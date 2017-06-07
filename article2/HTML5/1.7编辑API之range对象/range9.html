@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function testRange() {
+            var boldText = document.getElementById("boldTest");
+            var boldRanget = document.createRange();
+            boldRanget.selectNodeContents(boldText.firstChild);
+            var selection = document.getSelection();
+            if (selection.rangeCount > 0) {
+                var setRange = selection.getRangeAt(0);
+                if (setRange.compareBoundaryPoints(Range.START_TO_ENd, boldRanget) <= 0) {
+                    alert("选取的文字在粗体之前");
+                } else {
+                    if (setRange.compareBoundaryPoints(Range.START_TO_ENd, boldRanget) >= 0) {
+                        alert("选取的文字在粗体之后")
+                    }
+                }
+            }
+        }
+    </script>
+    这是一段文字，我也不<b id="boldTest">知道</b>写什么，随便吧。
+    <br>
+    <button onclick="testRange()">位置比较</button>
+</body>
+</html>

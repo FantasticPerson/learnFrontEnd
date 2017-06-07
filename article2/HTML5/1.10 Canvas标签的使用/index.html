@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        .canvas{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        var CANVAS_WIDTH = 500,CANVAS_HEIGHT = 500;
+        var mycanvas,context;
+        window.onload = function(){
+            createCanvas();
+            drawImg();
+//            drawRect();
+        };
+        function createCanvas(){
+            document.body.innerHTML = "<canvas id=\"mycanvas\" width=\""+CANVAS_WIDTH+"\" height=\""+CANVAS_HEIGHT+"\"></canvas>"
+            mycanvas = document.getElementById("mycanvas");
+            context = mycanvas.getContext('2d');
+        }
+
+        function drawRect(){
+            context.fillStyle = "#FF0000";
+//            context.rotate(45);
+            context.translate(200,200);
+            context.scale(0.5,0.5);
+            context.fillRect(0,0,200,200);
+        }
+        function drawImg(){
+            var img = new Image();
+            img.onload = function(){
+                context.drawImage(img,0,0);
+            };
+            img.src='test.jpg';
+        }
+    </script>
+</head>
+<body>
+    <!--<canvas class="canvas" width="200px" height="200px"></canvas>-->
+</body>
+</html>

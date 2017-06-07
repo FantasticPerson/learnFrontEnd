@@ -1,0 +1,98 @@
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg)
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(360deg)
+    }
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+.outer{
+    width: 300px;
+    height: 300px;
+    margin: 15px auto;
+    position: relative;
+    perspective: 300px;
+}
+.container{
+    top:50%;
+    left:50%;
+    margin-top: -48px;
+    margin-left:-48px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 48px 48px 0;
+}
+
+.container:hover {
+    -moz-animation: spin 5s linear infinite;
+    -o-animation: spin 5s linear infinite;
+    -webkit-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite;
+}
+
+.sub{
+    width: 96px;
+    height: 96px;
+    position: absolute;
+}
+
+.small{
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 3px;
+    float: left;
+}
+
+.one .small{
+    background-color: #14FF09;
+}
+
+.two .small{
+    background-color: #0A8D4D;
+}
+
+.three .small {
+    background-color: #FCFF0A;
+}
+
+.four .small {
+    background-color: #EA0005;
+}
+
+.five .small{
+    background-color: #15FFFD ;
+}
+
+.six .small{
+    background-color: #0B8E4D;
+}
+
+.one{
+    transform: translateZ(48px);
+}
+
+.two{
+    transform:rotateX(180deg) translateZ(48px)
+}
+
+.three{
+    transform: rotateY(-90deg) translateZ(48px);
+}
+
+.four{
+    transform: rotateY(90deg) translateZ(48px);
+}
+
+.five{
+    transform: rotateX(90deg) translateZ(48px);
+}
+
+.six{
+    transform: rotateX(-90deg) translateZ(48px);
+}

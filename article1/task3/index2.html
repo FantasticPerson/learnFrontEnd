@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+
+        }
+        .header{
+            background-color: orange;
+            height: 150px;
+        }
+        .article{
+            background-color: yellow;
+            height: 300px;
+            overflow: hidden;
+        }
+        .footer{
+            background-color: green;
+            height: 100px;
+        }
+        .left{
+            background-color: blue;
+            float: left;
+            color: white;
+            width: 150px;
+            margin-left: -100%;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .right{
+            background-color: #e0a0b0;
+            float: left;
+            width: 100px;
+            margin-left: -100px;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .middle{
+            background-color: #FF0000;
+            float: left;
+            width:100%;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .article{
+            /*padding-left: 150px;*/
+            /*padding-right: 100px;*/
+        }
+        .inner{
+            margin-left: 150px;
+            margin-right: 100px;
+            /*margin-bottom: -9999px;*/
+            /*padding-bottom: 9999px;*/
+            /*overflow: hidden;*/
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    我是头
+</div>
+<div class="article">
+    <div class="middle">
+        <div class="inner">
+            wo shi zhongjian
+        </div>
+    </div>
+    <div class="left">
+        wo shi zuo
+    </div>
+    <div class="right">
+        wo shi you
+    </div>
+</div>
+<div class="footer">
+    我是尾
+</div>
+</body>
+</html>

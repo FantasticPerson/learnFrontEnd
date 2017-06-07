@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input元素</title>
+</head>
+<body>
+    <!--url类型-->
+    <form>
+        <input type="url" name="url" value="http://www.jikexueyuan.com">
+        <input type="submit" value="提交">
+    </form>
+    <!--email-->
+    <form>
+        <input name="email" type="email" value="vewm@jikexueyuan.com">
+        <input type="submit" value="提交">
+    </form>
+    <!--data类型-->
+    <form>
+        <input type="date" name="date">
+    </form>
+    <!--time类型-->
+    <form>
+        <input type="time" value="10:00">
+    </form>
+    <!--datetime-->
+    <form>
+        <input type="datetime" name="datetime">
+    </form>
+    <!--datetime-local-->
+    <form>
+        <input type="datetime-local" name="datetimelocal">
+    </form>
+    <!--month元素-->
+    <input name="month" type="month" value="2010-01-01">
+    <!--week元素-->
+    <input name="week" type="week" >
+    <!--number元素-->
+    <input name="number" type="number" value="15" min="10" max="20" step="5">
+    <!--计数器-->
+    <script>
+        function sum(){
+            var n1 = document.getElementById('num1').valueAsNumber;
+            var n2 = document.getElementById('num2').valueAsNumber;
+            document.getElementById("result").valueAsNumber = n1+n2;
+        }
+    </script>
+    <form>
+        <input type="number" id="num1">
+        +
+        <input type="number" id="num2">
+        =
+        <input type="number" id="result" readonly>
+        <input type="button" value="计算" onclick="sum()">
+    </form>
+    <!--range元素-->
+    <input name="range" type="range" value="25" min="0" max="100" step="5">
+    <!--search类型-->
+    <input type="search">
+    <!--tel类型-->
+    <input type="tel">
+    <!--color类型-->
+    <input type="color" onchange="document.body.style.backgroundColor=document.getElementById('currentColor').textContent=this.value">
+    <span id="currentColor"></span>
+    <!--output元素的追加-->
+    <script>
+        function value_change(){
+            var number= document.getElementById("range").value;
+            document.getElementById("output").value = number;
+        }
+    </script>
+    <form id="testform">
+        <input id="range" type="range" min="0" max="100" step="5" value="10" onclick="value_change()">
+        <output id="output">10</output>
+    </form>
+</body>
+</html>

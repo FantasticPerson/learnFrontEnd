@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var numDiv;
+        var worker = null;
+        window.onload = function(){
+            numDiv = document.getElementById('numDiv');
+            document.getElementById('start').onclick= startWorker;
+            document.getElementById('stop').onclick = function(){
+                if(worker){
+                    worker.terminate();
+                    worker = null;
+                }
+            }
+
+        };
+        function startWorker(){
+            if(worker){
+                return;
+            }
+            worker = new Worker('count.js');
+            worker.onmessage = function(e){
+                numDiv.innerHTML = e.data;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="numDiv">0</div>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+</html>

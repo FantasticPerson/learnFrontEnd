@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>css响应式</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .left{
+            float: left;
+            width: 20%;
+            height: 500px;
+            background-color: aquamarine;
+            -webkit-transition: width 1s ease;
+            -moz-transition: width 1s ease;
+            -ms-transition: width 1s ease;
+            -o-transition: width 1s ease;
+            transition: width 1s ease;
+        }
+        .middle{
+            float: left;
+            width: 55%;
+            height: 800px;
+            margin:0 5px;
+            background-color: lightskyblue;
+        }
+        .right{
+            float: left;
+            width: 20%;
+            height: 500px;
+            background-color: yellowgreen;
+        }
+        .container{
+            margin: 5px;
+            /*margin:auto;*/
+        }
+
+        @media screen and (min-width:1024px){
+            .container{
+                width: 1000px;
+                /*background-color: #FF0000;*/
+                overflow: hidden;
+                margin: auto;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 1024px){
+            .right{
+                width: 0;
+                overflow: hidden;
+            }
+            .left{
+                width:30%;
+            }
+            .middle{
+                width:65%;
+            }
+        }
+        @media only screen and (max-width: 400px){
+            .left,
+            .middle,
+            .right{
+                width:95%;
+                height: 180px;
+                margin:5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">wo shi left</div>
+        <div class="middle">wo shi middle</div>
+        <div class="right">wo shi right</div>
+    </div>
+</body>
+</html>

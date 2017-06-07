@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function draw(id){
+            var canvas = document.getElementById(id);
+            var context= canvas.getContext('2d');
+            context.fillRect(0,0,500,500);
+            var image = new Image();
+            image.src = "../test.jpg";
+            image.onload = function(){
+                drawImg(context,image);
+            }
+        }
+        function drawImg(context,image){
+            context.drawImage(image,0,0,100,100);
+            context.drawImage(image,270,270,380,380,230,230,250,250);
+
+        }
+    </script>
+</head>
+<body onload="draw('canvas')">
+    <!--
+        context.drawImage(img,x,y);
+        context.drawImage(img,x,y,w,h);
+        context.drawImage(img,sx,sy,sw,sh,dx,dy,dw,dh);
+    -->
+    <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>

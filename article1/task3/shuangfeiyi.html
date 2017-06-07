@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .article{
+            min-height: 500px;
+            overflow: hidden;
+            min-width: 600px;
+        }
+        .main,
+        .left,
+        .right{
+            float: left;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+        .main{
+            width: 100%;
+            background-color: #e0a0b0;
+        }
+        .inner{
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .left{
+            position: relative;
+            width: 200px;
+            margin-left: -100%;
+            background-color: #0D7792;
+        }
+        .right{
+            position: relative;
+            width: 200px;
+            margin-left: -200px;
+            background-color: #FF0000;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            双飞翼布局
+        </header>
+        <div class="article">
+            <div class="main">
+                <div class="inner">【环球网军事报道】据俄罗斯卫星网5月31日报道，俄国防部表示，俄海军“埃森海军上将”号护卫舰和 “克拉斯诺达尔” 潜艇一昼夜内向巴尔米拉地区“伊斯兰国”设施发射4枚“口径”巡航导弹。</div>
+            </div>
+            <div class="left">【环球网军事报道】据俄罗斯卫星网5月31日报道，俄国防部表示，俄海军“埃森海军上将”号护卫舰和 “克拉斯诺达尔” 潜艇一昼夜内向巴尔米拉地区“伊斯兰国”设施发射4枚“口径”巡航导弹。</div>
+            <div class="right">【环球网军事报道】据俄罗斯卫星网5月31日报道，俄国防部表示，俄海军“埃森海军上将”号护卫舰和 “克拉斯诺达尔” 潜艇一昼夜内向巴尔米拉地区“伊斯兰国”设施发射4枚“口径”巡航导弹。</div>
+        </div>
+        <footer>
+            双飞翼布局
+        </footer>
+    </div>
+</body>
+</html>

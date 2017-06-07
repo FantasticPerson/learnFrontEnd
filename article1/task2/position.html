@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        body{
+            margin:0;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            margin: 0;
+        }
+        .rel{
+            background-color: orange;
+            display: inline-block;
+        }
+        .abs{
+            background-color: green;
+            display: inline-block;
+        }
+        .outer{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+        .fix{
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!--relative 是相对于 absolute 或 relative 元素进行布局的-->
+    <div class="fix">我不动</div>
+    <div class="outer">
+        <!--<div class="rel"></div>-->
+    </div>
+    <div class="abs"></div>
+</body>
+</html>

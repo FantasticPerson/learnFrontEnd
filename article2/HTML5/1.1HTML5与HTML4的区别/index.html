@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="checkbox" checked>
+    <input type="checkbox" checked="checked">
+    <input type="checkbox" checked="">
+    <input type="checkbox">
+    <h2>可编辑列表</h2>
+    <ul contenteditable="" hidden>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+    <ul contenteditable="">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+    <!--spellcheck 用于input和textArea-->
+    <input type="text" spellcheck="">
+    <!--默认情况下只有链接和表单元素可以通过tab获取焦点-->
+    <a href="#" tabindex="3">hello</a>
+    <a href="#" tabindex="1">hello</a>
+    <a href="#" tabindex="2">hello</a>
+    <!--tabIndex设置成-1就不能通过tab键获取焦点-->
+    <ul tabindex="-1">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+</body>
+</html>

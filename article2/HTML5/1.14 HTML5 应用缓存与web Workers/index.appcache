@@ -1,0 +1,6 @@
+CACHE MANIFEST
+
+CACHE: //可以缓存
+index.html
+
+NETWORK://不允许缓存

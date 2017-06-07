@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="" method="post">
+        <table width="400" border="1">
+            <tbody>
+            <tr>
+                <td><label>请输入姓名:</label></td>
+                <td><input type="text" name="textfield" id="username"></td>
+            </tr>
+            <tr>
+                <td><label>E-mail:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>请选择性别:</td>
+                <td>
+                    <select name="select" id="select">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的运动</td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="checkbox" value="篮球">篮球
+                    <input type="checkbox" name="checkbox" id="checkbox1" value="足球">足球
+                </td>
+            </tr>
+            <tr>
+                <td>我的简介</td>
+                <td><textarea name="textarea" id="textarae">我的简介</textarea></td>
+            </tr>
+            <tr>
+                <td>上传头像</td>
+                <td><input type="file" id="file"></td>
+            </tr>
+            <tr>
+                <td>分组</td>
+                <td><fieldset>
+                    <legend>篮球小组</legend>
+                    <ul>
+                        <li>yaoming</li>
+                        <li>wangzhizhi</li>
+                        <li>yijianlian</li>
+                        <li>zhufangyu</li>
+                    </ul>
+                </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>隐藏的标记</td>
+                <td><input type="hidden" value="111 "></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+                <td><input type="reset" value="重置"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function draw(id){
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            var oprts = new Array(
+                'source-atop',
+                'source-in',
+                'source-out',
+                'source-over',
+                'destination-atop',
+                'destination-in',
+                'destination-out',
+                'destination-over',
+                'lighter',
+                'copy',
+                'xor'
+            )
+            i = 8;
+            context.fillStyle = 'blue';
+            context.fillRect(10,10,60,60);
+            context.globalCompositeOperation = oprts[i];
+            context.beginPath();
+            context.fillStyle = "red";
+            context.arc(60,60,30,Math.PI*2,false);
+            context.fill();
+
+        }
+    </script>
+</head>
+<body onload="draw('canvas')">
+    <!--
+        globalCompositeOperation type =  属性
+        'source-atop'
+        'source-in'
+        'source-out'
+        'source-over'
+        'destination-atop',
+        'destination-in',
+        'destination-out',
+        'destination-over',
+        'lighter'
+        'copy'
+        'xor'
+    -->
+    <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+</html>

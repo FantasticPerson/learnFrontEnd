@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--figure元素以及figcaption元素-->
+    <figure>
+        <img src="img/bd_logo1_31bdc765.png" alt="这是一张美女">
+        <figcaption>美女</figcaption>
+    </figure>
+    <br>
+    <!--details元素和summary元素-->
+    <script>
+        function detail_onclick(detail){
+            var p= document.getElementById('p');
+            if(detail.open){
+                p.style.visibility="hidden"
+            } else {
+                p.style.visibility = "visible";
+            }
+        }
+    </script>
+    <details id="dateil" onclick="detail_onclick(this)">
+        <summary>速度与激情7</summary>
+        <p id="p" style="visibility: hidden">你好吗？这是为保罗打造的电影</p>
+    </details>
+    <!--mark元素-->
+    <p>这是一段文字，用来测试<mark>mark</mark>元素</p>
+</body>
+</html>

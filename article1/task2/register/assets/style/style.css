@@ -1,0 +1,101 @@
+html{
+    background-color: #0D7792;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+.container{
+    width: 710px;
+    border-radius: 20px;
+    height: 2600px;
+    background-color: white;
+    margin: 10px auto;
+}
+header{
+    width: 675px;
+}
+a:link{
+    text-decoration: none;
+}
+a:link:hover{
+    color: #cccccc;
+}
+
+.right-links{
+    display: inline-block;
+    float: right;
+    margin-top: 70px;
+}
+.right-links a{
+    margin-right: 5px;
+    color: rgb(255, 0, 153);
+}
+.tj-home-icon {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.tj-title{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+table{
+    width: 90%;
+    margin-left: 5%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+thead th{
+    background-image: url("../images/beijin1.gif");
+    font-weight: normal;
+}
+
+td {
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid #999;
+    padding: 2px 5px;
+}
+
+.tj-td-text-center{
+    text-align: center;
+}
+
+.tj-td-title{
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(0, 51, 153);
+    background-color: #eeeeee;
+}
+.tj-span-red{
+    color: red;
+}
+.tj-td-prop{
+    width: 130px;
+    text-align: right;
+}
+
+.tableBorder td{
+    border:0;
+}
+
+.tableBorder{
+    margin: 0;
+    padding: 5px;
+}
+.footer-p{
+    margin-top: 5px;
+    text-align: center;
+}
+.tj-p-blue{
+    color: #0000ff;
+}
+.tj-p-red{
+    color: red;
+}
