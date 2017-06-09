@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*有root选择器时  body选择器是内容区域生效，
+        当没有root选择器得时候，body选择器是整个页面生效*/
+        :root{
+            background-color: #0D7792;
+        }
+        body{
+            background-color: #15FFFD;
+        }
+        /*not*/
+        div *:not(h1){
+            color:red;
+        }
+        /*empty*/
+        :empty{
+            background-color: blue;
+        }
+        /*target*/
+        :target{
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>你好吗</h2>
+        <h1>你好吗</h1>
+        <p>这里是一个P标签</p>
+    </div>
+    <table border="1">
+        <tr>
+            <td>内筒1</td>
+            <td>内筒1</td>
+        </tr><tr>
+            <td>内筒1</td>
+            <td></td>
+        </tr><tr>
+            <td>内筒1</td>
+            <td>内筒1</td>
+        </tr>
+    </table>
+    <br>
+    <a href="#a1">菜单1</a>|
+    <a href="#a2">菜单2</a>|
+    <a href="#a3">菜单3</a>|
+    <a href="#a4">菜单4</a>
+    <div id="a1">
+        <h1>菜单1</h1>
+        <p>菜单一内容</p>
+    </div>
+    <div id="a2">
+        <h1>菜单1</h1>
+        <p>菜单一内容</p>
+    </div>
+    <div id="a3">
+        <h1>菜单1</h1>
+        <p>菜单一内容</p>
+    </div>
+    <div id="a4">
+        <h1>菜单1</h1>
+        <p>菜单一内容</p>
+    </div>
+</body>
+</html>

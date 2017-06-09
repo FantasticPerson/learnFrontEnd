@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+        /*.div2{*/
+            /*transform: translate(200px,100px);!**!*/
+        /*}*/
+        /*.div2{*/
+            /*transform: rotate(30deg);*/
+        /*}*/
+        /*.div2{*/
+            /*-webkit-transform: scale(1, 2);*/
+            /*-moz-transform: scale(1, 2);*/
+            /*-ms-transform: scale(1, 2);*/
+            /*-o-transform: scale(1, 2);*/
+            /*transform: scale(1, 2);*/
+        /*}*/
+        .div2{
+            -webkit-transform: skew(50deg, 50deg);
+            -moz-transform: skew(50deg, 50deg);
+            -ms-transform: skew(50deg, 50deg);
+            -o-transform: skew(50deg, 50deg);
+            transform: skew(50deg, 50deg);
+        }
+    </style>
+</head>
+<body>
+    <div>这是一个初始效果</div>
+    <br>
+    <div class="div2">这是一个改变后的效果</div>
+</body>
+</html>

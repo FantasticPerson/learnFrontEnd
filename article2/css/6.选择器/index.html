@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        [title]{
+            color: #EA0005;
+        }
+        [title="title2"]{
+            color: #c1c1c1;
+        }
+        [title~="title"]{/**/
+            font-size: 50px;
+        }
+        /*p strong{*/
+            /*color: orange;*/
+        /*}*/
+        p>strong{/*子元素选择器*/
+            color: orange;
+            font-size: 30px;
+        }
+        li+li{/*相邻兄弟选择器*/
+            font-size: 50px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+    ID选择器是唯一的
+    ID选择器不能结合使用
+-->
+    <p title="title">df</p>
+    <p title="title2">df</p>
+    <p title="tite3">df</p>
+    <p title="title 4">df</p>
+    <p><strong>this is my web page</strong></p>
+    <p>this is my <strong>web</strong> page</p>
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </div>
+</body>
+</html>
