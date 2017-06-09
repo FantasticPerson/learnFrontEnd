@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        #position1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 20px;
+            top: 20px;
+            z-index: 2;
+        }
+        #position2{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+            left: 10px;
+            top: 10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="position1"></div>
+    <div id="position2"></div>
+    <script>
+        for(var i=0;i<100;i++){
+            document.write(i+'<br>');
+        }
+    </script>
+</body>
+</html>
