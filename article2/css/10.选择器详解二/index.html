@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*first-child 第一个子元素*/
+        li:first-child{
+            background-color: yellow;
+        }
+        /*last-child 最后一个子元素*/
+        li:last-child{
+            background-color: blue;
+        }
+        /*nth-child(position)*/
+        li:nth-child(3){
+            background-color: #15FFFD;
+        }
+        li:nth-last-child(2){
+            background-color: #c1c1c1;
+        }
+        /*位置为奇数*/
+        li:nth-last-child(odd){
+            background-color: #0D7792;
+        }
+    </style>
+</head>
+<body>
+    <h2>列表</h2>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+    </ul>
+</body>
+</html>
