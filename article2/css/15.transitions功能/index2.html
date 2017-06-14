@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            background-color: red;
+        }
+        @keyframes mycolor {
+            0%{
+                background-color: red;
+            }
+            40%{
+                background-color: #ffff00;
+            }
+            70%{
+                background-color: aqua;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+        div:hover{
+            animation: mycolor 5s linear;
+        }
+    </style>
+</head>
+<body>
+    <div>示例文字</div>
+</body>
+</html>

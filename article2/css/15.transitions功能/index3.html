@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            position: absolute;
+            background-color: #ffff00;
+            top: 100px;
+            width: 500px;
+        }
+        @-webkit-keyframes mycolor {
+            0%{
+                background-color: red;
+                transform: rotate(0);
+            }
+            30%{
+                background-color: aqua;
+                transform: rotate(30deg);
+            }
+            60%{
+                background-color: lightskyblue;
+                transform: rotate(-30deg);
+            }
+            100%{
+                background-color: red;
+                transform: rotate(0);
+            }
+        }
+        div:hover{
+            animation: mycolor 5s linear;
+        }
+    </style>
+</head>
+<body>
+    <!-- linear ease-in ease-out ease ease-in-out -->
+    <div>示例文字</div>
+</body>
+</html>
