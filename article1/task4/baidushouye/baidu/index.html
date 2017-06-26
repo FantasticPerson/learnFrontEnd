@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <!--<link href="assets/style/style.css" rel="stylesheet" type="text/css">-->
+    <link href="assets/style/m-style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+<div class="pc-container" style="display: none">
+    <div class="header">
+        <a href="http://news.baidu.com" class="mnav">新闻</a>
+        <a href="http://www.hao123.com" class="mnav">hao123</a>
+        <a href="http://map.baidu.com" class="mnav">地图</a>
+        <a href="http://v.baidu.com" class="mnav">视频</a>
+        <a href="http://tieba.baidu.com" class="mnav">贴吧</a>
+        <a href="http://xueshu.baidu.com" class="mnav">学术</a>
+        <a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F" class="lb">登录</a>
+        <div href="http://www.baidu.com/gaoji/preferences.html" class="pf"><span>设置</span>
+            <div class="setting-submenu">
+                <a class="setting-submenu-a" href="javascript:;">搜索设置</a>
+                <a class="setting-submenu-a" href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a>
+                <a class="setting-submenu-a" href="javascript:;">开启预测</a>
+                <a class="setting-submenu-a" href="http://i.baidu.com/my/history?from=ps" target="_blank">搜索历史</a>
+            </div>
+        </div>
+        <div href="http://www.baidu.com/more/" class="bri"><span>更多产品</span>
+            <div class="bdmainlink">
+                <div class="bdbriimgtitle">更多产品</div>
+                <div class="briscrollwrapperContainer">
+                    <div class="briscrollwrapper bdbriscroll-ctrl-content bdbriscroll-onwheel">
+                        <div class="bdbriwrapper">
+                            <a href="http://www.nuomi.com/?cid=002540" name="tj_nuomi"><span class="bdbriimgitem_1 icon"></span><span class="text22">糯米</span></a>
+                            <a href="http://music.baidu.com" name="tj_mp3"><span class="bdbriimgitem_3  icon"></span><span class="text22">音乐</span></a>
+                            <a href="http://image.baidu.com" name="tj_img"><span class="bdbriimgitem_4  icon"></span><span class="text22">图片</span></a>
+                            <a href="http://zhidao.baidu.com" name="tj_zhidao"><span class="bdbriimgitem_2  icon"></span><span class="text22">知道</span></a>
+                            <a href="http://wenku.baidu.com" name="tj_wenku"><span class="bdbriimgitem_5  icon"></span><span class="text22">文库</span></a>
+                            <a href="http://top.baidu.com" name="tj_bang"><span class="bdbriimgitem_6  icon"></span><span class="text22">风云榜</span></a>
+                            <div class="bdbrievenmore">
+                                <a href="//www.baidu.com/more/" name="tj_more">全部产品&gt;&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="body">
+            <img class="baiduLogo" src="assets/image/bd_logo1_31bdc765.png">
+            <!--<form action="https://www.baidu.com/s" method="get" target="_blank">-->
+            <!--<input type="text" name="wd">-->
+            <!--<button type="submit">百度一下</button>-->
+            <!--</form>-->
+            <form action="https://www.baidu.com/s" method="get" target="_blank">
+                <div class="search-container">
+                    <form>
+                            <span class="outer-container">
+                                <input name="wd">
+                                <span class="camera-btn"></span>
+                                <!--<button type="submit"  class="search-btn">百度一下</button>-->
+                                <div class="search-btn" onclick="(function(){
+                                    var form = document.getElementsByTagName('form');
+                                    form.submit();
+                                })()">百度一下</div>
+                            </span>
+                    </form>
+                </div>
+            </form>
+            <!--<div class="search-container">-->
+            <!--<form>-->
+            <!--<span class="outer-container">-->
+            <!--<input>-->
+            <!--<span class="camera-btn"></span>-->
+            <!--<div class="search-btn">百度一下</div>-->
+            <!--</span>-->
+            <!--</form>-->
+            <!--</div>-->
+        </div>
+        <div class="footer">
+            <div class="qrcode">
+                <img src="assets/image/zbios_efde696.png">
+                <p>手机百度</p>
+            </div>
+            <p class="lh">
+                <a href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                <a class="lh-a" href="http://home.baidu.com">关于百度</a>
+                <a class="lh-a" href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a>
+                <a class="lh-a" href="http://e.baidu.com/?refer=888"    >百度推广</a>
+            </p>
+            <p class="cp">©2017&nbsp;Baidu&nbsp;
+                <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                <span>&nbsp;</span>
+                <a href="http://jianyi.baidu.com/" class="cp-feedback">意见反馈</a>
+                <span>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i>&nbsp;</span>
+                <a id="jgwab" target="_blank">京公网安备11000002000001号</a>
+                <span>&nbsp;<i class="c-icon-jgwablogo"></i></span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="m-container" style="">
+    <div id="m-header">
+        <div id="header">
+            <div id="logo" class="noTapColor use-festival">
+                <img src="https://m.baidu.com/static/index/plus/plus_logo.png" alt="百度一下,你就知道">
+            </div>
+            <form data-formposition="i" class="se-form" id="index-form" action="/from=844b/s" method="get"
+                  autocomplete="off">
+                <div class="con-wrap">
+                    <input type="text" autocomplete="off" autocorrect="off" maxlength="64"
+                                             id="index-kw" name="word" class="se-input adjust-input" data-sug="1">
+                    <button id="index-bn" class="se-bn" type="submit">百度一下</button>
+                </div>
+            </form>
+            <div id="navs">
+                <div id="ns-swipe" class="ns-swipe" style="visibility: visible;">
+                    <div class="ns-swipe-wrap">
+                        <div class="ns-swipe-item" data-index="0">
+                            <a class="ns-item menu-item-0" href="javascript:;" id=""
+                               data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:12,&quot;title&quot;:&quot;\u5173\u6ce8&quot;};ref:index_iphone;"><i
+                                    class="ns-focus ns-icon"></i><span class="ns-text">关注</span></a><a class="ns-item"
+                                                                                                       href="http://m.news.baidu.com/news?fr=mohome&amp;ssid=0&amp;from=1014571w&amp;uid=&amp;pu=sz%40224_220%2Cta%40iphone___3_537&amp;bd_page_type=1"
+                                                                                                       data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:1,&quot;title&quot;:&quot;\u65b0\u95fb&quot;};ref:index_iphone;url:http://m.news.baidu.com/news?fr=mohome&amp;ssid=0&amp;from=1014571w&amp;uid=&amp;pu=sz%40224_220%2Cta%40iphone___3_537&amp;bd_page_type=1;"><i
+                                class="ns-news ns-icon"></i><span class="ns-text">新闻</span></a><a class="ns-item"
+                                                                                                  href="http://dushu.m.baidu.com"
+                                                                                                  data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:2,&quot;title&quot;:&quot;\u5c0f\u8bf4&quot;};ref:index_iphone;url:http://dushu.m.baidu.com;"><i
+                                class="ns-novel ns-icon"></i><span class="ns-text">小说</span></a><a class="ns-item"
+                                                                                                   href="https://sv.baidu.com"
+                                                                                                   data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:3,&quot;title&quot;:&quot;\u89c6\u9891&quot;};ref:index_iphone;url:https://sv.baidu.com;"><i
+                                class="ns-video ns-icon"></i><span class="ns-text">视频</span></a><a class="ns-item"
+                                                                                                   href="https://m.nuomi.com/?cid=wise_shouye_nuomi"
+                                                                                                   data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:4,&quot;title&quot;:&quot;\u7cef\u7c73&quot;};ref:index_iphone;url:https://m.nuomi.com/?cid=wise_shouye_nuomi;"><i
+                                class="ns-life ns-icon"></i><span class="ns-text">糯米</span></a><a class="ns-item"
+                                                                                                  href="http://map.baidu.com/mobile/webapp/index/index/?itj=45&amp;wtj=wi&amp;ssid=0&amp;from=1014571w&amp;uid=&amp;pu=sz%40224_220%2Cta%40iphone___3_537&amp;bd_page_type=1"
+                                                                                                  data-schema="baidumap://map?src=wise.show.index.nav"
+                                                                                                  data-thunder="tid:11;ct:1;cst:2;logFrom:navs;logInfo:nav;logExtra:{&quot;pos&quot;:5,&quot;title&quot;:&quot;\u5730\u56fe&quot;};ref:index_iphone;url:http://map.baidu.com/mobile/webapp/index/index/?itj=45&amp;wtj=wi&amp;ssid=0&amp;from=1014571w&amp;uid=&amp;pu=sz%40224_220%2Cta%40iphone___3_537&amp;bd_page_type=1;"><i
+                                class="ns-map ns-icon"></i><span class="ns-text">地图</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-list-wrapper" data-total="7">
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                <div class="rec-item news-item tpl-3"><a
+                        href="https://feed.baidu.com/feed/data/wise/landingpage?s_type=news&amp;nid=3294683077184564646&amp;n_type=1&amp;p_from=2"
+                        class="inner-item"
+                        data-log="logExtra:yc:{&quot;st&quot;:&quot;news&quot;,&quot;isBaijiahao&quot;:1,&quot;extra&quot;:&quot;{\&quot;category\&quot;:1,\&quot;channel_id\&quot;:1,\&quot;city\&quot;:\&quot;\\u5357\\u901a\&quot;,\&quot;cs\&quot;:\&quot;3694189498 1854778878\&quot;,\&quot;district\&quot;:\&quot;\&quot;,\&quot;fe\&quot;:\&quot;\&quot;,\&quot;final_score\&quot;:2,\&quot;gr_merge_score\&quot;:0.39178962655653,\&quot;gr_pred_score\&quot;:0.64581072330475,\&quot;hha\&quot;:0,\&quot;localname\&quot;:\&quot;\&quot;,\&quot;mark\&quot;:2,\&quot;mark_rec\&quot;:2,\&quot;mthid\&quot;:\&quot;1568243271390393\&quot;,\&quot;new_cat\&quot;:\&quot;\\u5a31\\u4e50\&quot;,\&quot;new_sub_cat\&quot;:\&quot;\\u7efc\\u5408\&quot;,\&quot;odus\&quot;:0.18308788537979,\&quot;pfe\&quot;:\&quot;-1_-1_-1_-1_-1\&quot;,\&quot;predictor_result\&quot;:\&quot;CAEZAABfmfjt+0A=\&quot;,\&quot;province\&quot;:\&quot;\\u6c5f\\u82cf\&quot;,\&quot;rec_src\&quot;:[30],\&quot;score\&quot;:114400,\&quot;src_tag\&quot;:\&quot;\&quot;,\&quot;srccat\&quot;:13,\&quot;srcid\&quot;:80001,\&quot;tj_timeliness\&quot;:1,\&quot;type\&quot;:1,\&quot;ua\&quot;:\&quot;1440_2560_android_5.1_0\&quot;,\&quot;ut\&quot;:\&quot;nexus 6_5.1_0_google\&quot;,\&quot;msrcid\&quot;:80001,\&quot;dispatch_time\&quot;:1498447302}&quot;,&quot;stype&quot;:1,&quot;rid&quot;:&quot;3294683077184564646&quot;,&quot;pos&quot;:1,&quot;picNum&quot;:3,&quot;title&quot;:&quot;LOL\uff1b\u51af\u63d0\u83ab\u88ab\u7f51\u53cb P \u56fe\uff0c\u4e00\u5f20\u5f20\u201c\u626b\u9ec4\u56fe\u201d\u7adf\u6beb\u65e0\u8fdd\u548c\u611f\uff01\u592a\u5c4c\u4e86\uff01&quot;};yc;"
+                        data-rid="3294683077184564646" data-pos="1" data-mib="1"
+                        data-orilink="http://baijiahao.baidu.com/s?id=1571233180438786">
+                    <div class="text-content"><h2>LOL；冯提莫被网友 P 图，一张张“扫黄图”竟毫无违和感！太屌了！<span class="hotRec hotRec2"></span>
+                    </h2></div>
+                    <div class="pic-content">
+                        <div class="img-wrap"><img
+                                src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2108622910,1031531441&amp;fm=173&amp;s=309471954E31448A0790A4C9030080B2&amp;w=218&amp;h=146&amp;img.JPEG">
+                        </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=808028128,3873336083&amp;fm=173&amp;s=3734108924F0459AC715F14A0300E0B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div><!--
+                        --><div class="img-wrap"><img
+                            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2308096939,3250772398&amp;fm=173&amp;s=AB341089D6404D490EB0F5D1030000B1&amp;w=218&amp;h=146&amp;img.JPEG">
+                    </div>
+                    </div>
+                    <div class="news-from"><span class="src-net">打发</span><span class="src-time">10:41</span><span
+                            class="src-icon-rec isAndroid">推荐</span></div>
+                </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
