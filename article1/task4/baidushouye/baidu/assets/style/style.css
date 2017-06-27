@@ -3,6 +3,9 @@
     padding: 0;
     font-size: 12px;
 }
+.m-container{
+    display: none;
+}
 .header{
     position: absolute;
     right: 0;

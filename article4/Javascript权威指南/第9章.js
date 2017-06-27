@@ -440,6 +440,94 @@ Set.prototype.equals = function(that){
     }
 }
 
+//方法借用的泛型实现
+var generic = {
+    toString:function(){
+        var s = '[';
+        if(this.constructor && this.constructor.name){
+            s += this.constructor.name + ':';
+        }
+        var n = 0;
+        for(var name in this){
+            if(!this.hasOwnProperty(name)) continue;
+            if(n++) s+= ', ';
+            s += name + '='+value;
+        }
+        return s+']';
+    },
+    equals:function(that){
+        if(that == null) return false;
+        if(this.constructor != that.constructor) return false;
+        for(var name in this){
+            if(name === "|**objectid**|") continue;
+            if(!this.hasOwnProperty(name)) continue;
+            if(this[name] !== that[name]) return false;
+        }
+        return true;
+    }
+};
+
+//对Range类的读取端点方法的简单封装
+function Range(from,to){
+    this.from = function(){return from};
+    this.to = function(){return to;};
+}
+//原型上的方法无法直接操作端点
+//他们必须调用存取器方法
+Range.prototype = {
+    constructor:Range,
+    include:function(x){return this.from() <= x && x <=this.to()},
+    foreach:function (f) {
+        for(var x=Math.ceil(this.from()),max=this.to();x<=max;x++) {
+            f(x);
+        }
+    },
+    toString:function(){
+        return "("+this.from()+"..."+this.to()+")";
+    }
+};
+
+//构造函数的重载和工厂方法
+//重载Set()构造函数的例子
+function Set() {
+    this.value = {};
+    this.n = 0;
+    if(arguments.length == 1 && isArrayLike(arguments[0])){
+        this.add.apply(this,arguments[0])
+    } else if(arguments.length  > 0){
+        this.add.apply(this,arguments);
+    }
+}
+
+function isArrayLike(){
+    //待实现
+}
+
+//使用工厂方法返回一个使用极坐标初始化的Complex对象:
+Complex.polar = function(r,theta){
+    return new Complex(r*Math.cos(theta),r*Math.sin(theta));
+};
+
+//使用工厂方法用数组初始化Set对象
+Set.fromArray = function(a){
+    s = new Set();
+    s.add.apply(s,a);
+    return s;
+};
+
+//下面的例子使用这种技术定义了该类型的一个辅助构造函数
+function SetFromArray(a){
+    Set.apply(this,a);
+}
+
+SetFromArray.prototype = Set.prototype;
+
+var s = new SetFromArray([1,2,3]);
+s instanceof Set //=>true
+
+//定义子类
+
+
 
 
 

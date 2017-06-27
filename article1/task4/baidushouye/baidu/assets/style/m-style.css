@@ -4,6 +4,9 @@ body{
     padding:0;
     background: #f1f1f1;
 }
+.pc-container{
+    display: none;
+}
 #logo {
     height: 57px;
     padding-bottom: 17px;

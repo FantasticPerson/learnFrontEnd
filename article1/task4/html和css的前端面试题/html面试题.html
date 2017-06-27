@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html面试题</title>
+</head>
+<body>
+<div id="article_content" class="article_content tracking-ad" data-mod="popu_307" data-dsm="post">
+
+    <div class="image-package imagebubble"><img src="http://upload-images.jianshu.io/upload_images/1714316-3063f0220faa8f03.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="imagebubble-image" alt=""><br>
+        <div class="image-caption"></div>
+    </div>
+    <blockquote>
+        <p>“每18至24个月，前端都会难一倍”</p>
+    </blockquote>
+    <hr>
+    <h4><a name="t0" target="_blank"></a>知识点</h4>
+    <p><code>对Web标准的理解</code>、<code>浏览器内核差异</code>、<code>兼容性</code>、<code>hack</code>、<code><a href="http://lib.csdn.net/base/html5" class="replace_word" title="HTML5知识库" target="_blank" style="color:#df3434; font-weight:bold;">HTML5</a></code>......</p>
+    <h4><a name="t1" target="_blank"></a>题目&amp;答案</h4>
+    <ul>
+        <li>Doctype作用？标准模式与兼容模式各有什么区别？
+            <pre class="hljs xml" name="code"><code class="xml">（1）<span class="hljs-doctype">&lt;!DOCTYPE&gt;</span>声明位于HTML文档中的第一行，处于<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>标签之前，用于告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+（2）标准模式的排版和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示，模拟老式浏览器的行为以防止站点无法工作。</code></pre>
+        </li></ul>
+    <ul>
+        <li>HTML5为什么只需要写&lt;!DOCTYPE HTML&gt;？
+            <pre class="hljs cpp" name="code"><code class="cpp">HTML5不基于SGML，因此不需要对DTD进行引用，但是需要DOCTYPE来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
+HTML4<span class="hljs-number">.01</span>基于SGML，所以需要对DTD进行引用，才能让浏览器知道该文档所使用的文档类型。</code></pre>
+        </li></ul>
+    <ul>
+        <li>行内元素有哪些？块级元素有哪些？空（void）元素有哪些？
+            <pre class="hljs xml" name="code"><code class="xml">声明：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+（1）行内元素有：a b span img input select strong（强调的语气）
+（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+（3）常见的空元素：
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">img</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">input</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">link</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">meta</span>&gt;</span>
+      鲜为人知的空元素：
+  <span class="hljs-tag">&lt;<span class="hljs-title">area</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">base</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">col</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">command</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">embed</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">keygen</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">param</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">source</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">track</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">wbr</span>&gt;</span></code></pre>
+        </li></ul>
+    <ul>
+        <li>页面导入样式时，使用<code>Link</code>和<code>@import</code>有什么区别？
+            <pre class="hljs javascript" name="code"><code class="javascript">（<span class="hljs-number">1</span>）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@<span class="hljs-keyword">import</span>是CSS提供的，只能用于加载CSS;
+（<span class="hljs-number">2</span>）页面被加载的时，link会同时被加载，而@<span class="hljs-keyword">import</span>引用的CSS会等到页面被加载完再加载;
+（<span class="hljs-number">3</span>）<span class="hljs-keyword">import</span>是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</code></pre>
+        </li></ul>
+    <ul>
+        <li>介绍一下你对浏览器内核的理解
+            <pre class="hljs cpp" name="code"><code class="cpp">主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。
+（<span class="hljs-number">1</span>）渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+（<span class="hljs-number">2</span>）JS引擎则：解析和执行javascript来实现网页的动态效果。
+最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</code></pre>
+        </li></ul>
+    <ul>
+        <li>常见的浏览器内核有哪些？
+            <pre class="hljs perl" name="code"><code class="perl">Trident内核：IE,MaxThon,TT,The World,<span class="hljs-number">360</span>,搜狗浏览器等。[又称MSHTML]
+Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等。
+Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]
+Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
+EdgeHTML内核：Microsoft Edge。  [此内核其实是从MSHTML <span class="hljs-keyword">fork</span>而来，删掉了几乎所有的IE私有特性]</code></pre>
+            详细文章：<a target="_blank" href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html">浏览器内核的解析和对比——依水间</a></li></ul>
+    <ul>
+        <li>
+            <p><a href="http://lib.csdn.net/base/html5" class="replace_word" title="HTML5知识库" target="_blank" style="color:#df3434; font-weight:bold;">html5</a>有哪些新特性、移除了哪些元素？如何处理<a href="http://lib.csdn.net/base/html5" class="replace_word" title="HTML5知识库" target="_blank" style="color:#df3434; font-weight:bold;">Html5</a>新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</p>
+            <pre class="hljs bash" name="code"><code class="bash">HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+绘画 canvas;
+用于媒介回放的 video 和 audio 元素;
+本地离线存储 <span class="hljs-built_in">local</span>Storage 长期存储数据，浏览器关闭后数据不丢失;
+sessionStorage 的数据在浏览器关闭后自动删除;
+语意化更好的内容元素，比如 article、footer、header、nav、section;
+表单控件，calendar、date、time、email、url、search;
+新的技术webworker, websockt, Geolocation;</code></pre>
+        </li><li>
+        <p>简述一下你对HTML语义化的理解。</p>
+        <pre class="hljs undefined" name="code"><code>用正确的标签做正确的事情。
+HTML语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析；
+即使在没有样式CSS的情况下也能以一种文档格式显示，并且是容易阅读的；
+搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，有利于SEO；
+使阅读源代码的人更容易将网站分块，便于阅读、维护和理解。</code></pre>
+    </li></ul>
+    <ul>
+        <li>HTML5的离线存储怎么使用？能否解释一下工作原理？
+            <pre class="hljs sql" name="code"><code class="sql">在用户没有连接英特网时，可以正常访问站点和应用；在用户连接英特网时，更新用户机器上的缓存文件。
+`原理`：HTML5的离线存储是基于一个新建的 `.appcache` 文件的缓存机制（并非存储技术），通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储下来。之后当网络处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
+使用方法：
+(1) 在页面头部像下面一样加入一个 manifest 的属性；
+(2) 在 <span class="hljs-operator"><span class="hljs-keyword">cache</span>.manifest 文件里编写离线存储资源；
+     <span class="hljs-keyword">CACHE</span> MANIFEST
+     #v0<span class="hljs-number">.11</span>
+     <span class="hljs-keyword">CACHE</span>：
+       js/app.js
+       css/<span class="hljs-keyword">style</span>.css
+     NETWORK:
+       <span class="hljs-keyword">resource</span>/logo.png
+     FALLBACK：
+       / /<span class="hljs-keyword">offline</span>.html
+(<span class="hljs-number">3</span>) 在离线状态时，操作 window.applicationCache 进行需求实现</span></code></pre>
+            详细使用教程：<a target="_blank" href="https://segmentfault.com/a/1190000000732617">有趣的HTML5：离线存储——segmentfault</a></li></ul>
+    <ul>
+        <li>浏览器是怎么对HTML5的离线存储资源进行管理和加载的？
+            <pre class="hljs undefined" name="code"><code>在线情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
+离线情况下，浏览器就直接使用离线存储的资源。</code></pre>
+        </li></ul>
+    <ul>
+        <li>请描述一下 cookies，sessionStorage 和 localStorage 的区别？
+            <pre class="hljs bash" name="code"><code class="bash">`cookie`是网站为了标识用户身份而储存在用户本地终端（Client Side）上的数据（通常已经过加密）。cookie数据始终在同源的http请求中携带（即使不需要），也会在浏览器和服务器间来回传递。
+`sessionStorage`和`<span class="hljs-built_in">local</span>Storage`不会自动把数据发给服务器，仅在本地保存。
+存储大小：
+  cookie数据大小不能超过<span class="hljs-number">4</span>K。
+  sessionStorage和<span class="hljs-built_in">local</span>Storage虽然也有存储大小的限制，但比cookie大得多，可以达到<span class="hljs-number">5</span>M或更大。
+有效时间：
+  cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+  sessionStorage  数据在当前浏览器窗口关闭后自动删除
+  <span class="hljs-built_in">local</span>Storage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</code></pre>
+        </li></ul>
+    <ul>
+        <li>iframe 有哪些缺点？
+            <pre class="hljs undefined" name="code"><code>iframe会阻塞主页面的Onload事件；
+搜索引擎的检索程序无法解读这种页面，不利于SEO；
+iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好通过JavaScript动态给iframe添加src属性值，这样可以绕开以上两个问题。</code></pre>
+        </li></ul>
+    <ul>
+        <li>Label的作用是什么？如何使用？
+            <pre class="hljs ruby" name="code"><code class="ruby">label标签来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+&lt;label <span class="hljs-keyword">for</span>=<span class="hljs-string">"Name"</span>&gt;<span class="hljs-constant">Number</span><span class="hljs-symbol">:&lt;/label&gt;</span>
+&lt;input type=<span class="hljs-string">"text"</span> name=<span class="hljs-string">"Name"</span> id=<span class="hljs-string">"Name"</span> /&gt;
+&lt;label&gt;<span class="hljs-constant">Date</span><span class="hljs-symbol">:&lt;input</span> type=<span class="hljs-string">"text"</span> name=<span class="hljs-string">"B"</span> /&gt;&lt;<span class="hljs-regexp">/label&gt;</span></code></pre>
+        </li></ul>
+    <ul>
+        <li>HTML5的form如何关闭自动完成功能？
+            <pre class="hljs perl" name="code"><code class="perl">给不想要提示的 form 或下面某个 input 设置为 <span class="hljs-string">`autocomplete = off`</span>。</code></pre>
+        </li></ul>
+    <ul>
+        <li>如何实现浏览器内多个标签页之间的通信？（阿里）
+            <pre class="hljs bash" name="code"><code class="bash">调用 <span class="hljs-built_in">local</span>Storage、cookies 等本地存储方式</code></pre>
+        </li></ul>
+    <ul>
+        <li>webSocket 如何兼容低浏览器？（阿里）
+            <pre class="hljs mathematica" name="code"><code class="mathematica">Adobe Flash <span class="hljs-keyword">Socket</span>
+ActiveX HTMLFile（IE）
+基于 multipart 编码发送 XHR
+基于长轮询的 XHR</code></pre>
+        </li></ul>
+    <ul>
+        <li>页面可见性（Page Visibility） API可以有哪些用途？
+            <pre class="hljs undefined" name="code"><code>在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放。</code></pre>
+        </li></ul>
+    <ul>
+        <li>如何在页面上实现一个圆形的可点击区域？
+            <pre class="hljs cpp" name="code"><code class="cpp">(<span class="hljs-number">1</span>) <span class="hljs-built_in">map</span> + area 或者 svg
+(<span class="hljs-number">2</span>) border-radius
+(<span class="hljs-number">3</span>) 纯js实现，需要求一个点在不在圆上的简单算法、获取鼠标坐标等等</code></pre>
+        </li></ul>
+    <ul>
+        <li>实现 不使用 border 画出 1px 高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。
+            <pre class="hljs xml" name="code"><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"height:1px;overflow:hidden;background:#ccc"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre>
+        </li></ul>
+    <ul>
+        <li>网页验证码是干什么用的？是为了解决什么安全问题？
+            <pre class="hljs undefined" name="code"><code>区分用户是计算机还是人的公共全自动程序。可以防止：恶意破解密码、刷票、论坛灌水；
+有效防止黑客对某一个特定注册用户用特定程序通过暴力破解的方式进行不断的登录尝试。</code></pre>
+        </li></ul>
+    <hr>
+
+
+</div>
+</body>
+</html>

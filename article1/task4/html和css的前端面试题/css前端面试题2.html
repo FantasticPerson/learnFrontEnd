@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css前端面试题</title>
+    <link rel="stylesheet" type="text/css" href="assets/style2.css">
+</head>
+<body>
+<div class="article_body" id="nei">
+    <div>
+        <h2>1、介绍所知道的CSS hack技巧(如：_，&nbsp;*， +，&nbsp;\9， !important 之类)。</h2>
+        <h4>CSS hack的原理：</h4>
+        <p>由于不同的浏览器和浏览器各版本对CSS的支持及解析结果不一样，以及CSS优先级对浏览器展现效果的影响，我们可以据此针对不同的浏览器情景来应用不同的CSS。</p>
+        <h4>条件注释法：</h4>
+        <pre class="prettyprint hljs xml">只在IE下生效：
+<span class="hljs-comment">&lt;!--[if IE]&gt;
+这段文字只在IE浏览器显示
+&lt;![endif]--&gt;</span>
+
+只在IE6下生效：
+<span class="hljs-comment">&lt;!--[if IE 6]&gt;
+这段文字只在IE6浏览器显示
+&lt;![endif]--&gt;</span>
+
+只在IE6以上版本生效：
+<span class="hljs-comment">&lt;!--[if gte IE 6]&gt;
+这段文字只在IE6以上(包括)版本IE浏览器显示
+&lt;![endif]--&gt;</span>
+
+只在IE8上不生效：
+<span class="hljs-comment">&lt;!--[if ! IE 8]&gt;
+这段文字在非IE8浏览器显示
+&lt;![endif]--&gt;</span>
+
+非IE浏览器生效：
+<span class="hljs-comment">&lt;!--[if !IE]&gt;
+这段文字只在非IE浏览器显示
+&lt;![endif]--&gt;</span><br><br></pre>
+        <h4>类内属性前缀法：</h4>
+        <table cellspacing="0" class="table table-bordered">
+            <tbody>
+            <tr>
+                <td width="6%">hack</td>
+                <td width="27%">写法</td>
+                <td width="6%">实例</td>
+                <td width="6%">IE6(S)</td>
+                <td width="6%">IE6(Q)</td>
+                <td width="6%">IE7(S)</td>
+                <td width="6%">IE7(Q)</td>
+                <td width="6%">IE8(S)</td>
+                <td width="6%">IE8(Q)</td>
+                <td width="6%">IE9(S)</td>
+                <td width="6%">IE9(Q)</td>
+                <td width="7%">IE10(S)</td>
+                <td width="6%">IE10(Q)</td>
+            </tr>
+            <tr>
+                <td width="6%">*</td>
+                <td width="27%">*color</td>
+                <td width="6%">青色</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="7%">N</td>
+                <td width="6%">Y</td>
+            </tr>
+            <tr>
+                <td width="6%">+</td>
+                <td width="27%">+color</td>
+                <td width="6%">绿色</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="7%">N</td>
+                <td width="6%">Y</td>
+            </tr>
+            <tr>
+                <td width="6%">-</td>
+                <td align="left" width="27%">-color</td>
+                <td width="6%">黄色</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="7%">N</td>
+                <td width="6%">N</td>
+            </tr>
+            <tr>
+                <td width="6%">_</td>
+                <td width="27%"> <p>_color</p> </td>
+                <td width="6%">蓝色</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="7%">N</td>
+                <td width="6%">N</td>
+            </tr>
+            <tr>
+                <td width="6%">#</td>
+                <td width="27%">#color</td>
+                <td width="6%">紫色</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="7%">N</td>
+                <td width="6%">Y</td>
+            </tr>
+            <tr>
+                <td width="6%">\0</td>
+                <td width="27%">color:red\0</td>
+                <td width="6%">红色</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="7%">Y</td>
+                <td width="6%">N</td>
+            </tr>
+            <tr>
+                <td width="6%">\9\0</td>
+                <td width="27%">color:red\9\0</td>
+                <td width="6%">粉色</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="7%">Y</td>
+                <td width="6%">N</td>
+            </tr>
+            <tr>
+                <td width="6%">!important</td>
+                <td width="27%">color:blue !important;color:green;</td>
+                <td width="6%">棕色</td>
+                <td width="6%">N</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="6%">Y</td>
+                <td width="6%">N</td>
+                <td width="7%">Y</td>
+                <td width="6%">Y</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>说明：在标准模式中</p>
+        <ul>
+            <li>“-″减号是IE6专有的hack</li>
+            <li>“\9″ IE6/IE7/IE8/IE9/IE10都生效</li>
+            <li>“\0″ IE8/IE9/IE10都生效，是IE8/9/10的hack</li>
+            <li>“\9\0″ 只对IE9/IE10生效，是IE9/10的hack</li>
+        </ul>
+        <h4>选择器前缀法：</h4>
+        <p>选择器前缀法是针对一些页面表现不一致或者需要特殊对待的浏览器，在CSS选择器前加上一些只有某些特定浏览器才能识别的前缀进行hack。</p>
+        <p>目前最常见的是</p>
+        <pre class="prettyprint hljs groovy">*html *前缀只对IE6生效
+*+html *+前缀只对IE7生效
+<span class="hljs-meta">@media</span> screen\<span class="hljs-number">9</span>{...}只对IE6/<span class="hljs-number">7</span>生效
+<span class="hljs-meta">@media</span> \<span class="hljs-number">0</span>screen {body { <span class="hljs-string">background:</span> red; }}只对IE8有效
+<span class="hljs-meta">@media</span> \<span class="hljs-number">0</span>screen\,screen\<span class="hljs-number">9</span>{body { <span class="hljs-string">background:</span> blue; }}只对IE6<span class="hljs-regexp">/7/</span><span class="hljs-number">8</span>有效
+<span class="hljs-meta">@media</span> screen\<span class="hljs-number">0</span> {body { <span class="hljs-string">background:</span> green; }} 只对IE8<span class="hljs-regexp">/9/</span><span class="hljs-number">10</span>有效
+<span class="hljs-meta">@media</span> screen and (min-<span class="hljs-string">width:</span><span class="hljs-number">0</span>\<span class="hljs-number">0</span>) {body { <span class="hljs-string">background:</span> gray; }} 只对IE9/<span class="hljs-number">10</span>有效
+<span class="hljs-meta">@media</span> screen and (-ms-high-<span class="hljs-string">contrast:</span> active), (-ms-high-<span class="hljs-string">contrast:</span> none) {body { <span class="hljs-string">background:</span> orange; }} 只对IE10有效</pre>
+        <h4>CSS hack利弊</h4>
+        <p>一般情况下，我们尽量避免使用CSS hack，但是有些情况为了顾及用户体验实现向下兼容，不得已才使用hack。比如由于IE8及以下版本不支持CSS3,而我们的项目页面使用了大量 CSS3新属性在IE9/Firefox/Chrome下正常渲染，这种情况下如果不使用css3pie或htc或条件注释等方法时,可能就得让IE8- 的专属hack出马了。使用hack虽然对页面表现的一致性有好处，但过多的滥用会造成html文档混乱不堪，增加管理和维护的负担。相信只要大家一起努 力，少用、慎用hack，未来一定会促使浏览器厂商的标准越来越趋于统一，顺利过渡到标准浏览器的主流时代。抛弃那些陈旧的IE hack，必将减轻我们编码的复杂度，少做无用功。</p>
+        <h2>2、介绍CSS盒模型。</h2>
+        <p> <img src="http://img2.tuicool.com/J3auqa.jpg!web" class="alignCenter"> </p>
+        <pre class="prettyprint hljs">盒状模型是CSS中重要的概念。盒状模型中最重要的是内容，它是必备的，其他的几项都是可选的。 如上图，盒状模型有内至外的顺序是：</pre>
+        <ul>
+            <li> <strong>content</strong> （内容，它可以是文字、图片等。） </li>
+            <li> <strong>padding</strong> （内边距，也有人称之为空白、内补丁等。） </li>
+            <li> <strong>border</strong> （边框。） </li>
+            <li> <strong>margin</strong> （外边距，也可称为边界。） </li>
+        </ul>
+        <pre class="prettyprint hljs xml"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>css盒子模型<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+		*{<span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;<span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;} <span class="hljs-comment">/*清除浏览器默认的边距*/</span>
+		<span class="hljs-selector-class">.block</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">300px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">200px</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">10px</span>;<span class="hljs-attribute">border</span>:<span class="hljs-number">10px</span> solid red;<span class="hljs-attribute">background</span>: <span class="hljs-number">#000</span>;<span class="hljs-attribute">margin</span>:<span class="hljs-number">20px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20px</span>;}
+		<span class="hljs-selector-class">.box</span>{<span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;<span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;<span class="hljs-attribute">background</span>: yellow;<span class="hljs-attribute">color</span>: <span class="hljs-number">#ff4a00</span>;<span class="hljs-attribute">border</span>:<span class="hljs-number">5px</span> solid green;}
+	</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</pre>
+        <h2>3、CSS层叠是什么？介绍一下。</h2>
+        <p>我认可的理解：层叠指的是上级标签的样式会自动继承到其所有下级标签，如针对&lt;body&gt;设置的标签选择器所设的字体样式会自动应用到&lt;body&gt;下的&lt;p&gt;中，除非&lt;p&gt;重写了相关样式将其覆盖。CSS语义化的命名是指用易于理解的名称对html标签附加的class或id命名，如对于页面上方的&lt;div&gt;，可将其id设为header；页面下方的&lt;div&gt;设为footer，可以增强CSS的可维护性。 </p>
+        <p>基本上层叠的意思就是“继承”、“权重”、“覆盖”，通过良好的层级命名更好的实现效果，更少的代码，更多的功能。</p>
+        <h2>4、都知道哪些CSS浏览器兼容性问题。</h2>
+        <h4>问题1：不同浏览器的标签默认的外边距（margin）和内边距（padding）不同</h4>
+        <p>解决方案：*{margin:0;padding:0;}</p>
+        <p>备注：不建议通配符*，css遍历也是有代价的（虽说现代浏览器可以忽略）。可以写全body,p,html,h1,h2,h3...{margin:0;padding:0;}</p>
+        <h4> 问题2：块属性标签float后，又有横行的margin情况下，在IE6显示margin比设置的大 </h4>
+        <p>解决方案：在float的标签样式控制中加入 display:inline;将其转化为行内属性</p>
+        <p>备注：我们最常用的就是div+CSS布局了，而div就是一个典型的块属性标签，横向布局的时候我们通常都是用div+float实现的，横向的间距设置如果用margin实现，这就是一个必然会碰到的兼容性问题。</p>
+        <h4> <strong> <strong>问题3：</strong> </strong> 图片默认有间距 </h4>
+        <p>解决方案：使用float属性为img布局，上下间距可以设置vertical-align: middle;或者设置成display:block。</p>
+        <p>备注：因为img标签是行内属性标签，所以只要不超出容器宽度，img标签都会排在一行里，但是部分浏览器的img标签之间会有个间距。去掉这个间距使用float是正道。</p>
+        <h4> <strong> <strong> <strong>问题4：</strong> </strong> </strong> CSS透明问题 </h4>
+        <p>解决方案：</p>
+        <p>IE：filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60)。FF：opacity:0.6。 </p>
+        <p>备注：最好两个都写，并将opacity属性放在下面。</p>
+        <h4> <strong> <strong> <strong> <strong>问题5：</strong> </strong> </strong> </strong> CSS圆角问题 </h4>
+        <p>解决方案：ie7以下版本不支持圆角,其他浏览器都是加前缀例：FF（-moz-）</p>
+        <p>备注：随着浏览器更新换代，圆角属性都会被支持的；ie6-7,可以用三角形实现（有兴趣的可以研究研究）</p>
+        <p> <img src="http://img0.tuicool.com/yQFBnaV.png!web" class="alignCenter"> </p>
+        <h2>5、CSS3都有哪些新内容。</h2>
+        <h4>css3边框：</h4>
+        <ul>
+            <li>border-radius：圆角边框</li>
+            <li>box-shadow：边框阴影</li>
+            <li>border-image：边框图片</li>
+        </ul>
+        <h4>css3背景：</h4>
+        <ul>
+            <li>background-size：图片大小</li>
+            <li>background-origin：图片定位区域</li>
+        </ul>
+        <h4>css3文本效果：</h4>
+        <ul>
+            <li>text-shadow：文本阴影</li>
+            <li>word-wrap：自动换行</li>
+        </ul>
+        <h4>css3字体：</h4>
+        <ul>
+            <li> <strong> <strong>@font-face：定义字体</strong> </strong> </li>
+        </ul>
+        <h4>css32D转换：</h4>
+        <ul>
+            <li>translate()：当前位置移动</li>
+            <li>rotate()：顺时针旋转角度</li>
+            <li>scale()：元素尺寸放大缩小</li>
+            <li>skew()：元素翻转</li>
+            <li>matrix()：2D转换的组合</li>
+        </ul>
+        <h4>css33D转换：</h4>
+        <ul>
+            <li>rotateX()：围绕其 X 轴旋转</li>
+            <li>rotateY():围绕其 Y 轴旋转</li>
+        </ul>
+        <h4>css3过渡：</h4>
+        <ul>
+            <li>transition：hover过渡</li>
+        </ul>
+        <h4>css3动画：</h4>
+        <pre class="hljs scss"><span class="hljs-attribute">animation</span>：动画设置</pre>
+        <pre class="hljs less"><span class="hljs-keyword">@keyframes</span>：创建动画规则</pre>
+        <h4>css3多列：</h4>
+        <ul>
+            <li>column-count：分隔的列数</li>
+            <li>column-gap：列之间的间隔</li>
+            <li>column-rule：列之间的宽度、样式和颜色</li>
+        </ul>
+        <h4>css3用户界面：</h4>
+        <ul>
+            <li>resize：是否可由用户调整元素尺寸</li>
+            <li>box-sizing：可以改变盒子模型</li>
+            <li>outline-offset：超出边框边缘的位置绘制轮廓</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
