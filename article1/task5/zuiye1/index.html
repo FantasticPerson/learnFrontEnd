@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="check()">按钮</button>
+    <script>
+        function check(){
+            var text = document.getElementsByTagName('input')[0];
+            var number = text.value,tNumber=null;
+            if(number) {
+                tNumber = Math.floor(Number(number));
+            }
+            if((tNumber || tNumber === 0) && tNumber >= 0 && tNumber <= 100){
+                var result;
+                if(tNumber === 0){
+                    result = 1;
+                } else {
+                    result = Math.ceil(tNumber / 10);
+                }
+                alert("成绩等级为："+(11-result));
+            } else {
+                alert("输入的成绩不对劲")
+            }
+        }
+    </script>
+</body>
+</html>

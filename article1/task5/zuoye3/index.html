@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <span>输入一串字母:</span>
+    <input type="text">
+    <button onclick="oncheck()">检查</button>
+    <script>
+        function oncheck(){
+            var text = (document.getElementsByTagName('input')[0].value).trim();
+            var arr = text.split('');
+            var indexArr = [];
+            var posInfoArr = [];
+            arr.map(function(item,index){
+                if(indexArr.indexOf(item) < 0){
+                    indexArr.push(item);
+                    posInfoArr.push({char:item,posInfo:[]})
+                }
+                var itemIndex = indexArr.indexOf(item);
+                posInfoArr[itemIndex].posInfo.push(index);
+            });
+            posInfoArr.sort(function(item1,item2){
+                return item2.posInfo.length - item1.posInfo.length;
+            });
+            alert("所有字母的位置信息："+JSON.stringify(posInfoArr) + '\n\n\n' + '出现次数最多的字母：'+ posInfoArr[0].char + '；出现次数：'+posInfoArr[0].posInfo.length+';出现的位置分布：'+ posInfoArr[0].posInfo);
+
+        }
+    </script>
+</body>
+</html>
