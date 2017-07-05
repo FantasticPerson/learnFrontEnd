@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var table = document.createElement('table');
+        table.border=1;
+        table.width="900px";
+        var tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+        var tr1 = document.createElement('tr');
+        tbody.appendChild(tr1);
+        var td1 = document.createElement('td');
+        td1.appendChild(document.createTextNode("dsfdf"));
+        tr1.appendChild(td1);
+
+        var td2 = document.createElement('td');
+        td2.appendChild(document.createTextNode("dsfdf"));
+        tr1.appendChild(td2);
+
+        var tr2 = document.createElement('tr');
+        tbody.appendChild(tr2);
+        var td3 = document.createElement('td');
+        td3.appendChild(document.createTextNode("dsfdf"));
+        tr2.appendChild(td3);
+
+        var td4 = document.createElement('td');
+        td4.appendChild(document.createTextNode("dsfdf"));
+        tr2.appendChild(td4);
+
+        document.body.appendChild(table);
+        //table 属性
+        //cells 所有单元格 td
+        //rows 行数
+        //cols 列数
+
+        tbody.insertRow(0)//插入行
+        tbody.rows[0].insertCell(0)//插入单元格
+        tbody.rows[0].cells[0].appendChild(document.createTextNode("1234"));
+
+    </script>
+</body>
+</html>
