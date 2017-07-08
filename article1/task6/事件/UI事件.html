@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onscroll="scrollPage()" onresize="resizePage()" onload="loadPage()" onunload="alert('unload')">
+    <!--load 事件-->
+    <!--unload 事件-->
+    <!--select 事件-->
+    <!--resize 事件-->
+    <!--scroll 事件-->
+
+    <img src="" onload="alert('图片加载完毕')">
+    <input type="text" name="" onselect="getSelect(this)">
+    <script>
+        function loadPage(){
+            alert('加载完毕');
+        }
+        function getSelect(obj){
+            alert(obj.value);
+        }
+        function resizePage(){
+//            alert('页面已经被调整过了')
+        }
+        function scrollPage(){
+            alert(document.body.scrollTop)
+        }
+    </script>
+</body>
+</html>

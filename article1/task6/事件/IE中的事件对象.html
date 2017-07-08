@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--event.srcElement 事件目标-->
+<!--event.type 事件类型-->
+<!--event.returnValue false 取消事件的默认行为-->
+<!--event.cancelBubble true 取消冒泡-->
+<div id ="myDiv">
+    <button id="muBtn" onclick="alert(event.type)">点击</button>
+</div>
+<a href="https://www.baidu.com" id="myA">百度</a>
+<script>
+    var btn = document.getElementById('myBtn');
+    btn.onclick=function(){
+        alert(window.event.type);
+    };
+    btn.attachEvent('onclick',function(){
+        alert(window.event.srcElement);
+    })
+    btn.attachEvent('onclick',function(event){
+        alert(event.srcElement);
+    })
+
+    var a = document.getElementById('myA');
+    a.onclick = function(){
+        alert('clicked');
+        window.event.cancelBubble = true;
+        window.event.returnValue = false;
+    }
+</script>
+</body>
+</html>

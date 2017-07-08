@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function test(num){
+            //值传递
+            var num = num+1;
+            return num;
+        }
+        var num = 1;
+        test(num);
+
+
+        function test1(obj){
+            //引用传递
+            obj.age = "20";
+            console.log(obj);
+        }
+        var obj={
+            name:"xiaoming"
+        }
+        test1(obj)
+
+        //js对象，object array 按引用传递
+        //string number boolean 按值传递
+    </script>
+</body>
+</html>

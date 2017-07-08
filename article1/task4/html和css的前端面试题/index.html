@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html和css前端面试题</title>
+</head>
+<body>
+        <h3>Doctype是什么？如何触发严格模式与混杂模式模式？区分它们有何意义？</h3>
+        <p>
+            Doctype是document type（文档类型）的简写，是用来说明所用的XHTML或HTML是什么版本的。XHTML1.0 提供了三种DTD声明可供选择，分别是：
+            1、过渡的(Transitional，也叫混杂模式)：要求比较宽松，允许继续使用HTML4.01的标识，完整声明为
+            <br>
+            &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-tranisitional.dtd&quot;&gt;
+            <br>
+            2、严格的(Strict)：要求严格的DTD，不能使用任何表现层的标识和属性，完整声明为
+            <br>
+            &lt;!DOCTYPE html PUBLIC &quot;-W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+            <br>
+            3、框架的(Frameset)：专门针对框架页面设计使用的DTD，如果页面中包含有框架，可以采用DTD，完整声明为
+            <br>
+            &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;
+            <br>
+            定义成相应的声明就可以触发相应的模式。
+            区分的意义是为了最终能达到数据与表现相分离的目地。
+        </p>
+        <h3>行内元素和块级元素各有哪些？</h3>
+        <p>
+            行内元素会再一条直线上，是在同一行的。如   我是行内元素span   我是行内元素a
+            <br>
+            块级元素会各占一行。如  我是块级元素div 我是块级元素p
+            <br>
+            行内元素主要有：&lt;span&gt;、&lt;a&gt;、&lt;b&gt;、&lt;br&gt;、&lt;button&gt;、&lt;strong&gt;、&lt;textarea&gt;、&lt;select&gt;
+            <br>
+            块级元素主要有：&lt;div&gt;、、&lt;li&gt;、&lt;p&gt;、&lt;fieldset&gt;、&lt;form&gt;、&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;、&lt;h6&gt;、&lt;hr&gt;、&lt;iframe&gt;、&lt;ol&gt;、&lt;pre&gt;、&lt;table&gt;、&lt;tr&gt;、&lt;td&gt;
+            <br>
+            行内元素可以通过display:block转为块级元素。另外块级元素的margin和padding都正常，行内元素左右maring和左右padding正常，上下不识别，也就是说不能通过margin-top和padding-top来改变行高。
+        </p>
+        <h3>CSS的盒模型？</h3>
+        <p>
+        　　CSS盒模型：网页设计中的每个元素都是长方形的盒子，如下图所示
+            <br>
+        　　<img src="http://pic002.cnblogs.com/images/2012/389001/2012070817214035.png" alt="" />
+            <br>
+        　　Margin 比较特别，它不会影响盒子本身的大小，但是它会影响和盒子有关的其他内容。盒子本身的大小是这样计算的：
+            <br>
+        　　width(即MSIE中的offsetWidth)：width + padding-left + padding-right + border-left + border-right
+            <br>
+        　　height(即MSIE中的offsetHeight)：height + padding-top + padding-bottom + border-top + border-bottom
+        </p>
+        <h3>CSS引入的方式有哪些?</h3>
+        <p>
+        　　CSS与HTML文档结合的4中方法：
+            <br>
+        　　1、使用&lt;link&gt;元素链接到外部的样式文件
+            <br>
+        　　2、在&lt;head&gt;元素中使用"style"元素来指定
+            <br>
+        　　3、使用CSS "@import"标记来导入样式表单
+            <br>
+        　　4、在&lt;body&gt;内部的元素中使用"style"属性来定义样式
+        </p>
+
+        <h3>link和@import的区别是?</h3>
+        <p>
+        　　本质上，这两种方式都是为了加载CSS文件，但还是存在着细微的差别。
+            <br>
+            1、老祖宗的差别。link属于XHTML标签，而@import完全是CSS提供的一种方式。link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS了。
+        　　<br>
+            2、加载顺序的差别。当一个页面被加载的时候（就是被浏览者浏览的时候），link引用的CSS会同时被加载，而@import引用的CSS会等到页面全部被下载完再被加载。
+        　　<br>
+            3、兼容性的差别。由于@import是CSS2.1提出的所以老的浏览器不支持，@import只有在IE5以上的才能识别，而link标签无此问题。
+        　　<br>
+            4、使用dom控制样式时的差别。当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的。
+        </p>
+
+
+        <h3>CSS选择符有哪些？</h3>
+        <p>
+        　　CSS选择符主要有以下10类：
+            <br>
+        　　1、通配选择符：*{margin:0px;}
+            <br>
+        　　2、类型选择符：a{text-decoration:none;}
+            <br>
+        　　3、属性选择符：input[type="button"]{padding:5px;}
+            <br>
+        　　4、包含选择符：div.code a{text-decoration:none;}
+            <br>
+        　　5、子对象选择符：ul.test>li{font-size:14px;}
+            <br>
+        　　6、ID选择符：#test {color:red;}
+            <br>
+        　　7、类选择符：.test{color:red;}
+            <br>
+        　　8、选择符分组：body,ul,li{margin:0px;}
+            <br>
+        　　9、伪类及伪对象选择符：div:first-letter{font-size:16px;}、a.test:hover{text-decoration:underline;}
+            <br>
+        　　10、相邻选择符：li+li{font-weight:bold;}
+        </p>
+
+
+        <h3>哪些属性可以继承？</h3>
+        <p>
+        　　CSS可以继承的属性有：
+            <br>
+        　　1、文字相关：font-family、font-size、font-style、font-variant、font-weight、font、letter-spacing、line-height、text-align、text-indent、text-transform、word-spacing
+        　　<br>
+            2、列表相关：list-style-image、list-style-position、list-style-type、list-style
+        　　<br>
+            3、颜色相关:color
+        　　<br>
+            4、透明度：opacity(opacity的继承有问题，子元素会继承祖元素的opacity，但是无法更改。)
+        　　<br>
+            另外，font-size继承的是父元素的大小，而不是比例。line-height当父元素是百分比或px值的时候，子元素跟父元素相同，当父元素是normal或数字的时候，子元素的line-height是子元素的字体大小乘以数字。
+        　　<br>
+            关于继承性参考了博客：、&lt;b&gt;、、&lt;br&gt;、&lt;button&gt;、&lt;strong&gt;、&lt;textarea&gt;、&lt;select&gt;
+        　　<br>
+            块级元素主要有：&lt;div&gt;、、&lt;li&gt;、&lt;p&gt;、&lt;fieldset&gt;、&lt;form&gt;、&lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt;、&lt;h4&gt;、&lt;h5&gt;、&lt;h6&gt;、&lt;hr&gt;、&lt;iframe&gt;、&lt;ol&gt;、&lt;pre&gt;、&lt;table&gt;、&lt;tr&gt;、&lt;td&gt;
+        　　<br>
+            行内元素可以通过display:block转为块级元素。另外块级元素的margin和padding都正常，行内元素左右maring和左右padding正常，上下不识别，也就是说不能通过margin-top和padding-top来改变行高。
+        </p>
+        <h3>优先级算法如何计算？</h3>
+        <p>
+        　　重要性和来源的优先级排序从低到高是：
+            <br>
+        　　1、浏览器默认样式
+        　　<br>
+            2、用户在浏览器中定义的普通样式（normal规则，不带important规则）
+        　　<br>
+            3、开发人员定义的普通样式（ normal规则，不带important规则）
+        　　<br>
+            4、开发人员定义特殊样式（带important规则）
+        　　<br>
+            5、用户在浏览器中定义特殊样式（带important规则）
+        　　<br>
+            另外还有一些原则：
+        　　<br>
+            1、相同的样式在CSS规则后添加了!important的优先于没有添加的。
+        　　<br>
+            2、CSS规则在文档中出现的顺序后面定义的的优先于前面定义的。
+        　　<br>
+            3、加了!important的优先于内联样式。
+        　　<br>
+            4、内联样式优先于用link引入的样式和页面上&lt;style&gt;里的样式。
+        </p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button id="myBtn">点击</button>
+    <script>
+        var btn = document.getElementById('myBtn');
+        function addHandler(){
+            if(btn.addEventListener) {
+                btn.addEventListener("click",clickMe,false);
+            } else if(btn.attachEvent){
+                btn.attachEvent("onclick",clickMe);
+            } else {
+                btn.onclick = clickMe;
+            }
+        }
+        function removeHandler(){
+            if(btn.removeEventListener){
+                btn.removeEventListener("click",clickMe,false)
+            } else if(btn.detachEvent){
+                btn.detachEvent("onclick",clickMe);
+            } else {
+                btn.onclick = null;
+            }
+        }
+        addHandler();
+        removeHandler();
+        function clickMe(){
+            alert("click me");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--event.preventDefault 取消事件的默认行为-->
+<!--event.stopPropagation 取消事件的进一步捕获或冒泡-->
+<div id="myDiv">
+    <button onclick="alert(event.target)" id="myBtn">点击</button>
+</div>
+<a href="https://www.baidu.com" id="myA">百度</a>
+<script>
+    var btn = document.getElementById('myBtn');
+    btn.onclick = function (event){
+        alert(event.type);
+        alert(event.target);
+        event.stopPropagation();//阻止事件冒泡
+    };
+    var myDiv = document.getElementById('myDiv');
+    myDiv.addEventListener('click',function(){
+        alert('div')
+    },false);
+    btn.addEventListener("click",function(){
+        alert(event.type);
+    },false);
+
+    var myA = document.getElementById("myA");
+    myA.onclick = function(event){
+        event.preventDefault();
+    }
+</script>
+</body>
+</html>

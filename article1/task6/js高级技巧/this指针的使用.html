@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="button"  style="color: red" id="myBtn" value="点击">
+    <script>
+//        function test(){
+//            alert(this.m);
+//        }
+//        test();
+        this.m = 1000;
+        var obj = {
+            m:100,
+            test:function(){
+                return function() {
+                    alert(this.m);
+                }
+            }
+        };
+        obj.test();
+        (obj.test())();
+
+        var myBtn = document.getElementById('myBtn');
+
+        function test1(){
+            alert(this.style.color);
+        }
+        myBtn.onclick = test1;
+        //闭包的this
+
+        function test3(){
+            this.a=1;
+        }
+        test3.prototype.geta= function(){
+            return this.a;
+        }
+        var p = test3;
+        console.log(p.geta())//1
+
+        function test4(){
+            this.a = 1;
+        }
+        test4.prototype.a=1000;
+        var pp =new test4();
+        console.log(p.a);
+    </script>
+</body>
+</html>

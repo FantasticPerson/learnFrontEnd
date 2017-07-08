@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button id="btnDom0">点击</button>
+    <script>
+        var btn = document.getElementById('btnDom0');
+        btn.onclick = function(){
+            alert('Hello world!');
+            alert(this.id);
+            btn.onclick = null;
+        }
+    </script>
+</body>
+</html>

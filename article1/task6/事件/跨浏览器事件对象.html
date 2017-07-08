@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function getEvent(event){
+            return event || window.event;
+        }
+        function getTarget(event){
+            return event.target || event.srcElement;
+        }
+        function preventDefault(event){
+            if(event.preventDefault){
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        }
+        function stopPropagation(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            } else {
+                event.cancelBubble = true;
+            }
+        }
+    </script>
+</body>
+</html>

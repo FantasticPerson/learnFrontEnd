@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--attachEvent detachEvent-->
+    <!--支持IE 和 opera-->
+    <div id="myDiv">
+        <button id="myBtn">点击</button>
+    </div>
+    <script>
+        var btn = document.getElementById('myBtn');
+        btn.attachEvent("onclick",sayHi);
+        myBtn.detachEvent("onclick",sayHi);
+        function sayHi(){
+            alert('Hello，'+(this === window));
+        }
+    </script>
+</body>
+</html>

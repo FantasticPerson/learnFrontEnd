@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s" id="form1">
+        <input type="text" name="word">
+        <input type="button" value="提交" onclick="toSubmit()">
+        <input type="button" value="重置" onclick="toReset()">
+
+    </form>
+    <script>
+        function toSubmit(){
+            document.getElementById('form1').submit();
+        }
+        function toReset(){
+            document.getElementById('form1').reset();
+        }
+    </script>
+</body>
+</html>

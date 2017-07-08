@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--addEventListener(事件名，函数，布尔值) 布尔值为false 使用冒泡-->
+    <div id="myDiv">
+        <button id="MuBtn">点击</button>
+    </div>
+    <script>
+        var myBtn = document.getElementById('MyBtn');
+//        myBtn.addEventListener("click",function(){//可以绑定多个
+//            alert(this.id)
+//        },false)
+        myBtn.addEventListener("click",helloWord,false);
+//        myBtn.removeEventListener("click",helloWord,false);
+
+        function helloWord(){
+            alert("hello world")
+        }
+        var myDiv = document.getElementById('myDiv');
+        myDiv.addEventListener('click',sayHi,false);
+        function sayHi(){
+            alert('Hello button!');
+        }
+//        false 先处理button true 先处理 div
+    </script>
+</body>
+</html>

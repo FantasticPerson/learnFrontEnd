@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+//        var a = 1;
+//        alert(window.a);
+        //call && apply 都是借人家的方法
+        // call 第一个是要操作的对象 第二个是传递给原来方法的参数
+        function test(){
+
+        }
+        var p={
+            me:function(msg,msg2){
+                alert(msg+msg2)
+            }
+        };
+        p.me.call(test,'2','斤苹果');
+        p.me.apply(test,['2','斤苹果']);
+
+        var a={a:1};
+        [].push.call(a,2);
+        //requestAnimationFrame
+    </script>
+</body>
+</html>
