@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link href="assets/style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="assets/js/app1.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">0</div>
+       <div>
+           <div class="item">删除</div>
+           <div class="item item-2x">清屏</div>
+           <div class="item">+/-</div>
+           <div class="item">1/x</div>
+       </div>
+        <div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">÷</div>
+            <div class="item">%</div>
+        </div>
+        <div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">X</div>
+            <div class="item">√</div>
+        </div>
+        <div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">-</div>
+            <div class="item item-2y">=</div>
+        </div>
+        <div style="margin-top: -50px">
+            <div class="item item-2x">0</div>
+            <div class="item">.</div>
+            <div class="item">+</div>
+        </div>
+    </div>
+    <script>
+        document.getElementsByClassName = function(className, element){
+            var children = (element || document).getElementsByTagName('*');
+            var elements = new Array();
+            for (var i=0; i<children.length; i++){
+                var child = children[i];
+                var classNames = child.className.split(' ');
+                for (var j=0; j<classNames.length; j++){
+                    if (classNames[j] == className){
+                        elements.push(child);
+                        break;
+                    }
+                }
+            }
+            return elements;
+        };
+        var items = document.getElementsByClassName('item');
+        for(var i=0;i<items.length;i++){
+            if(items[i].addEventListener){
+                items[i].addEventListener('click',onItemClick);
+            } else {
+                items[i].attachEvent("onclick", onItemClick);
+            }
+
+        }
+    </script>
+</body>
+</html>
