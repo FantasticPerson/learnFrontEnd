@@ -2584,7 +2584,7 @@ function InkRippleService($window, $timeout) {
       return elem;
 
       /**
-       * Creates the ripple element with the provided css
+       * Creates the ripple element with the provided css方法
        *
        * @param {object} css properties to be applied
        *
@@ -2628,7 +2628,7 @@ function InkRippleService($window, $timeout) {
       }
 
       /**
-       * Generates the ripple css
+       * Generates the ripple css方法
        *
        * @param {number} the diameter of the ripple
        * @param {number} the left cursor offset
@@ -3623,7 +3623,7 @@ function generateThemes($injector) {
           var styleStrings = parseRules(theme, colorType, rulesByType[colorType]);
           while (styleStrings.length) {
             var style = document.createElement('style');
-                style.setAttribute('type', 'text/css');
+                style.setAttribute('type', 'text/css方法');
             style.appendChild(document.createTextNode(styleStrings.shift()));
             head.insertBefore(style, firstChild);
           }
@@ -3908,7 +3908,7 @@ function MdBottomSheetDirective() {
 function MdBottomSheetProvider($$interimElementProvider) {
   // how fast we need to flick down to close the sheet, pixels/ms
   var CLOSING_VELOCITY = 0.5;
-  var PADDING = 80; // same as css
+  var PADDING = 80; // same as css方法
 
   bottomSheetDefaults.$inject = ["$animate", "$mdConstant", "$mdUtil", "$timeout", "$compile", "$mdTheming", "$mdBottomSheet", "$rootElement", "$mdGesture"];
   return $$interimElementProvider('$mdBottomSheet')
@@ -5716,7 +5716,7 @@ function GridLayoutFactory($mdUtil) {
         },
 
         /**
-         * Default animator simply sets the element.css( <styles> ). An alternate
+         * Default animator simply sets the element.css方法( <styles> ). An alternate
          * animator can be provided as an argument. The function has the following
          * signature:
          *
@@ -5746,7 +5746,7 @@ function GridLayoutFactory($mdUtil) {
     }
 
   /**
-   * Default Gridlist animator simple sets the css for each element;
+   * Default Gridlist animator simple sets the css方法 for each element;
    * NOTE: any transitions effects must be manually set in the CSS.
    * e.g.
    *
@@ -10723,7 +10723,7 @@ function MdTooltipDirective($timeout, $window, $$rAF, $document, $mdUtil, $mdThe
       tooltipParent.append(element);
 
       // Check if we should display it or not.
-      // This handles hide-* and show-* along with any user defined css
+      // This handles hide-* and show-* along with any user defined css方法
       var computedStyles = $window.getComputedStyle(element[0]);
       if (angular.isDefined(computedStyles.display) && computedStyles.display == 'none') {
         element.detach();
