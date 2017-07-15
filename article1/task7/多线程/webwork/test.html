@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            cursor:pointer;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="test"></div>
+<script>
+
+    /*var worker = new Worker("task.js");
+     worker.onmessage = function(event){
+     console.log(event.data);
+     }
+     worker.postMessage(1000);*/
+
+    //sharedworker
+    var worker = new SharedWorker('task2.js');
+    worker.port.addEventListener('message',function(e){
+        console.log(e.data);
+    });
+    worker.port.postMessage('100');
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Concurrent.Thread.js"></script>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            cursor:pointer;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script>
+        $('#test').click(function(){
+            alert(1);
+        });
+        Concurrent.Thread.create(function(){
+            var i=0;
+            while(1){
+                console.log(i++);
+            }
+        })
+        /*下面有一段特别复杂的函数*/
+
+    </script>
+</body>
+</html>
