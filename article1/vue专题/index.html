@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <!--v-if-->
+        <!--绑定数据-->
+        <div class="test">{{obj}}</div>
+        <!--绑定属性-->
+        <img v-bind:src="imgs">
+        <div class="test2" v-if="a">{{a}}</div>
+        <div class="test2" v-else="a">{{a}}</div>
+        <!--v-show false隐藏 true显示-->
+        <div v-show="a">{{a}}</div>
+        <!--绑定表单元素-->
+        <input type="text" v-model="a">
+        <!--v-on绑定事件-->
+        <button v-on:click="a=!a">click</button>
+        <!--阻止默认事件的用法 prevent stop-->
+        <a href="https://www.baidu.com" v-on:click.prevent="a=!a">是的撒的撒旦</a>
+        <ul>
+            <li v-for="animal in zoo">
+                {{animal}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(a1,index) in zoo">
+                {{a1}}
+            </li>
+        </ul>
+        <!--绑定文本-->
+        <h1 v-text="text"></h1>
+        <!--v-html-->
+        <div v-html="word"></div>
+
+
+    </div>
+    <script>
+        window.onload = function(){
+            var vue = new Vue({
+                el:'#box',
+                data:{
+                    imgs:'sss',
+                    obj:'222',
+                    a:false,
+                    zoo:[
+                        '1',
+                        '2',
+                        '3'
+                    ],
+                    word:'<p>1234</p>',
+                    text:"1234"
+                },
+                methods: {
+                    click: function () {
+                        alert(1);
+                    }
+                }
+
+            })
+        }
+    </script>
+</body>
+</html>
