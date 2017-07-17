@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" src="vue.js"></script>
+    <style>
+        .size{
+            font-size: 20px;
+        }
+        .red{
+            background-color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .big{
+            font-size: 30px;
+        }
+        .small{
+            font-size: 10px;
+        }
+
+        .gate-enter,.gate-leave-active{
+            opacity: 0;
+            transform: rotateY(45deg);
+            transform-origin: left center;
+        }
+        .gate-enter-active,.gate-leave-active{
+            transition:all 2s ease;
+        }
+    </style>
 </head>
 <body>
     <div id="box">
         <!--v-if-->
         <!--绑定数据-->
         <div class="test">{{obj}}</div>
-        <!--绑定属性-->
+        <!--绑定属性  v-bind可以省略-->
         <img v-bind:src="imgs">
         <div class="test2" v-if="a">{{a}}</div>
         <div class="test2" v-else="a">{{a}}</div>
@@ -18,7 +44,7 @@
         <div v-show="a">{{a}}</div>
         <!--绑定表单元素-->
         <input type="text" v-model="a">
-        <!--v-on绑定事件-->
+        <!--v-on绑定事件 可以简写为@-->
         <button v-on:click="a=!a">click</button>
         <!--阻止默认事件的用法 prevent stop-->
         <a href="https://www.baidu.com" v-on:click.prevent="a=!a">是的撒的撒旦</a>
@@ -36,7 +62,46 @@
         <h1 v-text="text"></h1>
         <!--v-html-->
         <div v-html="word"></div>
+        <div>{{fullName}}</div>
+        <div>{{familyName+name}}</div>
+        <input type="text" v-model="familyName">
+        <input type="text" v-model="name">
+        <input type="text" v-model="getFullName">
+        <!--filter的用法  computed一定程度上可以代替filter-->
+        <div>{{imgs | currency}}</div>
 
+        <!--样式的绑定  true添加 false不添加-->
+        <div :class="{'size':state11,'red':state1,'yellow':state2}">1234</div>
+        <button @click="state2=!state2">点击</button>
+
+        <div :class="changeState">1234</div>
+        <div :class="[big,red]">1234</div>
+        <div :class="[style?red:big,yellow]">1234</div>
+        <button @click="style=!style">click</button>
+
+        <!--动画  必须要有显示隐藏的效果-->
+        <transition name="gate">
+            <div v-if="slow" :class="[red,big]">1234</div>
+        </transition>
+        <button @click="slow=!slow">点击</button>
+        <!--自定义-->
+        <transition name="animation" enter-active-calss="animated flipInx" leave-active-class="animated flipOutY">
+            <div v-if="slow" :class="[red,big]">
+                <h1>旋转吧</h1>
+            </div>
+        </transition>
+
+        <!--进入时的渲染-->
+        <transition appear appear-class="enter" appear-active-class="entered">
+            <div v-if="show" :class="[red,big]">1234</div>
+        </transition>
+
+        <!--绑定多个元素的动画 使用 transition-group-->
+        <transition-group name="animation" enter-active-calss="animated flipInx" leave-active-class="animated flipOutY" tag="ul">
+            <li v-for="item in zoo" v-bind:key="item">
+                {{item}}
+            </li>
+        </transition-group>
 
     </div>
     <script>
@@ -53,14 +118,49 @@
                         '3'
                     ],
                     word:'<p>1234</p>',
-                    text:"1234"
+                    text:"1234",
+                    familyName:'li',
+                    name:'lily',
+
+                    state11:true,
+                    state1:false,
+                    state2:true,
+                    changeState:{
+                        'big':false,
+                        'small':true
+                    },
+                    red:'red',
+                    big:'big',
+                    yellow:'yellow',
+                    style:false,
+                    slow:false
                 },
                 methods: {
                     click: function () {
                         alert(1);
                     }
-                }
+                },
+                computed:{//计算属性
+                    fullName:function(){
+                        return this.familyName + this.name;
+                    },
+                    getFullName:{
+                        get:function(){
+                            return this.familyName + ' '+this.name
+                        },
+                        set:function(val){
+                            var full = val.split(' ');
+                            this.familyName = full[0];
+                            this.name = full[1];
+                        }
+                    },
 
+                },
+                filters:{
+                    currency:function(val){
+                        return '￥'+val;
+                    }
+                }
             })
         }
     </script>
