@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css和文档</title>
+</head>
+<body>
+    <h1>元素</h1>
+    <p><em>块级元素不能嵌套在行内元素中</em></p>
+    <p><em>title是link的一个属性</em></p>
+    <p><em>title是link的一个属性</em></p>
+    <h1>候选样式表</h1>
+    <p>rel的属性置为alternate stylesheet</p>
+    <link rel="stylesheet" href="sheet1.css" title="default">
+    <link rel="alternate" href="big.css" title="big text">
+    <link rel="alternate" href="small.css" title="small text">
+    <p>然后浏览器器中会有切换的功能</p>
+    <p>如果没有指定title，样式表始终用于文档显示</p>
+
+    @import url('base.css')//必须放在其他css规则前面 否则可能不起作用
+    //@import 无法指定候选样式表
+    //应用一种或多种媒体
+    @import url('base.css') all;
+    @import url('base.css') screen;
+    @import url('base.css') projection,print;
+
+    <p>为了让老式浏览器也能识别你的样式表，可以将 声明包含在一个注释标记中</p>
+    <style><!--
+        h1{
+            color:red;
+        }
+    -->
+    </style>
+
+    //内联样式表中不能放@import
+</html>
