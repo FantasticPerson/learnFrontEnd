@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快男</title>
+    <script type="text/javascript" src="../vue.js"></script>
+    <link type="text/css" rel="stylesheet" href="../animate.css">
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrapper{
+            width: 1200px;
+            min-width: 1000px;
+            margin:0 auto;
+            background-color: #ccc;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        h1{
+            text-align: center;
+            color:#363636
+        }
+        .cons{
+            width: 1100px;
+            margin:10px auto;
+        }
+        .cf:after{
+            display: block;
+            content:'';
+            clear:both
+        }
+        .avatar{
+            position: relative;
+            width: 200px;
+            /*height:;*/
+        }
+        .avatar img{
+            display: block;
+            width:180px;
+            height: 200px;
+            background-color: #999;
+            border: 2px solid #aaa;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        .avatar span{
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            display: inline-block;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 16px;
+            background-color: #FFF;
+            color:#ffa90f;
+            border-radius: 3px;
+        }
+        ul li{
+            float: left;
+            margin:0 36px;
+        }
+        .fa{
+            position: relative;
+            overflow: hidden;
+        }
+        .son{
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .box{
+            width: 180px;
+            height: 200px;
+            background: rgba(247,244,218,0.9);
+        }
+        .box p{
+            padding: 20px 15px;
+            color:#383838;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="box">
+        <div class="header">
+            <h1>快男2017投票</h1>
+        </div>
+        <div class="cons">
+            <ul class="cf">
+                <infos v-for="item in superBoy" :datas="item">
+                    <!--<h2>你好</h2>-->
+                    <introduce class="son" :introduce="item"></introduce>
+                </infos>
+            </ul>
+        </div>
+    </div>
+</body>
+<template id="info">
+    <div>
+        <li class="fa">
+            <div class="avatar">
+                <img :src="datas.avatar">
+                <span>{{votes}}</span>
+            </div>
+            <p>{{datas.name}}</p>
+            <p>
+                <span>{{datas.leader}}</span>
+                <span>{{datas.region}}</span>
+            </p>
+            <button v-show='show1' class="btnd" @click="up">顶</button>
+            <button v-show='show2' class="btnc" @click="down">踩</button>
+
+            <button class="btnout" @click="datas.show=!datas.show">个人档案</button>
+            <!--槽口功能 用来显示组件的子元素-->
+            <slot>我是一个多余的槽口</slot>
+        </li>
+    </div>
+</template>
+<template id="board">
+    <transition name="animation" enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
+        <div v-if="introduce.show" class="box">
+            <p>
+                {{introduce.introduce}}
+            </p>
+        </div>
+    </transition>
+</template>
+<script>
+    new Vue({
+        el:'#box',
+        components:{
+            infos:{
+                props:['datas'],
+                template:'#info',
+                data:function(){
+                    return {
+                        state1:false,
+                        state2:false,
+                        show1:true,
+                        show2:true
+                    }
+                },
+                methods:{
+                    up:function(){
+                        this.state1 = true;
+                        this.state2 = false;
+                        this.show1=true;
+                        this.show2=false;
+                    },
+                    down:function(){
+                        this.state1 = false;
+                        this.state2 = true;
+                        this.show1 = false;
+                        this.show2=true;
+                    },
+                    show:function(){
+
+                    }
+                },
+                computed:{
+                    votes:function () {
+                        if(this.state1){
+                            return this.datas.votes+1
+                        }
+                        if(this.state2){
+                            return this.datas.votes-1;
+                        }
+                        return this.datas.votes;
+                    }
+                }
+            },
+            "introduce":{
+                props:['introduce'],
+                template:'#board'
+            }
+        },
+        data:{
+            superBoy:[
+                {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }, {
+                    "name":'哈哈',
+                    "regin":'华中',
+                    "leader":'间隔',
+                    "avater":'',
+                    "votes":5678,
+                    "introduce":'sfsfsdfsdsfsd',
+                    "show":false
+                }
+            ]
+        }
+    });
+</script>
+</html>
