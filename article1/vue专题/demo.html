@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="vue.js"></script>
+    <style type="text/css">
+        .chice{
+            color:#ff890f;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <kuai-nan v-for="post in postdata" :post="post" :key="post.id"></kuai-nan>
+        </ul>
+    </div>
+    <template id="vote">
+        <div>
+            <li>
+                <i v-show="state01" class="up" @click="upvote" :class="{chice:upbtn}">支持</i>
+                <span>{{votes}}</span>
+                <i v-show="state02" class="down" @click="downvote" :class="{chice:downbtn}">反对</i>
+                <a>{{post.title}}</a>
+            </li>
+        </div>
+    </template>
+    <script type="text/javascript">
+        Vue.component('kuaiNan',{
+            template:"#vote",
+            props:['post'],
+            data:function(){
+                return {
+                    upbtn:false,
+                    downbtn:false,
+                    state01:true,
+                    state02:true
+                }
+            },
+            methods:{
+                upvote:function(){
+                    this.upbtn = !this.upbtn;
+                    this.downbtn=false;
+                    this.state02=!this.state02;
+                },
+                downvote:function(){
+                    this.upbtn=false;
+                    this.downbtn = !this.downbtn;
+                    this.state01 = !this.state01;
+                },
+            },
+            computed:{
+                votes:function () {
+                    if(this.upbtn){
+                        return this.post.votes+1;
+                    }else if(this.downbtn){
+                        return this.post.votes-1;
+                    }else {
+                        return this.post.votes;
+                    }
+                }
+            }
+        })
+        var vm = new Vue({
+            el:'#box',
+            data:{
+                postdata:[
+                    {
+                        title:'我是快男小明',
+                        votes:18
+                    },
+                    {
+                        title:'我是快男大王',
+                        votes:50
+                    },
+                    {
+                        title:'我是快男小薛',
+                        votes:25
+                    },
+                    {
+                        title:'我是快男小孙',
+                        votes:15
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

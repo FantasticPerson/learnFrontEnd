@@ -102,12 +102,85 @@
                 {{item}}
             </li>
         </transition-group>
-
+        <brown></brown>
+        <jack></jack>
+        <tom></tom>
+        <!--如果注册时用的是驼峰命名  使用时 格式 a-b的形式  -->
+        <a-component></a-component>
+        <dog></dog>
+        <!--写模板时需要一个根元素-->
+        <template id="animel">
+            <div>
+                <h3>1234</h3>
+            </div>
+        </template>
+        <father></father>
+        <part v-bind:msg="season.menu1"></part>
     </div>
+    <template id="son">
+        <div>
+            <ul>
+                <li>123</li>
+                <li>1234</li>
+                <li>1234</li>
+            </ul>
+        </div>
+    </template>
+
+    <!--backbone的写法-->
+    <script type="text/x-template" id="animel2">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </script>
     <script>
         window.onload = function(){
+            var son = Vue.extend({
+                template:'#son'
+            })
+            var fa = Vue.extend({
+                template:'<div><h3>我是父组件</h3><child></child></div>',
+                components:{
+                    'child':son
+                }
+            })
+            Vue.component('father',fa);
+            //全局注册组件
+            var tem =Vue.extend({
+
+                template:'<h2>我是Boven老师!!</h2>'
+            });
+            //第一个参数 组件的名称 第二个参数模板
+            Vue.component('brown',tem);//这个是单数
+            Vue.component('aComponent',{
+                template:'<h3>我也是全局注册的组件</h3>'
+            })
+
+            var a=Vue.extend({
+                template:'<h3>我是局部注册的组件</h3>'
+            })
+            //注册局部组件
             var vue = new Vue({
                 el:'#box',
+                components:{//这个必须是复数 因为同时注册多个组件
+                    'jack':a,
+                    'tom':{
+                        template:'<strong>我也是局部组件</strong>'
+                    },
+                    "dog":{
+                        template:'#animel'
+                    },
+                    //父子之间的数据通信
+                    //通过props属性
+                    'part':{
+                        props:['msg'],
+                        template:'<h3>{{msg}}</h3>'
+                    }
+                },
                 data:{
                     imgs:'sss',
                     obj:'222',
@@ -133,7 +206,12 @@
                     big:'big',
                     yellow:'yellow',
                     style:false,
-                    slow:false
+                    slow:false,
+                    season:{
+                        menu1:'12',
+                        menu2:'23',
+                        menu3:'34',
+                    }
                 },
                 methods: {
                     click: function () {
