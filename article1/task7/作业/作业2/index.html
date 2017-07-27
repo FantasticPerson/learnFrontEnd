@@ -1,0 +1,1592 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>极客学院</title>
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="jk-header">
+            <div class="header">
+                <h1>
+                    <a href="//www.jikexueyuan.com" class="logo">
+                        <img src="http://e.jikexueyuan.com/headerandfooter/images/logo.png?t=1501151196000" width="100" alt="极客学院">
+                    </a>
+                </h1>
+                <nav style="width:442px;">
+                    <ul>
+                        <li>
+                            <a href="//www.jikexueyuan.com" class="home">首页</a>
+                        </li>
+                        <li class="careerpath"><a href="//www.jikexueyuan.com/zhiye/">职业方向</a><i class="slide-icon"></i>
+                            <div class="zhiye-submenu slide-submeu">
+                                <strong>前端</strong>
+                                <a href="//www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web前端工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/wechatapp"><i class="wx-icon"></i>微信小程序</a>
+                                <strong>移动端</strong>
+                                <a href="//www.jikexueyuan.com/zhiye/android"><i class="android-icon"></i>Android工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a>
+                                <strong>后端</strong>
+                                <a href="//www.jikexueyuan.com/zhiye/python"><i class="python-icon"></i>Python工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/php"><i class="php-icon"></i>PHP工程师</a>
+                                <a href="//www.jikexueyuan.com/zhiye/go"><i class="golang-icon"></i>Golang工程师</a>
+                            </div>
+                        </li>
+                        <li><a href="http://www.jikexueyuan.com/course/">课程</a><i class="slide-icon"></i>
+                            <div class="slide-submeu">
+                                <a href="//www.jikexueyuan.com/course/">课程库</a>
+                                <a href="//ke.jikexueyuan.com/zhiye/">职业路径</a>
+                                <a href="//www.jikexueyuan.com/path/">知识体系图</a>
+                                <a href="//ke.jikexueyuan.com/xilie/">系列课程</a>
+                                <a href="//www.jikexueyuan.com/partner">企业专区</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="//wiki.jikexueyuan.com/">社区</a><i class="slide-icon"></i>
+                            <div class="slide-submeu">
+                                <a href="//wiki.jikexueyuan.com/">Wiki</a>
+                                <a href="//wenda.jikexueyuan.com/">技术问答</a>
+                                <a href="//qun.jikexueyuan.com/">社群</a>
+                                <a href="//download.jikexueyuan.com/">资料下载</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="//www.jikexueyuan.com/vip/" class="home">会员</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input class="searchinput" id="searchinput" placeholder="搜索课程、问答或Wiki">
+                    <span class="search-icon" id="search-bottom"></span>
+                </div>
+                <div class="nav-other" id="nav-other">
+                    <div class="centerbox" style="display: inline-block;">
+                        <a href="http://xue.jikexueyuan.com/" class="learn-center" title="学习中心"></a>
+                    </div><!--
+                    --><div class="centerbox" style="display: inline-block;">
+                        <a href="//www.jikexueyuan.com/member/notifications/" class="message" id="message" title="消息中心"><i class="have" id="have" style="display: none;"></i></a>
+                    </div><!--
+                    --><span class="userinfo-login" id="userinfo-login">
+                            <a href="http://my.jikexueyuan.com/setting/user/">
+                                <img src="https://assets.jikexueyuan.com/user/avtar/201705/17/02/1n64lpjhegspp.jpeg" id="userpoto">
+                            </a>
+                            <i id="uservip-icon" class="vip-icon"></i>
+                            <div class="slide-submeu user-slide">
+                                    <a href="http://xue.jikexueyuan.com/"><i class="learningcenter-icon"></i>学习中心</a>
+                                    <a href="http://my.jikexueyuan.com/wudandan"><i class="homepage-icon"></i>个人主页</a>
+                                    <a href="http://my.jikexueyuan.com/setting/user/"><i class="set-icon"></i>账号设置</a>
+                                    <a href="http://passport.jikexueyuan.com/submit/logout"><i class="exit-icon"></i>退出登录</a>
+                            </div>
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div id="paper">
+            <div id="container">
+                <div class="wrap w-1000 mar-t20">
+                    <div id="main" class="f_r">
+                        <!-- tagGather -->
+                        <div class="tagGather">
+                            <div class="bd">
+                                <div class="listbox">
+                                    <!-- sort -->
+                                    <div class="sort">
+                                        <div class="wrap">
+                                            <div class="sortMode">
+                                                <h3>全部课程</h3>
+                                                <dl><dt><span class="type-title-one">最新</span><i class="arrow"></i></dt>
+                                                    <dd>
+                                                        <p class="lesson-new">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow">最新</a>
+                                                        </p>
+                                                        <p class="lesson-new">
+                                                            <a href="//www.jikexueyuan.com/course/all/2-0-0-0/" ref="nofollow">最热</a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                                <!-- new课程类型 -->
+                                                <dl><dt><span class="type-title-tow">课程类型</span><i class="arrow"></i></dt>
+                                                    <dd>
+                                                        <p class="lesson-detailed">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-1/" ref="nofollow">VIP</a>
+                                                        </p>
+                                                        <p class="lesson-detailed">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-2/" ref="nofollow">免费</a>
+                                                        </p>
+                                                        <p class="lesson-detailed">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-3/" ref="nofollow">认证专享</a>
+                                                        </p>
+                                                        <p class="lesson-all">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow">全部</a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                                <!-- /new课程类型 -->
+                                                <dl><dt><span class="type-title-tow">内容类型</span><i class="arrow"></i></dt>
+                                                    <dd>
+                                                        <p class="lesson-detailed">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-1-0/" ref="nofollow">知识精讲</a>
+                                                        </p>
+                                                        <p class="lesson-detailed">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-3-0/" ref="nofollow">项目实战</a>
+                                                        </p>
+                                                        <p class="lesson-all">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow">全部</a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                                <dl><dt><span class="type-title-three">难度等级</span><i class="arrow"></i></dt>
+                                                    <dd>
+                                                        <p class="level-one">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-1-0-0/" ref="nofollow">初级</a>
+                                                        </p>
+                                                        <p class="level-one">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-3-0-0/" ref="nofollow">中级</a>
+                                                        </p>
+                                                        <p class="level-one">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-5-0-0/" ref="nofollow">高级</a>
+                                                        </p>
+                                                        <p class="level-all">
+                                                            <a href="//www.jikexueyuan.com/course/all/1-0-0-0/" ref="nofollow"> 全部 </a>
+                                                        </p>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="previewMode">
+                                                <ul>
+                                                    <li class="kuai-icon curr"><i class="icon"></i>
+                                                    </li>
+                                                    <li class="list-icon"><i class="icon"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lesson-list" id="changeid" style="">
+                                        <ul class="cf" style="display: block;">
+                                            <li id="3803" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3803&amp;posColumn=3803.1"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3803.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3803&amp;posColumn=3803.1">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/26/552a/597808e826a48.jpg" class="lessonimg" title="AWS入门-教你快速开始使用AWS" alt="AWS入门-教你快速开始使用AWS">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3803&amp;posColumn=3803.1"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3803.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3803&amp;posColumn=3803.1">AWS入门-教你快速开始使用AWS</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本期课程将手把手教你如何从”零“开始，开启 AWS 上的云计算之旅。内容将涵盖对 AWS 的简单介绍和 AWS 核心服务（例如 Amazon S3, Amazon EC2）的使用,并分步演示如何利用这些服务在云中搭建虚拟机、备份和恢复数据等等。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>6课时 44分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1081人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3803&amp;posColumn=3803.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3753" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3753&amp;posColumn=3753.2"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3753.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3753&amp;posColumn=3753.2">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/e2b7/5965dd45a4144.jpg" class="lessonimg" title="AWS云上数据库迁移" alt="AWS云上数据库迁移">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3753&amp;posColumn=3753.2"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3753.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3753&amp;posColumn=3753.2">AWS云上数据库迁移</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本课将向大家讲述数据库迁移到云的方法，数据库平台重构的可用选项，云上数据库迁移的最佳实践和注意事项，以及AWS数据库迁移工具（DMT）的使用方法。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 42分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1369人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3753&amp;posColumn=3753.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3752" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3752&amp;posColumn=3752.3"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3752.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3752&amp;posColumn=3752.3">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/5f07/5965d791abe4f.jpg" class="lessonimg" title="AWS云上大规模迁移的最佳实践" alt="AWS云上大规模迁移的最佳实践">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3752&amp;posColumn=3752.3"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3752.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3752&amp;posColumn=3752.3">AWS云上大规模迁移的最佳实践</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">通过AWS的最佳实践，能够帮助企业业务以高效方式实现线下数据中心迁移到AWS云上环境，包括迁移战略，迁移方法，迁移规划和迁移执行。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 51分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1133人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3752&amp;posColumn=3752.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3751" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3751&amp;posColumn=3751.4"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3751.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3751&amp;posColumn=3751.4">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/7df7/5965c20d2f215.jpg" class="lessonimg" title="AWS人工智能新服务解析-Rekognition、Polly及Lex服务" alt="AWS人工智能新服务解析-Rekognition、Polly及Lex服务">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3751&amp;posColumn=3751.4"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3751.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3751&amp;posColumn=3751.4">AWS人工智能新服务解析-Rekognition、Polly及Lex服务</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">
+                                                        本课程是AWS re:Invent 2016 Recap北京站活动分享了AWS人工智能新服务解，分享了深度学习在多个领域中推动人工智能的发展，以及如何在商业中取得成功。
+                                                    </p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 46分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1118人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3751&amp;posColumn=3751.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3750" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3750&amp;posColumn=3750.5"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3750.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3750&amp;posColumn=3750.5">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/a882/596596599eff0.jpg" class="lessonimg" title="AWS上的人工智能和深度学习" alt="AWS上的人工智能和深度学习">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3750&amp;posColumn=3750.5"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3750.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3750&amp;posColumn=3750.5">AWS上的人工智能和深度学习</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本课程是AWS re:Invent 2016 Recap上海站活动，由AWS 架构师分享了AWS上的人工智能和深度学习，其中包括最新的卷积神经网络模型。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 36分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1192人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3750&amp;posColumn=3750.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3748" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3748&amp;posColumn=3748.6"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3748.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3748&amp;posColumn=3748.6">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/bb61/5965943354211.jpg" class="lessonimg" title="AWS云计算对于AI的影响及改变" alt="AWS云计算对于AI的影响及改变">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3748&amp;posColumn=3748.6"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3748.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3748&amp;posColumn=3748.6">AWS云计算对于AI的影响及改变</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本课程是AWS re:Invent 2016 Recap广州站活动，包括AWS云计算对于AI的影响及改变；人工智能在广告素材优化，游戏设计，线下零售，语言教学等方面的应用；案例分析和搭建架构的分享。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 33分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1085人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3748&amp;posColumn=3748.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3745" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3745&amp;posColumn=3745.7"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3745.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3745&amp;posColumn=3745.7">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/957c/596593be6bed5.jpg" class="lessonimg" title="AWS云产品 - 数据库与数据分析" alt="AWS云产品 - 数据库与数据分析">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3745&amp;posColumn=3745.7"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3745.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3745&amp;posColumn=3745.7">AWS云产品 - 数据库与数据分析</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">AWS 数据库数据库服务是完全托管的服务，只需单击几下，便可在几分钟内启动它们，AWS 数据分析服务用来处理分析流程链中的每个步骤。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>5课时 47分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1109人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3745&amp;posColumn=3745.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3746" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3746&amp;posColumn=3746.8"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3746.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3746&amp;posColumn=3746.8">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/4f86/596593973e229.jpg" class="lessonimg" title="AWS云产品- 存储和内容传输" alt="AWS云产品- 存储和内容传输">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3746&amp;posColumn=3746.8"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3746.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3746&amp;posColumn=3746.8">AWS云产品- 存储和内容传输</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">AWS 提供一整套云存储服务来支持应用程序和存档方面的合规性要求。从对象、文件、块存储服务，以及各种云数据迁移选项中进行选择，从而开始设计云 IT 环境的基础。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 24分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1083人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3746&amp;posColumn=3746.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3747" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3747&amp;posColumn=3747.9"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3747.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3747&amp;posColumn=3747.9">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/a4eb/5965937e68f4c.jpg" class="lessonimg" title="AWS云产品-计算（云服务器）" alt="AWS云产品-计算（云服务器）">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3747&amp;posColumn=3747.9"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3747.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3747&amp;posColumn=3747.9">AWS云产品-计算（云服务器）</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">借助AWS 计算类云产品，你可以将你的应用程序作为虚拟服务器、容器或代码进行部署、运行和扩展。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 16分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1164人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3747&amp;posColumn=3747.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3749" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3749&amp;posColumn=3749.10"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3749.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3749&amp;posColumn=3749.10">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/7cfc/5965935b26bfa.jpg" class="lessonimg" title="AWS云产品 - 网络与内容分发" alt="AWS云产品 - 网络与内容分发">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3749&amp;posColumn=3749.10"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3749.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3749&amp;posColumn=3749.10">AWS云产品 - 网络与内容分发</a></h2>
+                                                    <p>AWS云中网络服务Amazon VPC, 可以让你在AWS 云中预置一个逻辑隔离分区，让你在自己定义的虚拟网络中启动 AWS 资源。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>1课时 12分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1064人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3749&amp;posColumn=3749.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3739" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3739&amp;posColumn=3739.11"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3739.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3739&amp;posColumn=3739.11">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/3def/596590c8311cc.jpg" class="lessonimg" title="AWS云账单服务" alt="AWS云账单服务">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3739&amp;posColumn=3739.11"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3739.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3739&amp;posColumn=3739.11">AWS云账单服务</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本课程中，AWS架构师将通过实际操作讲述如何使用AWS云服务计费规则进行成本估算、通过控制台查看账单。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 24分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1051人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3739&amp;posColumn=3739.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3744" test="0" deg="0">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3744&amp;posColumn=3744.12"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3744.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3744&amp;posColumn=3744.12">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/3b1a/59659064ac204.jpg" class="lessonimg" title="AWS云中的网络服务" alt="AWS云中的网络服务">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3744&amp;posColumn=3744.12"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3744.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3744&amp;posColumn=3744.12">AWS云中的网络服务</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本期课程讲述AWS云中网络服务VPC，你在 VPC 中既可以使用 IPv4，也可以使用 IPv6，从而实现安全而轻松的资源访问和应用程序访问。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 28分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1064人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3744&amp;posColumn=3744.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3743" test="0" deg="0">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3743&amp;posColumn=3743.13"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3743.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3743&amp;posColumn=3743.13">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/5ee1/59658eae4c3b4.jpg" class="lessonimg" title="AWS云中的关系型数据库服务RDS" alt="AWS云中的关系型数据库服务RDS">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3743&amp;posColumn=3743.13"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3743.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3743&amp;posColumn=3743.13">AWS云中的关系型数据库服务RDS</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">Amazon RDS 在多种类型的数据库实例 （针对内存、性能或 I/O 进行了优化的实例） 上均可用，并提供六种常用的数据库引擎供您选择，包括 Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle 和 Microsoft SQL Server。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 22分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1065人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3743&amp;posColumn=3743.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3742" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3742&amp;posColumn=3742.14"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3742.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3742&amp;posColumn=3742.14">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/0a77/59658e2f5170d.jpg" class="lessonimg" title="AWS云中的负载均衡 ELB" alt="AWS云中的负载均衡 ELB">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3742&amp;posColumn=3742.14"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3742.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3742&amp;posColumn=3742.14">AWS云中的负载均衡 ELB</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">学习本课程，你将能够实现在多个 Amazon EC2 实例之间自动分配应用程序的传入流量。应用程序负载均衡器可将流量路由至多个服务，也可在同一EC2实例的多个端口之间进行负载均衡。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 40分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1144人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3742&amp;posColumn=3742.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3741" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3741&amp;posColumn=3741.15"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3741.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3741&amp;posColumn=3741.15">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/d11e/59658cc269201.jpg" class="lessonimg" title="AWS云中弹性计算服务（虚拟机EC2）" alt="AWS云中弹性计算服务（虚拟机EC2）">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3741&amp;posColumn=3741.15"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3741.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3741&amp;posColumn=3741.15">AWS云中弹性计算服务（虚拟机EC2）</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本次课程，AWS架构师将手把手教你使用AWS云中的计算类服务。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 22分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1143人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3741&amp;posColumn=3741.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3740" test="0" deg="0">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3740&amp;posColumn=3740.16"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3740.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3740&amp;posColumn=3740.16">
+                                                        <img src="https://a1.jikexueyuan.com/home/201707/12/6613/596588dc6d439.jpg" class="lessonimg" title="AWS云中云存储服务" alt="AWS云中云存储服务">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3740&amp;posColumn=3740.16"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3740.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3740&amp;posColumn=3740.16">AWS云中云存储服务</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">AWS架构师手把手教您使用云存储服务，让你快速上手AWS云存储服务。学完本课，你将理解基本的S3功能，建立S3的生命周期规则和存储服务。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>2课时 23分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1093人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box">
+                                                                <a href="//www.jikexueyuan.com/course/AWS/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201707/12/cfaf/59658a14894bf.png" alt="AWS" title="AWS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3740&amp;posColumn=3740.1&amp;aCCate=AWS">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3689" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3689&amp;posColumn=3689.17"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3689.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3689&amp;posColumn=3689.17">
+                                                        <img src="https://a1.jikexueyuan.com/home/201706/27/57be/5951c82b80fef.jpg" class="lessonimg" title="微软男神夜话-人工智能的美丽新世界" alt="微软男神夜话-人工智能的美丽新世界">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3689&amp;posColumn=3689.17"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3689.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3689&amp;posColumn=3689.17">微软男神夜话-人工智能的美丽新世界</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">本课程中，微软亚洲院三位男神以对话的形式，与关注科技圈人工智能的朋友共同探讨，在人工智能的美丽新世界中，我们如何通过人工智能这样强大有潜力的工具来帮助人类解决很多难题。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 58分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1963人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/AIread/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201706/27/97ad/5951c92f9f580.jpg" alt="AIread" title="行业解读" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3689&amp;posColumn=3689.1&amp;aCCate=AIread">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3652" test="0" deg="0">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3652&amp;posColumn=3652.18"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3652.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3652&amp;posColumn=3652.18">
+                                                        <img src="https://a1.jikexueyuan.com/home/201706/13/f041/593fb7b2c1180.jpg" class="lessonimg" title="微软人工智能概览" alt="微软人工智能概览">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3652&amp;posColumn=3652.18"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3652.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3652&amp;posColumn=3652.18">微软人工智能概览</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">
+                                                        本课将为大家介绍微软研究院最新 AI 成果，以及微软在 Azure 公有云中围绕人工智能和数据分析、深度学习提供的接口和服务，并探讨这些服务如何助力开发人员抢占人工智能的先机。
+                                                    </p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>1课时 19分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">2537人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box">
+                                                                <a href="//www.jikexueyuan.com/course/aioverview/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201706/14/b1d7/59411fd2da57d.png" alt="aioverview" title="人工智能概览" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3652&amp;posColumn=3652.1&amp;aCCate=aioverview">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3651" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3651&amp;posColumn=3651.19"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3651.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3651&amp;posColumn=3651.19">
+                                                        <img src="https://a1.jikexueyuan.com/home/201706/13/7dd7/593f89efb7310.jpg" class="lessonimg" title="微软人工智能 － 深度学习框架" alt="微软人工智能 － 深度学习框架">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3651&amp;posColumn=3651.19"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3651.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3651&amp;posColumn=3651.19">微软人工智能 － 深度学习框架</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">从最新一次的ImageNet大赛（(ILSVRC）的结果，机器的视觉已经超过人类的视觉，基于深度学习的机器认知能力超过人类似乎指日可待。深度学习在对IT基础设施和IT计算能力有很高要求，而公有云平台降低了深度学习运行的门槛，使得更多的人可以便捷的使用云平台强大的计算能力来完成深度学习相关的计算。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>4课时 167分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon3"></i><em>高级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">2812人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/deeplearn/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201706/14/a5c2/5940f8f1e3745.png" alt="deeplearn" title="深度学习" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3651&amp;posColumn=3651.1&amp;aCCate=deeplearn">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3650" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3650&amp;posColumn=3650.20"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3650.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3650&amp;posColumn=3650.20">
+                                                        <img src="https://a1.jikexueyuan.com/home/201706/13/6550/593f898111f4e.jpg" class="lessonimg" title="微软人工智能 － 服务和API" alt="微软人工智能 － 服务和API">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3650&amp;posColumn=3650.20"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3650.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3650&amp;posColumn=3650.20">微软人工智能 － 服务和API</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">以微软认知服务和机器人框架为代表的服务和API，让你的应用和服务可以轻而易举的拥有人的智慧。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>6课时 212分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">2031人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/APIservice/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201706/14/877c/5940f8bcad46a.png" alt="APIservice" title="服务与API" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3650&amp;posColumn=3650.1&amp;aCCate=APIservice">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3647" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3647&amp;posColumn=3647.21"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3647.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3647&amp;posColumn=3647.21">
+                                                        <img src="https://a1.jikexueyuan.com/home/201706/12/c903/593e4d5f679db.jpg" class="lessonimg" title="微软人工智能 － 数据分析平台" alt="微软人工智能 － 数据分析平台">
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3647&amp;posColumn=3647.21"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3647.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3647&amp;posColumn=3647.21">微软人工智能 － 数据分析平台</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">随着移动互联网、物联网技术的发展，企业将有能力收集到越来越多的数据，数据的统计、分析甚至是机器学习成为如今最热门的话题。为了满足飞速累积的数据和日益增长的需求，数据分析人员对便捷的机器学习训练工具、高度自管理化的大数据分析平台有着强烈的渴望。</p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>3课时 122分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon2"></i><em>中级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">1789人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/datamva/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201706/14/7f4a/5940f8d6b6b99.png" alt="datamva" title="数据分析" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3647&amp;posColumn=3647.1&amp;aCCate=datamva">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3224" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3224&amp;posColumn=3224.22"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3224.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3224&amp;posColumn=3224.22">
+                                                        <img src="https://a1.jikexueyuan.com/home/201612/12/1b6a/584e070d8c2cb.jpeg" class="lessonimg" title="腾讯云产品 - 游戏云" alt="腾讯云产品 - 游戏云">
+
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3224&amp;posColumn=3224.22"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3224.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3224&amp;posColumn=3224.22">腾讯云产品 - 游戏云</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">
+                                                        本课程主要介绍腾讯游戏云相关知识
+                                                    </p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>5课时 177分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+                                                                    <i class="xinhao-icon2"></i><em>中级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">9504人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/tencent/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201604/29/930b/572318c5ac303.png" alt="tencent" title="腾讯云" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3224&amp;posColumn=3224.1&amp;aCCate=tencent">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3173" test="0" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang " style="display: none;" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3173&amp;posColumn=3173.23"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3173.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3173&amp;posColumn=3173.23">
+                                                        <img src="https://a1.jikexueyuan.com/home/201611/17/9d28/582d6e30c2d46.png" class="lessonimg" title="前端开发环境搭建(三种工具任选其一)" alt="前端开发环境搭建(三种工具任选其一)">
+
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3173&amp;posColumn=3173.23"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3173.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3173&amp;posColumn=3173.23">前端开发环境搭建(三种工具任选其一)</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">
+                                                        本课程介绍常用前端开发工具 Sublime Text / Dreamweaver / WebStorm 的安装与使用技巧
+                                                    </p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>6课时 41分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+
+                                                                    <i class="xinhao-icon"></i><em>初级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">10869人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+
+                                                                <a href="//www.jikexueyuan.com/course/practice/">
+                                                                    <img width="16" src="https://wirrorcdn.jikexueyuan.com/category/advance.png" alt="practice" title="项目实战" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3173&amp;posColumn=3173.1&amp;aCCate=practice">
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="3142" test="1" deg="0" stop="1">
+                                                <div class="lessonimg-box">
+                                                    <i class="user-action lesson-shoucang ysc " style="" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2003&amp;aCId=3142&amp;posColumn=3142.24"></i>
+                                                    <a href="//www.jikexueyuan.com/course/3142.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3142&amp;posColumn=3142.24">
+                                                        <img src="https://a1.jikexueyuan.com/home/201611/03/f97d/581ae2cb75899.jpg" class="lessonimg" title="腾讯大咖分享 - 腾讯大咖分享之技术交流" alt="腾讯大咖分享 - 腾讯大咖分享之技术交流">
+
+                                                        <div class="lessonplay" style="opacity: 0;">
+                                                            <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3142&amp;posColumn=3142.24"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="lesson-infor" style="height: 88px;">
+                                                    <h2 class="lesson-info-h2"><a href="//www.jikexueyuan.com/course/3142.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=2004&amp;aCId=3142&amp;posColumn=3142.24">腾讯大咖分享 - 腾讯大咖分享之技术交流</a></h2>
+                                                    <p style="height: 0px; opacity: 0; display: none;">
+                                                        本课程主要是腾讯大咖与大家分享一些技术经验与心得。
+                                                    </p>
+                                                    <div class="timeandicon">
+                                                        <div class="cf">
+                                                            <dl>
+                                                                <dd class="mar-b8"><i class="time-icon"></i><em>10课时 204分钟</em>
+                                                                </dd>
+                                                                <dd class="zhongji" style="display: none;">
+
+                                                                    <i class="xinhao-icon3"></i><em>高级</em>
+                                                                </dd>
+                                                            </dl>
+                                                            <em class="learn-number" style="display: none;">8267人学习</em>
+                                                        </div>
+                                                        <div class="cf">
+                                                            <div class="lessonicon-box" style="bottom: 4px;">
+                                                                <a href="//www.jikexueyuan.com/course/tencent/">
+                                                                    <img width="16" src="https://a1.jikexueyuan.com/home/201604/29/930b/572318c5ac303.png" alt="tencent" title="腾讯云" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=2005&amp;aCId=3142&amp;posColumn=3142.1&amp;aCCate=tencent">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="page-nav">
+                                        <ul class="pages">
+                                            <li class="pgNext pgEmpty">首页</li><!--
+                                            --><li class="pgNext pgEmpty">上一页</li><!--
+                                            --><li class="page-number pgCurrent">1</li><!--
+                                            --><li class="page-number">2</li><!--
+                                            --><li class="page-number">3</li><!--
+                                            --><li class="page-number">4</li><!--
+                                            --><li class="page-number">5</li><!--
+                                            --><li class="page-number">6</li><!--
+                                            --><li class="page-number">7</li><!--
+                                            --><li class="thpoint">...</li><!--
+                                            --><li class="pgNext">下一页</li><!--
+                                            --><li class="pgNext">末页</li><!--
+                                            --><li class="thpoint pagetotal" style="margin-top:3px;">共 96 页</li><!--
+                                            --><li class="thpoint pagenow">当前<input type="text" value="1" maxlength="6" id="gotoval" style="width:20px; height:16px;margin-top:-3px;padding-top:2px;padding-left:10px;">页</li><!--
+                                            --><li class="pgNext go">确定</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                            <div id="aside" class="f_l">
+                                <div class="aside-allCategory">
+                                    <div class="hd">
+                                        <h2><a href="//www.jikexueyuan.com/course"><i class="icon-course-curr"></i>课程库</a></h2>
+                                    </div>
+                                    <div class="bd">
+                                        <ul class="aside-cList">
+                                            <li>
+                                                <div>
+                                                    <a cgid="2" href="//www.jikexueyuan.com/course/web/">前端开发</a>
+                                                    <div class="list-show" style="min-height: 343px; width: 402px; top: -45px;">
+                                                        <div style="width: 400px;">
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/webbase/" cgid="16">前端基础</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/html/" cgid="76">HTML</a>
+                                                                    <a href="//www.jikexueyuan.com/course/css/" cgid="77">CSS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/javascript/" cgid="78">JavaScript</a>
+                                                                    <a href="//www.jikexueyuan.com/course/html5/" cgid="79">HTML5</a>
+                                                                    <a href="//www.jikexueyuan.com/course/css3/" cgid="80">CSS3</a>
+                                                                    <a href="//www.jikexueyuan.com/course/prospective/" cgid="81">技术前瞻</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/advance/" cgid="18">前端进阶</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/typescript/" cgid="97">Typescript</a>
+                                                                    <a href="//www.jikexueyuan.com/course/security/" cgid="98">前端安全</a>
+                                                                    <a href="//www.jikexueyuan.com/course/practice/" cgid="99">项目实战</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/webframe/" cgid="17">前端框架</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/jquery/" cgid="82">jQuery</a>
+                                                                    <a href="//www.jikexueyuan.com/course/jqueryui/" cgid="83">jQuery UI</a>
+                                                                    <a href="//www.jikexueyuan.com/course/jquerymobile/" cgid="84">jQuery Mobile</a>
+                                                                    <a href="//www.jikexueyuan.com/course/extjs/" cgid="85">Ext JS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/angularjs/" cgid="86">AngularJS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/reactjs/" cgid="87">ReactJS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/bootstrap/" cgid="94">Bootstrap</a>
+                                                                    <a href="//www.jikexueyuan.com/course/reactnative/" cgid="371">React Native</a>
+                                                                    <a href="//www.jikexueyuan.com/course/backbone/" cgid="372">Backbone</a>
+                                                                    <a href="//www.jikexueyuan.com/course/threejs/" cgid="373">Three.js</a>
+                                                                    <a href="//www.jikexueyuan.com/course/mootools/" cgid="374">MooTools</a>
+                                                                    <a href="//www.jikexueyuan.com/course/compass/" cgid="375">Compass</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/html5games/" cgid="19">HTML5游戏</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/canvas/" cgid="100">Canvas</a>
+                                                                    <a href="//www.jikexueyuan.com/course/svg/" cgid="102">SVG</a>
+                                                                    <a href="//www.jikexueyuan.com/course/webgl/" cgid="103">WebGL</a>
+                                                                    <a href="//www.jikexueyuan.com/course/cocos2djs/" cgid="105">Cocos2d-js</a>
+                                                                    <a href="//www.jikexueyuan.com/course/createjs/" cgid="106">CreateJS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/webflash/" cgid="107">Flash</a>
+                                                                    <a href="//www.jikexueyuan.com/course/webunreal/" cgid="108">Unreal</a>
+                                                                    <a href="//www.jikexueyuan.com/course/webegret/" cgid="109">Egret</a>
+                                                                    <a href="//www.jikexueyuan.com/course/phaser/" cgid="376">Phaser</a>
+                                                                </dd>
+                                                            </dl>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="1" href="//www.jikexueyuan.com/course/mobile/">移动开发</a>
+                                                    <div class="list-show" style="min-height: 343px; width: 402px;">
+                                                        <div style="width: 400px;">
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/app/" cgid="58">应用开发</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/android/" cgid="59">Android</a>
+                                                                    <a href="//www.jikexueyuan.com/course/ios/" cgid="60">iOS</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/games/" cgid="13">游戏开发</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/cocos/" cgid="63">Cocos</a>
+                                                                    <a href="//www.jikexueyuan.com/course/unity3d/" cgid="64">Unity3D</a>
+                                                                    <a href="//www.jikexueyuan.com/course/spritekit2d/" cgid="65">SpriteKit 2D</a>
+                                                                    <a href="//www.jikexueyuan.com/course/unreal/" cgid="66">Unreal</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/frame/" cgid="14">常用框架</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/cordova/" cgid="68">Cordova</a>
+                                                                    <a href="//www.jikexueyuan.com/course/reactnative1/" cgid="382">React Native</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="3" href="//www.jikexueyuan.com/course/dev/">后端开发</a>
+                                                    <div class="list-show" style="min-height: 343px; width: 402px;">
+                                                        <div style="width: 400px;">
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/python/" cgid="23">Python</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/pythonbase/" cgid="147">Python 基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/web2py/" cgid="148">web2py</a>
+                                                                    <a href="//www.jikexueyuan.com/course/django/" cgid="149">Django</a>
+                                                                    <a href="//www.jikexueyuan.com/course/flask/" cgid="150">Flask</a>
+                                                                    <a href="//www.jikexueyuan.com/course/gui/" cgid="393">GUI</a>
+                                                                    <a href="//www.jikexueyuan.com/course/datamininganalysis/" cgid="394">数据挖掘与分析</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/php/" cgid="21">PHP</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/phpbase/" cgid="123">PHP 基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/yii/" cgid="125">YII</a>
+                                                                    <a href="//www.jikexueyuan.com/course/thinkphp/" cgid="126">ThinkPHP</a>
+                                                                    <a href="//www.jikexueyuan.com/course/laravel/" cgid="127">Laravel</a>
+                                                                    <a href="//www.jikexueyuan.com/course/wordpress/" cgid="128">WordPress</a>
+                                                                    <a href="//www.jikexueyuan.com/course/phalcon/" cgid="131">Phalcon</a>
+                                                                    <a href="//www.jikexueyuan.com/course/apachedev/" cgid="135">Apache</a>
+                                                                    <a href="//www.jikexueyuan.com/course/facebookhack/" cgid="136">Facebook Hack</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/nodedotjs/" cgid="26">Node.js</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/nodejs/" cgid="158">Node.js 基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/express/" cgid="159">express</a>
+                                                                    <a href="//www.jikexueyuan.com/course/meteor/" cgid="161">Meteor</a>
+                                                                    <a href="//www.jikexueyuan.com/course/hexo/" cgid="386">Hexo</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/aspdotnet/" cgid="22">ASP.NET</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/csharpdev/" cgid="137">C#</a>
+                                                                    <a href="//www.jikexueyuan.com/course/mvc/" cgid="139">ASP.NET MVC</a>
+                                                                    <a href="//www.jikexueyuan.com/course/entity/" cgid="140">Entity Framework</a>
+                                                                    <a href="//www.jikexueyuan.com/course/wpf/" cgid="368">WPF</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/j2ee/" cgid="20">J2EE</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/jsp/" cgid="111">JSP</a>
+                                                                    <a href="//www.jikexueyuan.com/course/maven/" cgid="112">Maven</a>
+                                                                    <a href="//www.jikexueyuan.com/course/spring/" cgid="114">Spring</a>
+                                                                    <a href="//www.jikexueyuan.com/course/springmvc/" cgid="115">SpringMVC</a>
+                                                                    <a href="//www.jikexueyuan.com/course/struts2/" cgid="116">Struts2</a>
+                                                                    <a href="//www.jikexueyuan.com/course/mybatis/" cgid="117">MyBatis</a>
+                                                                    <a href="//www.jikexueyuan.com/course/hibernate/" cgid="118">Hibernate</a>
+                                                                    <a href="//www.jikexueyuan.com/course/lucene/" cgid="120">Lucene</a>
+                                                                    <a href="//www.jikexueyuan.com/course/j2eeframe/" cgid="369">常用框架</a>
+                                                                    <a href="//www.jikexueyuan.com/course/j2eepractice/" cgid="370">项目实战</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/ruby/" cgid="24">Ruby</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/rubybase/" cgid="151">Ruby 基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/rails/" cgid="152">Ruby on Rails</a>
+                                                                    <a href="//www.jikexueyuan.com/course/grape/" cgid="153">Grape</a>
+                                                                    <a href="//www.jikexueyuan.com/course/rubyadvanced/" cgid="366">Ruby进阶</a>
+                                                                    <a href="//www.jikexueyuan.com/course/rubymine/" cgid="367">RubyMine</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/go/" cgid="25">Go</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/gobase/" cgid="155">Go 基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/revel/" cgid="156">Revel</a>
+                                                                    <a href="//www.jikexueyuan.com/course/beego/" cgid="157">beego</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/erlang/" cgid="387">Erlang</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/erlangbase/" cgid="388">Erlang 基础</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="400" href="//www.jikexueyuan.com/course/ai/">人工智能</a>
+                                                    <div class="list-show" style="min-height: 343px;">
+                                                        <div>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/microsoftai/" cgid="401">微软AI</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/aioverview/" cgid="405">人工智能概览</a>
+                                                                    <a href="//www.jikexueyuan.com/course/APIservice/" cgid="404">服务与API</a>
+                                                                    <a href="//www.jikexueyuan.com/course/datamva/" cgid="403">数据分析</a>
+                                                                    <a href="//www.jikexueyuan.com/course/deeplearn/" cgid="402">深度学习</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/AIbasis/" cgid="406">人工智能基础</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/AIread/" cgid="407">行业解读</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="6" href="//www.jikexueyuan.com/course/intellegence/">智能硬件 / 物联网</a>
+                                                    <div class="list-show" style="min-height: 343px;">
+                                                        <div>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/hardware/" cgid="35">硬件架构</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/c51/" cgid="222">C51</a>
+                                                                    <a href="//www.jikexueyuan.com/course/armframe/" cgid="223">ARM</a>
+                                                                    <a href="//www.jikexueyuan.com/course/keil/" cgid="226">Keil</a>
+                                                                    <a href="//www.jikexueyuan.com/course/cortex-m/" cgid="228">Cortex-M</a>
+                                                                    <a href="//www.jikexueyuan.com/course/cortex-a/" cgid="229">Cortex-A</a>
+                                                                    <a href="//www.jikexueyuan.com/course/avr/" cgid="379">AVR</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/iot/" cgid="36">物联网操作系统</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/rtos/" cgid="231">RTOS</a>
+                                                                    <a href="//www.jikexueyuan.com/course/androidwear/" cgid="233">Android Wear</a>
+                                                                    <a href="//www.jikexueyuan.com/course/applewatchkit/" cgid="236">Apple Watchkit</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/open/" cgid="37">开源硬件平台</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/arduino/" cgid="237">Arduino</a>
+                                                                    <a href="//www.jikexueyuan.com/course/pibow/" cgid="238">树莓派</a>
+                                                                    <a href="//www.jikexueyuan.com/course/mbed/" cgid="239">mbed</a>
+                                                                    <a href="//www.jikexueyuan.com/course/goKit/" cgid="242">GoKit</a>
+                                                                    <a href="//www.jikexueyuan.com/course/lemakerguitar/" cgid="395">LeMaker Guitar</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/link/" cgid="38">通信链接技术</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/wifi/" cgid="243">无线WiFi</a>
+                                                                    <a href="//www.jikexueyuan.com/course/tel/" cgid="244">移动通信</a>
+                                                                    <a href="//www.jikexueyuan.com/course/bluetooth/" cgid="245">蓝牙</a>
+                                                                    <a href="//www.jikexueyuan.com/course/nfc/" cgid="247">NFC</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/infosense/" cgid="39">信息感知处理技术</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/sensor/" cgid="251">传感器</a>
+                                                                    <a href="//www.jikexueyuan.com/course/dig/" cgid="255">数据挖掘</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/hci/" cgid="40">人机交互技术</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/asr/" cgid="257">语音识别</a>
+                                                                    <a href="//www.jikexueyuan.com/course/face/" cgid="259">人脸识别</a>
+                                                                    <a href="//www.jikexueyuan.com/course/gesture/" cgid="261">手势识别</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="11" href="//www.jikexueyuan.com/course/productdesign/">设计 / 产品 / 测试</a>
+                                                    <div class="list-show" style="min-height: 343px;">
+                                                        <div>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/designbase/" cgid="51">设计基础</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/photoshop/" cgid="327">Photoshop</a>
+                                                                    <a href="//www.jikexueyuan.com/course/flash/" cgid="329">Flash</a>
+                                                                    <a href="//www.jikexueyuan.com/course/illustrator/" cgid="330">Illustrator</a>
+                                                                    <a href="//www.jikexueyuan.com/course/sketch/" cgid="331">Sketch</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/gamedesign/" cgid="52">游戏设计</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/interface/" cgid="336">界面设计</a>
+                                                                    <a href="//www.jikexueyuan.com/course/role/" cgid="338">角色设计</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/pm/" cgid="54">产品经理</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/demand/" cgid="341">需求分析</a>
+                                                                    <a href="//www.jikexueyuan.com/course/axure/" cgid="343">Axure</a>
+                                                                    <a href="//www.jikexueyuan.com/course/item/" cgid="344">项目实战</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/vd/" cgid="362">视觉设计</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/appui/" cgid="340">应用UI设计</a>
+                                                                    <a href="//www.jikexueyuan.com/course/webui/" cgid="363">网页UI设计</a>
+                                                                    <a href="//www.jikexueyuan.com/course/dt/" cgid="364">设计理论</a>
+                                                                    <a href="//www.jikexueyuan.com/course/gd/" cgid="365">图形设计</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/testtools/" cgid="50">测试工具</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/autotest/" cgid="325">自动化测试</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="5" href="//www.jikexueyuan.com/course/clouddata/">云计算 / 大数据</a>
+                                                    <div class="list-show" style="min-height: 343px;">
+                                                        <div>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/cloudcompute/" cgid="32">云计算</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/openstack/" cgid="189">OpenStack</a>
+                                                                    <a href="//www.jikexueyuan.com/course/docker/" cgid="191">Docker</a>
+                                                                    <a href="//www.jikexueyuan.com/course/cloudstack/" cgid="197">CloudStack</a>
+                                                                    <a href="//www.jikexueyuan.com/course/windowsazure/" cgid="378">Windows Azure</a>
+                                                                    <a href="//www.jikexueyuan.com/course/Iaas/" cgid="389">IaaS</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/bigdata/" cgid="33">大数据</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/hadoop/" cgid="198">Hadoop</a>
+                                                                    <a href="//www.jikexueyuan.com/course/storm/" cgid="200">Storm</a>
+                                                                    <a href="//www.jikexueyuan.com/course/hive/" cgid="204">Hive</a>
+                                                                    <a href="//www.jikexueyuan.com/course/flume/" cgid="206">Flume</a>
+                                                                    <a href="//www.jikexueyuan.com/course/kafka/" cgid="208">Kafka</a>
+                                                                    <a href="//www.jikexueyuan.com/course/zookeeper/" cgid="209">Zookeeper</a>
+                                                                    <a href="//www.jikexueyuan.com/course/hbase/" cgid="211">Hbase</a>
+                                                                    <a href="//www.jikexueyuan.com/course/spark/" cgid="213">Spark</a>
+                                                                    <a href="//www.jikexueyuan.com/course/Informationretrieval/" cgid="377">信息检索</a>
+                                                                    <a href="//www.jikexueyuan.com/course/dataanalysis/" cgid="383">数据分析</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/virtual/" cgid="34">虚拟化</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/vmware/" cgid="220">VMware</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/sql/" cgid="41">SQL</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/mysql/" cgid="262">MySQL</a>
+                                                                    <a href="//www.jikexueyuan.com/course/sqlserver/" cgid="263">SQL Server</a>
+                                                                    <a href="//www.jikexueyuan.com/course/oracledb/" cgid="264">Oracle</a>
+                                                                    <a href="//www.jikexueyuan.com/course/sqlite/" cgid="265">SQLite</a>
+                                                                    <a href="//www.jikexueyuan.com/course/postgresql/" cgid="266">PostgreSQL</a>
+                                                                    <a href="//www.jikexueyuan.com/course/db2/" cgid="267">DB2</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/nosql/" cgid="42">NoSQL</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/cassandra/" cgid="212">Cassandra</a>
+                                                                    <a href="//www.jikexueyuan.com/course/redis/" cgid="269">Redis</a>
+                                                                    <a href="//www.jikexueyuan.com/course/mongoDB/" cgid="271">MongoDB</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/cloudplatform/" cgid="391">云平台</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/tencent/" cgid="392">腾讯云</a>
+                                                                    <a href="//www.jikexueyuan.com/course/AWS/" cgid="408">AWS</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <a cgid="4" href="//www.jikexueyuan.com/course/base/">技术支撑</a>
+                                                    <div class="list-show" style="min-height: 343px; width: 402px;">
+                                                        <div style="width: 400px;">
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/baselang/" cgid="27">基础语言</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/c/" cgid="162">C</a>
+                                                                    <a href="//www.jikexueyuan.com/course/cpp/" cgid="163">C++</a>
+                                                                    <a href="//www.jikexueyuan.com/course/oc/" cgid="165">Objective-C</a>
+                                                                    <a href="//www.jikexueyuan.com/course/swift/" cgid="166">Swift</a>
+                                                                    <a href="//www.jikexueyuan.com/course/csharp/" cgid="167">C#</a>
+                                                                    <a href="//www.jikexueyuan.com/course/java/" cgid="168">Java</a>
+                                                                    <a href="//www.jikexueyuan.com/course/perl/" cgid="169">Perl</a>
+                                                                    <a href="//www.jikexueyuan.com/course/shell/" cgid="170">Shell</a>
+                                                                    <a href="//www.jikexueyuan.com/course/qt/" cgid="171">Qt</a>
+                                                                    <a href="//www.jikexueyuan.com/course/scala/" cgid="390">Scala</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/computer/" cgid="28">计算机基础</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/theory/" cgid="172">计算机组成原理</a>
+                                                                    <a href="//www.jikexueyuan.com/course/network/" cgid="173">网络工程</a>
+                                                                    <a href="//www.jikexueyuan.com/course/word/" cgid="175">Word</a>
+                                                                    <a href="//www.jikexueyuan.com/course/excel/" cgid="176">Excel</a>
+                                                                    <a href="//www.jikexueyuan.com/course/ppt/" cgid="177">PowerPoint</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/devbase/" cgid="29">开发基础</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/count/" cgid="178">算法基础</a>
+                                                                    <a href="//www.jikexueyuan.com/course/figure/" cgid="179">数据结构</a>
+                                                                    <a href="//www.jikexueyuan.com/course/model/" cgid="180">设计模式</a>
+                                                                    <a href="//www.jikexueyuan.com/course/software/" cgid="181">软件工程</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/devtools/" cgid="30">开发工具</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/git/" cgid="183">Git/Github</a>
+                                                                    <a href="//www.jikexueyuan.com/course/svn/" cgid="184">SVN</a>
+                                                                    <a href="//www.jikexueyuan.com/course/vi/" cgid="185">VI</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/devstd/" cgid="31">开放标准</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/opencl/" cgid="186">OpenCL</a>
+                                                                    <a href="//www.jikexueyuan.com/course/xml/" cgid="187">Open XML</a>
+                                                                    <a href="//www.jikexueyuan.com/course/gles/" cgid="188">OpenGL/GLES</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/exam/" cgid="43">计算机等级考试</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/first/" cgid="275">一级</a>
+                                                                    <a href="//www.jikexueyuan.com/course/secc/" cgid="276">二级C</a>
+                                                                    <a href="//www.jikexueyuan.com/course/secjava/" cgid="277">二级Java</a>
+                                                                    <a href="//www.jikexueyuan.com/course/seccpp/" cgid="278">二级C++</a>
+                                                                    <a href="//www.jikexueyuan.com/course/networking/" cgid="281">网络工程师</a>
+                                                                    <a href="//www.jikexueyuan.com/course/dba/" cgid="282">数据库工程师</a>
+                                                                    <a href="//www.jikexueyuan.com/course/secure/" cgid="283">信息安全工程师</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/enterprise/" cgid="45">企业认证</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/cisco/" cgid="298">思科认证</a>
+                                                                    <a href="//www.jikexueyuan.com/course/oracle/" cgid="299">Oracle认证</a>
+                                                                    <a href="//www.jikexueyuan.com/course/linux/" cgid="301">Linux认证</a>
+                                                                    <a href="//www.jikexueyuan.com/course/arm/" cgid="302">ARM认证</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/operation/" cgid="46">运维管理</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/shellmaintain/" cgid="303">Shell</a>
+                                                                    <a href="//www.jikexueyuan.com/course/auto/" cgid="304">自动化运维</a>
+                                                                    <a href="//www.jikexueyuan.com/course/nginx/" cgid="305">Nginx</a>
+                                                                    <a href="//www.jikexueyuan.com/course/apache/" cgid="308">Apache</a>
+                                                                    <a href="//www.jikexueyuan.com/course/operationmonitor/" cgid="380">运维监控</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/business/" cgid="47">商业智能</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/filemaker/" cgid="310">FileMaker</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/os/" cgid="48">操作系统</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/linuxsys/" cgid="311">Linux</a>
+                                                                    <a href="//www.jikexueyuan.com/course/windows/" cgid="312">Windows</a>
+                                                                    <a href="//www.jikexueyuan.com/course/macos/" cgid="313">Mac OS</a>
+                                                                </dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt><a href="//www.jikexueyuan.com/course/enterpriseservice/" cgid="384">企业服务</a></dt>
+                                                                <dd class="cf">
+                                                                    <a href="//www.jikexueyuan.com/course/b2c/" cgid="385">B2C</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <ul class="hdlist">
+                                    <li>
+                                        <a href="//ke.jikexueyuan.com/zhiye/"><i class="icon-zylj"></i>职业路径图</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.jikexueyuan.com/path/"><i class="icon-zstx"></i>知识体系图</a>
+                                    </li>
+                                    <li>
+                                        <a href="//ke.jikexueyuan.com/xilie/"><i class="icon-xlkc"></i>系列课程</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.jikexueyuan.com/tag/"><i class="icon-kcbq"></i>课程标签</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+			<div class="footer-content">
+				<div class="contact-way">
+					<div class="other-way">
+						<a href="//blog.jikexueyuan.com/28.html " target="_blank" class="weixin-icon"></a>
+						<!--<a href="" class="tencen-icon"></a>-->
+						<a href="//weibo.com/jikexueyuan" target="_blank" class="sina-icon"></a>
+						<a href="//twitter.com/jikexueyuan" target="_blank" class="facebook-icon"></a>
+						<a href="//plus.google.com/communities/117673330839635588089" target="_blank" class="google-icon"></a>
+					</div>
+				</div>
+				<nav>
+					<a href="//help.jikexueyuan.com/" target="_blank">关于我们</a><i>|</i>
+					<a href="//help.jikexueyuan.com/join.html" target="_blank">加入我们</a><i>|</i>
+					<a href="//help.jikexueyuan.com/contact.html" target="_blank">联系我们</a><i>|</i>
+					<a href="//j.jikexueyuan.com/evangelist/apply" target="_blank">讲师合作</a><i>|</i>
+					<a href="//help.jikexueyuan.com/" target="_blank">帮助中心</a><i>|</i>
+					<a href="//blog.jikexueyuan.com/" target="_blank">黑板报</a><i>|</i>
+					<a href="//www.jikexueyuan.com/friendlink.html" target="_blank">友情链接</a><i>|</i>
+					<a href="//static.meiqia.com/dist/standalone.html?_=t&amp;eid=21444" target="_blank">意见反馈</a>
+				</nav>
+				<div class="copyright">Copyright © 2013-2016 jikexueyuan.com All Rights Reserved. 京ICP备11018032号 京公网安备11010802013056</div>
+				<a style="display:block; margin: 5px 0 0px 0" id="___szfw_logo___" href="https://credit.szfw.org/CX20160908025320080267.html" target="_blank"><img src="http://e.jikexueyuan.com/headerandfooter/images/cert.png?t=1501151196000" width="60px" border="0" target="_blank"></a>
+			</div>
+			<div class="gotop" id="gototop">
+				<span class="tel-icon">
+            <div class="tel-number"></div>
+        </span>
+				<a class="service" href="javascript:void(0);" onclick="meiqia()"></a>
+				<span class="wx">
+            <div class="appewm"></div>
+        </span>
+				<span class="top"><i style="display: block;"></i></span>
+			</div>
+		</div>
+    </div>
+</body>
+
+</html>

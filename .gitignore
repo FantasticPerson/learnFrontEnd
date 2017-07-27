@@ -5,3 +5,4 @@ dist/
 npm-debug.log
 libs/
 .DS_Store
+.vscode
