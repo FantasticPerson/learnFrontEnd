@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;" name="viewport" />
+    <title>first html</title>
+</head>
+<body>
+    <h1>设计一个有getMin功能的栈</h1>
+    <p>实现一个特殊的栈，在实现栈的基础上，再实现返回栈中最小元素的操作</p>
+    <h2>要求</h2>
+    <p>1.pop,push,getMin操作的时间复杂度都是O(1)</p>
+    <p>2.设计的栈类型可以使用现成的结构</p>
+    <img src="assets/img/1.png">
+    <img src="assets/img/2.png">
+    <script type="text/javascript">
+        function MyStack(){
+            this.stackData=[];
+            this.stackMin = [];
+        }
+        MyStack.prototype={
+            push:function(num){
+                if(this.stackMin.lenght == 0){
+                    this.stackMin.push(num);
+                } else if(num <= this.getMin()){
+                    this.stackMin.push(num);
+                }
+                this.stackData.push(num);
+            },
+            pop:function(){
+                if(this.stackData.lenght == 0){
+                    return null;
+                }
+                var value = this.stackMin.pop();
+                if(value == this.getMin()){
+                    this.stackMin.pop();
+                }
+                return value;
+            },
+            getMin:function(){
+                if(this.stackMin.length === 0){
+                    return null;
+                }
+                return Math.min(this.stackMin);
+            }
+        }
+        function MyStack2(){
+            this.stackData = [];
+            this.stackMin = [];
+        }
+        MyStack2.prototype = {
+            push:function(num){
+                if(this.stackMin.lenght === 0){
+                    this.stackMin.push(num);
+                } else if(num < this.getMin()){
+                    this.stackMin.push(num);
+                } else {
+                    this.stackMin.push(this.getMin());
+                }
+            },
+            pop:function(){
+                if(this.stackData.lenght === 0){
+                    return null;
+                }
+                this.stackMin.pop();
+                return this.stackData.pop();
+            },
+            getMin:function(){
+                if(this.stackMin.length === 0){
+                    return null;
+                }
+                return Math.min(this.stackMin);
+            }
+        }
+    </script>
+    <h1>由两个栈组成队列</h1>
+    <p>编写一个类，用两个栈实现队列，支持队列的基本操作（add，poll，peek）</p>
+    <h2>解答</h2>
+    <p>栈的特点是先进后出，而队列的特点的是先进先出</p>
+    <script>
+        function TwoStackQueue(){
+            this.pushStack = [];
+            this.popStack = [];
+        }
+    </script>
+</body>
+</html>
