@@ -22,6 +22,10 @@ $(document).ready(function(){
                 imgLocation()
             }
         }
+        // window.onload = function(){
+        //     console.log('load load')
+        // }
+        window.onresize = imgLocation;
     // })
 });
 
@@ -35,13 +39,22 @@ function scrollside(){
 }
 
 function imgLocation(){
+    console.log("width:"+window.innerWidth);
+    console.log("width1:"+$(window).width());
     var box = $('.box');
     var boxWidth = box.eq(0).width();
     var num = Math.floor($(window).width()/boxWidth);
+    console.log("num:"+num);
     var boxArr = [];
     box.each(function(i,item){
         // boxArr.push(item.height());
         // console.log(item);
+        $(item).css({
+            position:'relative',
+            float:'left',
+            top:'',
+            left:''
+        })
         var boxHeight = box.eq(i).height();
         if(i < num){
             boxArr[i] = boxHeight;
