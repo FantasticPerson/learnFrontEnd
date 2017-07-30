@@ -2,31 +2,25 @@
  * Created by wdd on 2017/7/13.
  */
 $(document).ready(function(){
-    // $(window).on('load',function(){
-        imgLocation();
-        window.onload = imgLocation();
-        var dataImg = {'data':[
-            {'src':'img1.jpg'},
-            {'src':'img2.jpg'},
-            {'src':'img3.jpg'},
-            {'src':'img4.jpg'},
-            {'src':'img5.jpg'}
-            ]}
-        window.onscroll = function(){
-            if(scrollside()){
-                $.each(dataImg.data,function(index,value){
-                    var box = $('<div>').addClass('box').appendTo($('#container'));
-                    var content = $('<div>').addClass('content').appendTo(box);
-                    $('<img>').attr("src",'./img/'+$(value).attr('src')).appendTo(content);
-                });
-                imgLocation()
-            }
+    imgLocation();
+    var dataImg = {'data':[
+        {'src':'img1.jpg'},
+        {'src':'img2.jpg'},
+        {'src':'img3.jpg'},
+        {'src':'img4.jpg'},
+        {'src':'img5.jpg'}
+        ]}
+    window.onscroll = function(){
+        if(scrollside()){
+            $.each(dataImg.data,function(index,value){
+                var box = $('<div>').addClass('box').appendTo($('#container'));
+                var content = $('<div>').addClass('content').appendTo(box);
+                $('<img>').attr("src",'./img/'+$(value).attr('src')).appendTo(content);
+            });
+            imgLocation()
         }
-        // window.onload = function(){
-        //     console.log('load load')
-        // }
-        window.onresize = imgLocation;
-    // })
+    }
+    window.onresize = imgLocation;
 });
 
 function scrollside(){
