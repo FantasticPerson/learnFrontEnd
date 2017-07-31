@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        (function(){
+            var n = 'iwen'
+            function People(name){
+                this._name = name;
+            }
+
+            People.prototype.say = function(){
+                alert('hello'+this._name+n);
+            }
+            window.People = People;
+        })();
+        (function(){
+            function Student(name){
+                this._name = name;
+            }
+
+            Student.prototype = new People();
+            var superSay = Student.prototype.say;
+            Student.prototype.say = function(){
+                superSay.call(this);
+                alert('say1'+this._name);
+            }
+            window.Student = Student;
+        })();
+
+        
+        var s = new Student('iwen');
+        s.say();
+    </script>
+</html>

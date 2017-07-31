@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        (function(){
+            function Person(name){
+                var _this = {};
+                _this._name = name;
+                _this.sayHello = function(){
+                    alert('hello'+_this._name)
+                }
+                return _this;
+            }
+            window.Person = Person;
+        })();
+        
+
+        function Teacher(name){
+            var _this = Person(name);
+            var superSay = _this.sayHello;
+            _this.sayHello = function(){
+                superSay.call(_this);
+                alert('tHello'+_this._name);
+            }
+            return _this;
+        }
+
+        var t = Teacher('iwen');
+        t.sayHello();
+    </script>
+</html>
