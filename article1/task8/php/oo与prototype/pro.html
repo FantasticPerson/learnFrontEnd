@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        function people(color){
+            this.eye=color;
+            this.header="";
+            this.single = function(){
+                alert(this.header+this.eye);
+            }
+        }
+        people.prototype.eye='123';
+        var t = new people();
+        console.log(this.eye);
+        function yellowman(color){
+            people.call(this,color);
+        }
+        yellowman.prototype=Object.create(people.prototype);//这样可以防止原型被修改
+        yellowman.prototype.a = "aaa";
+        var p = new yellowman('yellow');
+        console.log(p);
+        console.log(t);
+    </script>
+</html>
