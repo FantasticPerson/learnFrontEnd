@@ -41,3 +41,67 @@ const atom = {
         return 'f';
     }
 }
+
+//数组
+//拷贝数组
+let arr = [1,2,3];
+let arrCopy = [...arr];
+
+//将类似于数组的对象变为数组
+let arr1={
+
+}
+Array.from();
+
+//函数
+(()=>{
+
+})();//匿名函数
+
+//绑定
+
+//老的方式
+const seif = this;
+const boundMethod = function(...params){
+    return boundMethod.apply(self,params);
+}
+//.bind(this)
+
+//所有配置项都应该集中在一个对象，放在最后一个参数，bool值不可以直接作为参数
+function divide(a,b,{option=false}={}){
+
+}
+
+//map
+let map = new Map(arr);
+
+for (let key of map.keys()) {
+  console.log(key);
+}
+
+for (let value of map.values()) {
+  console.log(value);
+}
+
+for (let item of map.entries()) {
+  console.log(item[0], item[1]);
+}
+
+//class
+const inherits = require('inherits');
+function PeekableQueue(contents) {
+  Queue.apply(this, contents);
+}
+inherits(PeekableQueue, Queue);
+PeekableQueue.prototype.peek = function() {
+  return this._queue[0];
+}
+
+// good
+class PeekableQueue extends Queue {
+  peek() {
+    return this._queue[0];
+  }
+}
+
+//export class 首字母大写 function大写
