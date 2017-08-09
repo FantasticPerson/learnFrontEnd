@@ -6,3 +6,4 @@ npm-debug.log
 libs/
 .DS_Store
 .vscode
+bower_components/
