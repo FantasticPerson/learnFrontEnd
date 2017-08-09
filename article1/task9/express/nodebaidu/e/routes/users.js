@@ -1,18 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var dbConfig = require('./dbconfig')
 
-var connection = mysql.createPool({
-  host:'localhost',
-  port:'3306',
-  user:'root',
-  password:'123',
-  database:'baidunews'
-})
+var connection = mysql.createPool(dbConfig)
 
 /* 后台页面. */
 router.get('/getnews', function(req, res, next) {
-  connection.query('SELECT * FROM `news`',[],function(err,rows,fields){
+  connection.query('SELECT * FROM `news` order by id desc',[],function(err,rows,fields){
     res.json(rows);
   })
 });

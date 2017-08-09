@@ -99,7 +99,6 @@ $(document).ready(function(){
     })
 
     $('#confirmUpdate').click(function(){
-        console.log('update~~~~~');
         $.ajax({
             url:'/admin/updateNews',
             type:'post',
