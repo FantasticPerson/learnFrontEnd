@@ -1,0 +1,998 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+img,
+input,
+label,
+select {
+    vertical-align: middle;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+#jk-header {
+    background: #fff;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #e4e4e4;
+    .header {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    h1 {
+        display: inline;
+    }
+    a {
+        color: #555555;
+        text-decoration: none;
+        font-size: 15px;
+        &:hover {
+            color: #35b558;
+        }
+    }
+    .logo {
+        width: 100px;
+        height: 37px;
+        margin-top: 15px;
+        float: left;
+        margin-right: 70px;
+        img {
+            display: block;
+        }
+    }
+    nav {
+        display: inline-block;
+        float: left;
+        li {
+            color: #555;
+            list-style: none;
+            line-height: 69px;
+            padding-right: 32px;
+            text-decoration: none;
+            font-size: 15px;
+            float: left;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+                color: #35b558;
+            }
+            i.slide-icon {
+                background: url(http://e.jikexueyuan.com/headerandfooter/images/icon.png);
+                background-position: 0px -47px;
+                display: inline-block;
+                width: 11px;
+                margin-left: 5px;
+                height: 7px;
+                transition: All 0.4s ease-in-out;
+                -webkit-transition: All 0.4s ease-in-out;
+                -moz-transition: All 0.4s ease-in-out;
+                -o-transition: All 0.4s ease-in-out;
+            }
+        }
+    }
+    .slide-submeu {
+        position: absolute;
+        left: 0;
+        top: 69px;
+        z-index: 1000;
+        width: 210px;
+        padding: 5px 0;
+        background: #fff;
+        border-top: 1px solid #E4E4E4;
+        box-shadow: -1px 3px 5px rgba(000, 000, 000, 0.3);
+        display: none;
+        strong {
+            display: block;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: normal;
+            padding: 0px 15px;
+            color: #b9b9b9;
+            background: #fafafa;
+        }
+        a {
+            display: block;
+            font-size: 12px;
+            line-height: 35px;
+            padding: 0px 15px;
+        }
+    }
+    .careerpath .slide-submeu a:nth-child(2n) {
+        background: #fff;
+    }
+    .slide-submeu a:nth-child(2n) {
+        background: #FAFAFA;
+    }
+    .careerpath .slide-submeu a {
+        line-height: 30px;
+    }
+    .zhiye-submenu a i.web-icon {
+        background-position: -94px -23px;
+    }
+    .zhiye-submenu a i {
+        display: inline-block;
+        float: left;
+        width: 14px;
+        height: 14px;
+        margin-top: 8px;
+        margin-right: 10px;
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/icon.png);
+    }
+    .search {
+        border: 1px solid #e4e4e4;
+        height: 32px;
+        width: 230px;
+        overflow: hidden;
+        display: inline-block;
+        float: left;
+        margin-top: 20px;
+        input {
+            float: left;
+            width: 190px;
+            height: 30px;
+            border: none;
+            padding: 0px 8px;
+            border-right: 1px solid #e4e4e4;
+            outline: none;
+            font-size: 12px;
+        }
+    }
+    .search-icon {
+        width: 18px;
+        height: 18px;
+        float: right;
+        margin-top: 6px;
+        margin-right: 10px;
+        display: inline-block;
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/icon.png) 0 0 no-repeat;
+        background-position: 0 0;
+        cursor: pointer;
+    }
+    .nav-other {
+        float: right;
+        width: 143px;
+        height: 70px;
+    }
+    .centerbox {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    .learn-center {
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/center-icon.png) no-repeat 0 0;
+        width: 16px;
+        height: 16px;
+        margin: 8px 0 0 8px;
+        display: block;
+    }
+    .nav-other .userinfo-login {
+        width: 47px;
+        height: 69px;
+        display: inline-block;
+        position: relative;
+        float: right;
+        padding-top: 18px;
+    }
+    .userinfo-login a img {
+        width: 32px;
+        height: 32px;
+        display: block;
+        border-radius: 50%;
+        float: right;
+    }
+    #uservip-icon {
+        width: 13px;
+        height: 13px;
+        display: block;
+        position: absolute;
+        top: 38px;
+        left: 39px;
+    }
+    .vip-icon {
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/vip.png) 0 0 no-repeat;
+        background-size: 13px 13px;
+    }
+    .message {
+        cursor: pointer;
+        width: 15px;
+        height: 18px;
+        display: block;
+        position: relative;
+        margin: 7px 0px 0 8px;
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/icon.png) 0 0 no-repeat;
+        background-position: -26px 0;
+    }
+}
+
+#container {
+    .mar-t20 {
+        margin-top: 20px !important;
+    }
+    .wrap {
+        &:after {
+            display: table;
+            clear: both;
+            content: " ";
+        }
+    }
+    .w-1000 {
+        width: 1000px;
+        margin: 0 auto;
+        clear: both;
+        #main {
+            width: 776px;
+            .tagGather>.bd {
+                color: #666;
+                font-size: 12px;
+                line-height: 1.5;
+                .listbox {
+                    .sort {
+                        position: relative;
+                        z-index: 500;
+                        .wrap {
+                            box-sizing: content-box;
+                            height: 38px;
+                            background: #fff;
+                            color: gray;
+                            line-height: 38px;
+                            .sortMode {
+                                overflow: visible;
+                                float: left;
+                                height: 38px;
+                                h3 {
+                                    float: left;
+                                    padding: 0 21px;
+                                    background: #fff;
+                                    border-right: 1px solid #f5f5f5;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    cursor: default;
+                                }
+                                dl {
+                                    position: relative;
+                                    z-index: 10;
+                                    overflow: hidden;
+                                    float: left;
+                                    height: 36px;
+                                    margin: 0 1px 0 -1px;
+                                    white-space: nowrap;
+                                    dt {
+                                        padding: 0 18px;
+                                        cursor: default;
+                                        .arrow {
+                                            position: relative;
+                                            display: inline-block;
+                                            margin-left: 5px;
+                                            &:after,
+                                            &:before {
+                                                display: block;
+                                                width: 0 !important;
+                                                height: 0 !important;
+                                                padding: 0 !important;
+                                                font-size: 0 !important;
+                                                line-height: 0 !important;
+                                                border: 5px solid transparent;
+                                                border-bottom-width: 0;
+                                                border-top-color: gray;
+                                                content: " ";
+                                            }
+                                            &:after {
+                                                position: absolute;
+                                                left: 1px;
+                                                bottom: 1px;
+                                                border-width: 4px;
+                                                border-bottom-width: 0;
+                                                border-top-color: #fff;
+                                            }
+                                        }
+                                    }
+                                    dd {
+                                        position: relative;
+                                        z-index: 12;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        -webkit-transition: all .1s ease .1s;
+                                        -moz-transition: all .1s ease .1s;
+                                        -ms-transition: all .1s ease .1s;
+                                        transition: all .1s ease .1s;
+                                        a {
+                                            display: block;
+                                            padding: 0 32px 0 17px;
+                                            font-weight: 500;
+                                            color: gray;
+                                        }
+                                    }
+                                }
+                            }
+                            .previewMode {
+                                float: right;
+                                li {
+                                    position: relative;
+                                    float: left;
+                                    width: 36px;
+                                    height: 38px;
+                                    border-left: 1px solid #f5f5f5;
+                                    line-height: 36px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    -webkit-transition: background-color .2s;
+                                    -moz-transition: background-color .2s;
+                                    -ms-transition: background-color .2s;
+                                    transition: background-color .2s;
+                                    .curr,
+                                    &:hover {
+                                        background: #fff;
+                                    }
+                                    .kuai-icon .icon {
+                                        width: 14px;
+                                        background: url(https://s1.jikexueyuan.com/course/images/icon-kuai_3c1a8cf.png) no-repeat 0 0;
+                                        background-size: 14px;
+                                    }
+                                    .icon {
+                                        position: relative;
+                                        top: -1px;
+                                        display: inline-block;
+                                        width: 14px;
+                                        height: 14px;
+                                        vertical-align: middle;
+                                        background: url(https://s1.jikexueyuan.com/course/images/preview-icon_2ae2eb9.png) no-repeat 0 0;
+                                    }
+                                    .list-icon .icon {
+                                        width: 19px;
+                                        background: url(https://s1.jikexueyuan.com/course/images/icon-list_6d9f87f.png) no-repeat center;
+                                        background-size: 16px 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .lesson-list {
+                        ul {
+                            width: 790px;
+                            margin-top: 15px;
+                            li {
+                                width: 250px;
+                                height: 225px;
+                                float: left;
+                                margin-right: 13px;
+                                margin-bottom: 13px;
+                                .lessonimg-box {
+                                    width: 100%;
+                                    height: 135px;
+                                    position: relative;
+
+                                    a{
+                                      .lessonimg {
+                                          width: 100%;
+                                          height: 135px;
+                                      }
+                                    }
+                                    .lesson-shoucang {
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 10px;
+                                        width: 16px;
+                                        height: 16px;
+                                        background: url(https://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
+                                        background-size: 16px 16px;
+                                        z-index: 101;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .lesson-infor {
+                                    padding: 10px;
+                                    position: relative;
+                                    z-index: 200;
+                                    height: 88px;
+                                    overflow: hidden;
+                                    background: #fff;
+                                    .lesson-info-h2,
+                                    h5 {
+                                        font-size: 14px;
+                                        color: #333;
+                                        line-height: 18px;
+                                        margin-bottom: 12px;
+                                        height: 36px;
+                                        overflow: hidden;
+                                        a {
+                                            color: #333;
+                                            &:hover {
+                                                color: #333;
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        color: gray;
+                                        font-size: 12px;
+                                        line-height: 18px;
+                                        height: 0;
+                                        overflow: hidden;
+                                        opacity: 0;
+                                        margin-bottom: 10px;
+                                        display: none;
+                                    }
+                                    .timeandicon {
+                                        font-size: 12px;
+                                        color: gray;
+                                        position: relative;
+                                        dl {
+                                            width: 120px;
+                                            float: left;
+                                            white-space: nowrap;
+                                            dd {
+                                                font-size: 12px;
+                                                float: left;
+                                                display: inline-block;
+                                                margin-right: 15px;
+                                            }
+                                        }
+                                        .time-icon {
+                                            background: url(https://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+                                            width: 14px;
+                                            height: 14px;
+                                            display: block;
+                                            float: left;
+                                            margin-right: 8px;
+                                            background-size: 14px 14px;
+                                        }
+                                        .learn-number {
+                                            float: right;
+                                            display: none;
+                                        }
+                                    }
+                                    .zhongji {
+                                        display: none;
+                                    }
+                                    .cf{
+                                      .lessonicon-box {
+                                          position: absolute;
+                                          right: 0;
+                                          text-align: right;
+                                          bottom: 4px;
+                                          a {
+                                              display: inline-block;
+                                              width: 16px;
+                                              height: 16px;
+                                              margin-left: 3px;
+                                          }
+                                          
+                                      }
+                                  }
+                                }
+                            }
+                        }
+                    }
+                    .lesson-list2 {
+                        ul {
+                            li {
+                                height: 100px;
+                                padding: 0;
+                                background-color: #fff;
+                                margin-top: 13px;
+                                .lessonimg-box {
+                                    width: 185px;
+                                    height: 100px;
+                                    float: left;
+                                    margin-right: 15px;
+                                    position: relative;
+                                    .lesson-shoucang {
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 10px;
+                                        width: 16px;
+                                        height: 16px;
+                                        background: url(https://s1.jikexueyuan.com/course/images/shoucang-1_76dc56f.png);
+                                        background-size: 16px 16px;
+                                        z-index: 101;
+                                        cursor: pointer;
+                                    }
+                                    .lessonimg {
+                                        width: 185px;
+                                        height: 100px;
+                                    }
+                                    .lessonplay {
+                                        background: rgba(0, 0, 0, .4);
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: 100;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        opacity: 0;
+                                        .playericon {
+                                            position: absolute;
+                                            z-index: 120;
+                                            width: 50px;
+                                            height: 50px;
+                                            display: block;
+                                            left: 50%;
+                                            margin-left: -25px;
+                                            top: 50%;
+                                            margin-top: -25px;
+                                            background: url(https://s1.jikexueyuan.com/course/images/player_icon_5c67475.png) no-repeat;
+                                            background-size: 50px 50px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                .lesson-infor {
+                                    position: relative;
+                                    height: 100px;
+                                    width: 566px;
+                                    float: left;
+                                    .lesson-info-h2,
+                                    h5 {
+                                        font-size: 14px;
+                                        color: #333;
+                                        margin-top: 5px;
+                                        margin-bottom: 5px;
+                                        overflow: hidden;
+                                        a {
+                                            color: #333;
+                                        }
+                                    }
+                                    p {
+                                        color: gray;
+                                        font-size: 12px;
+                                        opacity: 1 !important;
+                                        line-height: 18px;
+                                        overflow: hidden;
+                                        margin-bottom: 10px;
+                                    }
+                                    .lessonicon-box {
+                                        position: absolute;
+                                        right: 0;
+                                        text-align: right;
+                                        top: 5px;
+                                        a {
+                                            display: inline-block;
+                                            width: 16px;
+                                            height: 16px;
+                                            margin-left: 3px;
+                                            background-size: 16px 16px;
+                                            -webkit-background-size: 16px 16px;
+                                        }
+                                    }
+                                    .timeandicon {
+                                        .time-icon {
+                                            background: url(https://s1.jikexueyuan.com/course/images/icon_7f8b929.png) 0 -72px no-repeat;
+                                            width: 14px;
+                                            height: 14px;
+                                            display: block;
+                                            float: left;
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #page-nav {
+                        text-align: center;
+                        margin-top: 17px;
+                        ul.pages {
+                            display: block;
+                            border: 0;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            margin: 10px 0 45px;
+                            padding: 0;
+                            li {
+                                display: inline-block;
+                                width: 32px;
+                                height: 32px;
+                                border: 0;
+                                margin-left: 5px;
+                                line-height: 30px;
+                                border: 1px solid #fff;
+                                text-align: center;
+                                font-size: 12px;
+                                background: #fff;
+                                color: gray;
+                                border: 1px solid #e4e4e4;
+                                &.pgNext {
+                                    width: 50px;
+                                }
+                                &.pgEmpty {
+                                    border: 1px solid #f0f0f0;
+                                    color: #d9d6c3;
+                                    width: 50px;
+                                    cursor: default;
+                                }
+                                &.pgCurrent {
+                                    background: #35b558;
+                                    color: #fff;
+                                    border: 1px solid #35B558;
+                                }
+                                &.thpoint {
+                                    border: 0;
+                                    cursor: auto;
+                                    color: #000;
+                                    background: none !important;
+                                    margin-top: 3px;
+                                }
+                                &.pagetotal {
+                                    width: 70px;
+                                }
+                                &.pagenow {
+                                    width: 100px;
+                                }
+                                &.go {
+                                    width: 32px;
+                                    height: 22px;
+                                    line-height: 22px;
+                                    margin-top: 6px;
+                                }
+                            }
+                            &:nth-child(2) {
+                                width: 72px;
+                            }
+                        }
+                        input {
+                            width: 35px !important;
+                            height: 22px !important;
+                            background: #fff;
+                            border: 1px solid #e4e4e4;
+                            color: #666;
+                            line-height: 22px;
+                            margin: 0 10px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+        #aside {
+            width: 210px;
+            .hdlist {
+                width: 100%;
+                background-color: #fff;
+                li {
+                    height: 45px;
+                }
+                a {
+                    display: block;
+                    height: 45px;
+                    width: 100%;
+                    line-height: 45px;
+                    color: #333;
+                    font-size: 14px;
+                    padding-left: 10px;
+                    border-bottom: 1px solid #eee;
+                    .icon-zylj {
+                        background: url(https://s1.jikexueyuan.com/common/images/icon-zylj_6ee6dac.png) no-repeat left center;
+                        background-size: 15px 14px;
+                    }
+                    i {
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 8px;
+                        vertical-align: text-bottom;
+                    }
+                    .icon-zstx {
+                        background: url(https://s1.jikexueyuan.com/common/images/icon-zstx_a1ae096.png) no-repeat left center;
+                        background-size: 15px 12.5px;
+                    }
+                    .icon-xlkc {
+                        background: url(https://s1.jikexueyuan.com/common/images/icon-xlkc_2e47588.png) no-repeat left center;
+                        background-size: 14px 14px;
+                    }
+                    .icon-kcbq {
+                        background: url(https://s1.jikexueyuan.com/common/images/icon-kcbq_65534c2.png) no-repeat left center;
+                        background-size: 15px 13px;
+                    }
+                    &:hover {
+                        color: #35b558;
+                        background: #fafafa url(https://s1.jikexueyuan.com/common/images/img-seeall_b965178.png) no-repeat 160px center;
+                        background-size: 40px 10px;
+                    }
+                }
+            }
+            .aside-allCategory {
+                margin: 0;
+                border: 1px solid #35b558;
+                background-color: #fff;
+                >.hd {
+                    height: 45px;
+                    padding: 0 32px;
+                    border-bottom: 1px solid #eee;
+                    line-height: 45px;
+                    cursor: default;
+                    h2 {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 400;
+                        a {
+                            color: #35b558;
+                        }
+                    }
+                    .icon-course-curr {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        background: url(https://s1.jikexueyuan.com/common/images/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+                        position: absolute;
+                        margin-left: -20px;
+                        margin-top: 14px;
+                    }
+                }
+                .bd {
+                    .aside-cList {
+                        position: relative;
+                        width: 208px;
+                        li {
+                            padding: 0;
+                            border-bottom: 0;
+                            >div {
+                                cursor: pointer;
+                                width: 208px;
+                                height: 37px;
+                                border-bottom: 1px solid #f5f5f5;
+                                background: url(https://s1.jikexueyuan.com/common/images/icon-more_cd68622.png) 186px center no-repeat;
+                                background-size: 6px 10px;
+                                padding-left: 32px;
+                                a {
+                                    font-size: 12px;
+                                    color: #666;
+                                    line-height: 36px;
+                                }
+                                &:hover {
+                                    border-left: 1px solid #ddd;
+                                    border-top: 1px solid #ddd;
+                                    border-bottom: 1px solid #ddd;
+                                    height: 38px;
+                                    width: 210px;
+                                    margin-top: -1px;
+                                    margin-left: -1px;
+                                    padding-left: 24px;
+                                    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+                                    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+                                    >a {
+                                        display: block;
+                                        width: 188px;
+                                        background: #fff;
+                                        position: absolute;
+                                        z-index: 1102;
+                                        border-right: 3px solid #fff;
+                                        color: #35b558;
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                        line-height: 36px;
+                                    }
+                                }
+                            }
+                            .list-show {
+                                display: none;
+                                -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+                                -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+                                box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+                                overflow: hidden;
+                                min-height: 417px;
+                                min-width: 401px;
+                                background: #fff;
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 209px;
+                                top: -46px;
+                                z-index: 1101;
+                                list-style: none;
+                                margin-left: -1px;
+                                padding-bottom: 30px;
+                                float: left;
+                                width: 591px;
+                                dl {
+                                    margin: 0 15px;
+                                    overflow: hidden;
+                                    dt {
+                                        display: block;
+                                        border-bottom: 1px solid #f5f5f5;
+                                        height: 37px;
+                                        line-height: 45px;
+                                        >a {
+                                            color: #333;
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                    dd {
+                                        list-style: none;
+                                        margin-left: -8px;
+                                        padding: 3px 0;
+                                        a {
+                                            height: 14px;
+                                            line-height: 14px;
+                                            margin-bottom: 10px;
+                                            margin-top: 5px;
+                                            padding: 0 7px;
+                                            color: #666;
+                                            display: inline-block;
+                                            font-size: 12px;
+                                            border-left: 1px solid #e0e0e0;
+                                            float: left;
+                                            white-space: nowrap;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    margin-top: 70px;
+    position: relative;
+    font-size: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    border-top: 1px solid #e4e4e4;
+    .footer-content {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        .contact-way {
+            text-align: center;
+            box-sizing: border-box;
+            width: 240px;
+            z-index: 100;
+            background: #fff;
+            margin: 20px auto;
+            .other-way {
+                a {
+                    background: url(http://e.jikexueyuan.com/headerandfooter/images/otherway.png) 0 0 no-repeat;
+                    display: inline-block;
+                    width: 22px;
+                    height: 18px;
+                    margin-right: 20px;
+                    &.weixin-icon {
+                        background-position: -28px 0px;
+                    }
+                    &.sina-icon {
+                        background-position: 0px 0px;
+                    }
+                    &.facebook-icon {
+                        background-position: -104px 0px;
+                    }
+                    &.google-icon {
+                        background-position: -80px 0px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .nav {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 0px 0px 20px 0px;
+            a {
+                padding: 4px 10px;
+                color: #666;
+                text-decoration: none;
+            }
+            i {
+                color: #E4E4E4;
+                font-style: normal;
+            }
+        }
+        .copyright {
+            color: #999;
+            padding: 10px 0;
+        }
+    }
+    .gotop {
+        position: fixed;
+        left: 50%;
+        margin-left: 515px;
+        top: 450px;
+        width: 40px;
+        text-align: center;
+        z-index: 2000;
+        span,
+        a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1px;
+        }
+        .tel-icon {
+            position: relative;
+            background: #fff url(http://e.jikexueyuan.com/headerandfooter/images/tel.png) 12px 10px no-repeat;
+            .tel-number {
+                background: url(http://e.jikexueyuan.com/headerandfooter/images/tel_number.png) center center no-repeat;
+                background-size: 100%;
+                width: 157px;
+                height: 89px;
+                position: absolute;
+                z-index: 2100;
+                left: -155px;
+                top: -4px;
+                display: none;
+            }
+        }
+        .service {
+            background: #fff url(http://e.jikexueyuan.com/headerandfooter/images/service.png) 10px 10px no-repeat;
+        }
+        .wx {
+            position: relative;
+            background: #fff url(http://e.jikexueyuan.com/headerandfooter/images/wx.png) 12px 10px no-repeat;
+            .appewm {
+                background: url(http://e.jikexueyuan.com/headerandfooter/images/qrcode.png) center center no-repeat;
+                background-size: 100%;
+                width: 158px;
+                height: 178px;
+                position: absolute;
+                z-index: 2100;
+                left: -156px;
+                top: -86px;
+                display: none;
+            }
+        }
+        .top {
+            i {
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: #fff url(http://e.jikexueyuan.com/headerandfooter/images/top.png) 11px 10px no-repeat;
+            }
+        }
+    }
+}
+
+.f_r {
+    float: right;
+}
+
+.cf {
+    zoom: 1;
+}
+
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.mar-b8 {
+    margin-bottom: 8px;
+}
