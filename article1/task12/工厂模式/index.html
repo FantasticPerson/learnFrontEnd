@@ -1,0 +1,25 @@
+<meta charset="utf-8"/>
+<script type="text/javascript">
+    //1.工厂应该有厂长来决定到底运行哪条产品线
+    //消费之=>子类
+    var gongchang = {};
+    gongchang.chanyifu = function(){
+        this.gongren="50";
+        alert('we have '+this.gongren);
+    }
+    gongchang.chanxie = function(){
+        alert('生产鞋子');
+    }
+    gongchang.yunshu = function(){
+        alert('运输')
+    }
+    gongchang.chanzhang = function(para){
+        //new js我们用了 构造函数模式 单例模式
+        return new gongchang[para]();
+    }
+
+    var me = gongchang.chanzhang('chanyifu');
+    alert(m.gongren);
+
+    //简单工厂 抽象工厂
+</script>

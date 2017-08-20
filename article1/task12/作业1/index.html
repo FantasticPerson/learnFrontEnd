@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link href="assets/style/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="pc-container">
+    <div class="header">
+        <a href="http://news.baidu.com" class="mnav">新闻</a>
+        <a href="http://www.hao123.com" class="mnav">hao123</a>
+        <a href="http://map.baidu.com" class="mnav">地图</a>
+        <a href="http://v.baidu.com" class="mnav">视频</a>
+        <a href="http://tieba.baidu.com" class="mnav">贴吧</a>
+        <a href="http://xueshu.baidu.com" class="mnav">学术</a>
+        <a href="javascript:login()" class="lb">登录</a>
+        <div href="http://www.baidu.com/gaoji/preferences.html" class="pf"><span>设置</span>
+            <div class="setting-submenu">
+                <a class="setting-submenu-a" href="javascript:;">搜索设置</a>
+                <a class="setting-submenu-a" href="//www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a>
+                <a class="setting-submenu-a" href="javascript:;">开启预测</a>
+                <a class="setting-submenu-a" href="http://i.baidu.com/my/history?from=ps" target="_blank">搜索历史</a>
+            </div>
+        </div>
+        <div href="http://www.baidu.com/more/" class="bri"><span>更多产品</span>
+            <div class="bdmainlink">
+                <div class="bdbriimgtitle">更多产品</div>
+                <div class="briscrollwrapperContainer">
+                    <div class="briscrollwrapper bdbriscroll-ctrl-content bdbriscroll-onwheel">
+                        <div class="bdbriwrapper">
+                            <a href="http://www.nuomi.com/?cid=002540" name="tj_nuomi"><span class="bdbriimgitem_1 icon"></span><span class="text22">糯米</span></a>
+                            <a href="http://music.baidu.com" name="tj_mp3"><span class="bdbriimgitem_3  icon"></span><span class="text22">音乐</span></a>
+                            <a href="http://image.baidu.com" name="tj_img"><span class="bdbriimgitem_4  icon"></span><span class="text22">图片</span></a>
+                            <a href="http://zhidao.baidu.com" name="tj_zhidao"><span class="bdbriimgitem_2  icon"></span><span class="text22">知道</span></a>
+                            <a href="http://wenku.baidu.com" name="tj_wenku"><span class="bdbriimgitem_5  icon"></span><span class="text22">文库</span></a>
+                            <a href="http://top.baidu.com" name="tj_bang"><span class="bdbriimgitem_6  icon"></span><span class="text22">风云榜</span></a>
+                            <div class="bdbrievenmore">
+                                <a href="//www.baidu.com/more/" name="tj_more">全部产品&gt;&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="body">
+            <img class="baiduLogo" src="assets/image/bd_logo1_31bdc765.png">
+            <form action="https://www.baidu.com/s" method="get" target="_blank">
+                <div class="search-container">
+                    <form>
+                            <span class="outer-container">
+                                <input name="wd">
+                                <span class="camera-btn"></span>
+                                <div class="search-btn" onclick="(function(){
+                                    var form = document.getElementsByTagName('form');
+                                    form.submit();
+                                })()">百度一下</div>
+                            </span>
+                    </form>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="qrcode">
+                <img src="assets/image/zbios_efde696.png">
+                <p>手机百度</p>
+            </div>
+            <p class="lh">
+                <a href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                <a class="lh-a" href="http://home.baidu.com">关于百度</a>
+                <a class="lh-a" href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a>
+                <a class="lh-a" href="http://e.baidu.com/?refer=888"    >百度推广</a>
+            </p>
+            <p class="cp">©2017&nbsp;Baidu&nbsp;
+                <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                <span>&nbsp;</span>
+                <a href="http://jianyi.baidu.com/" class="cp-feedback">意见反馈</a>
+                <span>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i>&nbsp;</span>
+                <a id="jgwab" target="_blank">京公网安备11000002000001号</a>
+                <span>&nbsp;<i class="c-icon-jgwablogo"></i></span>
+            </p>
+        </div>
+    </div>
+    <div class="login-container" style="display: none">
+        <div class="login-background"></div>
+        <div class="login-container-container">
+            <div class="tang-title tang-title-dragable">
+                <div class="login-close-btn" onclick="(function(){
+                    document.getElementsByClassName('login-container')[0].style.display='none';
+                })()"></div>
+                <span id="TANGRAM__PSP_4__titleText">登录百度帐号</span>
+            </div>
+            <p>
+                <label class="login-label-1"></label>
+                <input class="my-login-username" type="text">
+            </p>
+            <p>
+                <label  class="login-label-2"></label>
+                <input class="my-login-passport" type="text">
+            </p>
+            <button onclick="(function(){
+                var useN = $('.my-login-username')[0].value.trim();
+                var pasP = $('.my-login-passport')[0].value.trim();
+                if(useN && useN.length >0 && pasP && pasP.length > 0){
+                    window.location.href = 'index2.html';
+                } else {
+                    alert('请输入用户名，密码');
+                }
+            })()">登录</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    function login(){
+        document.getElementsByClassName('login-container')[0].style.display="block";
+    }
+</script>
+
+</body>
+</html>

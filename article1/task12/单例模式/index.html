@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    //1.独立的对象 建两个 xiaowang xiaoli
+    //2.让xiaowang跟xiaoli通过门铃通讯
+    //3.两个单例之间开始通讯
+    var xiaowang = (function(){
+        var xiaowangjia = function(message){
+            this.menling = message;
+        }
+        var men;
+        var info = {
+            sendMessage:function(){
+                if(!men){
+                    men = new xiaowangjia(message);
+                }
+                return men;
+            }
+        }
+        return info;
+    })();
+
+    var xiaoli = {
+        callXiaowang:function(msg){
+            var _xw = xiaowang.sendMessage(msg);
+            alert(_xw.menling);
+            _xw = null;
+        }
+    }
+</script>
+
+<script type="text/javascript">
+//页面上留个按钮
+//a b c => top
+//d e f => banner
+    var top = {
+        init:function(){
+            this.render();
+            this.bind();
+        },
+        a:4,
+        bind:function(){
+            var me = this;
+            me.btna.click(function(){
+                this.test();
+            })
+        },
+        test:function(){
+            a=5;
+        }
+    }
+    var banner = {
+
+    }
+
+    top.init();
+    banner.init();
+</script>

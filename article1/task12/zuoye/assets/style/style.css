@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+.m-container{
+    display: none;
+}
+.header{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px;
+    padding: 0 96px 0 0;
+    z-index: 2;
+}
+.mnav{
+    float: left;
+    margin-left: 20px;
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.bri{
+    display: block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #fff;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.lb{
+    display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.pf {
+    display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+}
+
+.pf span{
+    text-decoration: underline;
+}
+
+.pf span:hover,
+.lb:hover,
+.mnav:hover{
+    color:#00c;
+}
+
+.baiduLogo{
+    width: 270px;
+    height: 129px;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    min-width: 810px;
+}
+
+.body{
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+form{
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+}
+
+.outer-container{
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+    height: 34px;
+}
+
+.outer-container input{
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+.outer-container span{
+    position: absolute;
+    margin-top: 8px;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../image/camera.png) no-repeat;
+}
+.outer-container span:hover{
+    background-position: 0 -20px;
+}
+
+.search-btn{
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    position: absolute;
+    margin-left: 538px;
+    margin-top: -29px;
+    text-align: center;
+    line-height: 35px;
+}
+
+* +html .search-btn{
+    margin-top: -1px;
+    margin-left: 28px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.qrcode p{
+    color: #666;
+    font-weight: 700;
+}
+
+.lh a,
+.cp a{
+    color: #999;
+}
+
+.lh{
+    margin-top: 20px;
+}
+
+.cp{
+    color: #999;
+}
+
+.lh-a{
+    margin-left: 25px;
+}
+
+.cp .c-icon-icrlogo, .c-icon-jgwablogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_5859e57.png) no-repeat;
+}
+
+.cp .c-icon-icrlogo {
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+.c-icon-jgwablogo {
+    background-position: -623px -96px;
+    position: relative;
+    top: 3px;
+}
+
+.setting-submenu{
+    /*position: absolute;*/
+    /*margin-left: 345px;*/
+    /*margin-top: -10px;*/
+    visibility: hidden;
+    border: 1px solid #d1d1d1;
+    width: 68px;
+    /*top: 36px;*/
+    /*z-index: 302;*/
+    box-shadow: 1px 1px 5px #d1d1d1;
+    -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+    margin-left: -20px;
+}
+
+.pf:hover .setting-submenu{
+    visibility: visible !important;
+}
+
+.setting-submenu-a{
+    display: block;
+    text-align: center;
+    margin: 0!important;
+    padding: 0 9px;
+    line-height: 26px;
+    text-decoration: none;
+    width: 50px;
+    /*text-underline: ;*/
+}
+
+.pf .setting-submenu-a{
+    color:#555;
+}
+
+.pf .setting-submenu-a:hover{
+    background-color: #398bfb;
+    color:#FFF;
+}
+
+.bdbriimgtitle{
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 30px;
+    line-height: 34px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+
+.bdbri.bdbriimg .bdmainlink a, #wrapper .bdbri.bdbriimg .bdothlink a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.bdmainlink{
+    width: 85px;
+    border-left: 1px solid #e7e7e7;
+    position: fixed;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.bdbri.bdbriimg .bdmainlink a:visited, #wrapper .bdbri.bdbriimg .bdothlink a:visited {
+    color: #666;
+}
+
+.bdbriwrapper span.icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url('../image/more_iocns.png') no-repeat;
+    cursor: pointer;
+}
+
+.bdbriwrapper span.bdbriimgitem_3 {
+    width: 40px;
+    background-position: -72px 0;
+}
+
+.bdbriwrapper span.bdbriimgitem_4 {
+    background-position: -112px 0;
+}
+
+.bdbriwrapper span.bdbriimgitem_2 {
+    background-position: -36px 0;
+}
+.bdbriwrapper span.bdbriimgitem_5 {
+    background-position: -148px 0;
+}
+.bdbriwrapper span.bdbriimgitem_6 {
+    background-position: -184px 0;
+}
+
+.bdbriwrapper span.text22{
+    display: inline-block;
+    width: 85px;
+    text-align: center;
+    color: #666;
+}
+
+.bdbrievenmore{
+    text-align: center;
+}
+
+.bdmainlink{
+    visibility: hidden;
+}
+
+.bri:hover .bdmainlink{
+    visibility: visible !important;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    min-width: 800px;
+    height: 100%;
+    position: relative;
+}
+
+.login-container{
+    top: 0px;
+    left: 0px;
+    bottom:0;
+    right:0;
+    position: fixed;
+    /*opacity: 0.15;*/
+    z-index: 60000;
+    /*background-color: rgb(0, 0, 0);*/
+}
+
+.login-background{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.15;
+    z-index: -1;
+
+}
+
+.login-container-container{
+    width: 393px;
+    height: 405px;
+    background-color: #FFF;
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+div.tang-title-dragable {
+    /*cursor: move;*/
+    position: relative;
+    height: 47px;
+}
+div.tang-title {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-width: 1px 1px 0;
+    border-bottom: 0;
+}
+
+div.tang-title span {
+    width: auto;
+    height: 18px;
+    font-size: 16px;
+    font-family: ����;
+    font-weight: 700;
+    color: rgb(102, 102, 102);
+    text-indent: 50px;
+    margin-right: 29px;
+    display: block;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: content-box;
+    background: -webkit-image-set(url(https://passport.baidu.com/passApi/img/baidu_logo_24.png) 1x, url(https://passport.baidu.com/passApi/img/baidu_logo_48.png) 2x) 18px 8px no-repeat;
+    padding: 15px 0px 13px;
+    overflow: hidden;
+}
+.login-label-2,
+.login-label-1{
+    background-position: 0 -68px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background-image: url(https://passport.baidu.com/passApi/img/input_icons_24.png);
+    background-repeat: no-repeat;
+    z-index: 20;
+    background-image: url(https://passport.baidu.com/passApi/img/input_icons_24.png);
+    background-image: -webkit-image-set(url(https://passport.baidu.com/passApi/img/input_icons_24.png) 1x,url(https://passport.baidu.com/passApi/img/input_icons_48.png) 2x);
+}
+.login-label-2{
+    background-position: 0 -147px;
+}
+
+.login-container p{
+    position: relative;
+    margin: 0;
+    z-index: 18;
+    margin-left: 21px;
+}
+.login-container p:nth-child(2){
+    margin-top: 50px;
+}
+.login-container p:nth-child(3){
+    margin-top: 10px;
+}
+
+.login-container input{
+    display: block;
+    position: relative;
+    height: 16px;
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    /*transition: .3s;*/
+    font-size: 14px;
+    color: #666;
+    padding-left: 38px;
+    width: 260px;
+    padding-right: 50px;
+    outline: 0;
+    box-sizing: content-box;
+}
+
+.login-container button{
+    background-color: #3f89ec;
+    display: block;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    background: #3f89ec;
+    border-radius: 3px;
+    border: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    /*transition: .3s;*/
+    /*-moz-transition: .3s;*/
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.login-close-btn{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    background-image: -webkit-image-set(url(https://passport.baidu.com/passApi/img/pass_login_icons.png) 1x,url(https://passport.baidu.com/passApi/img/pass_login_icons_retina.png) 2x);
+    background-image: url(https://passport.baidu.com/passApi/img/pass_login_icons.png);
+    background-position: -56px -48px;
+    cursor: pointer;
+}
