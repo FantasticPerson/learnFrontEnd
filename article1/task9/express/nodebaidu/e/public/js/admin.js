@@ -1,6 +1,16 @@
 $(document).ready(function(){
+    var csrftoken;
     var $newsTable = $('#newstable tbody');
-    refresh();
+    $.ajax({
+        url:'/admin/gettoken',
+        type:'get',
+        success:function(data){
+            csrftoken = data;
+            refresh();
+        }
+    })
+
+    
 
     $('#btnupdate').click(function(e){
         e.preventDefault();
@@ -33,11 +43,12 @@ $(document).ready(function(){
         
         } else {
             var jsonNews ={
-                newstitle:$('#newstitle').val(),
-                newstype:$('#newstype').val(),
-                newsimg:$('#newsimg').val(),
-                newstime:$('#newstime').val(),
-                newssrc:$('#newssrc').val(),
+                newstitle:filterXSS($('#newstitle').val()),
+                newstype:filterXSS($('#newstype').val()),
+                newsimg:filterXSS($('#newsimg').val()),
+                newstime:filterXSS($('#newstime').val()),
+                newssrc:filterXSS($('#newssrc').val()),
+                _csrf:csrftoken
             };
             $.ajax({
                 url:'/admin/insert',
@@ -68,7 +79,10 @@ $(document).ready(function(){
             $.ajax({
                 url:'/admin/delete',
                 type:'post',
-                data:{newsid:deleteId},
+                data:{
+                    newsid:deleteId,
+                    _csrf:csrftoken
+                },
                 success:function(data){
                     console.log('删除成功');
                     $('#deleteModal').modal('hide');
@@ -87,7 +101,10 @@ $(document).ready(function(){
             url:'/admin/curnews',
             type:'post',
             datatype:'json',
-            data:{newsid:updateId},
+            data:{
+                newsid:updateId,
+                _csrf:csrftoken
+            },
             success:function(data){
                 $('#u-newstitle').val(data[0].newstitle);
                 $('#u-newstype').val(data[0].newstype);
@@ -104,12 +121,13 @@ $(document).ready(function(){
             type:'post',
             datatype:'json',
             data:{
-                newstitle:$('#u-newstitle').val(),
-                newstype:$('#u-newstype').val(),
-                newsimg:$('#u-newsimg').val(),
-                newstime:$('#u-newstime').val(),
-                newssrc:$('#u-newssrc').val(),
-                id:updateId
+                newstitle:filterXSS($('#u-newstitle').val()),
+                newstype:filterXSS($('#u-newstype').val()),
+                newsimg:filterXSS($('#u-newsimg').val()),
+                newstime:filterXSS($('#u-newstime').val()),
+                newssrc:filterXSS($('#u-newssrc').val()),
+                id:updateId,
+                _csrf:csrftoken
             },
             success:function(data){
                 console.log('删除成功');
@@ -127,17 +145,20 @@ $(document).ready(function(){
         $.ajax({
             type:'get',
             url:'/admin/getnews',
-            data:{newstype:null},
+            data:{
+                newstype:null,
+                _csrf:csrftoken
+            },
             success:function(data){
                 console.log(data);
                 data.forEach(function(item,index){
                     console.log(index,item);
-                    var $tdid = $('<td>').html(item.id);
-                    var $tdtype = $('<td>').html(item.newstype);
-                    var $tdtitle = $('<td>').html(item.newstitle);
-                    var $tdimg = $('<td>').html(item.newsimg);
-                    var $tddata = $('<td>').html(item.newstime);
-                    var $tdsrc = $('<td>').html(item.newssrc);
+                    var $tdid = $('<td>').html(filterXSS(item.id));
+                    var $tdtype = $('<td>').html(filterXSS(item.newstype));
+                    var $tdtitle = $('<td>').html(filterXSS(item.newstitle));
+                    var $tdimg = $('<td>').html(filterXSS(item.newsimg));
+                    var $tddata = $('<td>').html(filterXSS(item.newstime));
+                    var $tdsrc = $('<td>').html(filterXSS(item.newssrc));
                     var $tdbtn = $('<td>');
                     var $btnEdit=$('<button>').addClass('btn btn-primary btn-xs').html('修改');
                     var $btnDelete=$('<button>').addClass('btn btn-danger btn-xs').html('删除');
